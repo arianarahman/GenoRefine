@@ -1,0 +1,16 @@
+{
+  "protocol_id": "spatial_comparator_v1",
+  "dataset": "Squidpy Visium mouse-brain example",
+  "path": "revision_pipeline/data/external/squidpyvisium.h5ad",
+  "sha256": "c4caaa4b8708a46b0d4b4ae7390256034e78e02280da3ed16de1ca3a198cddf8",
+  "comparator": "SpaGCN 1.2.7",
+  "official_repository": "https://github.com/jianhuupenn/SpaGCN",
+  "commit": "dc7a1c26ea0fdf4dfe7064adc7699be141b4871f",
+  "paper": "https://www.nature.com/articles/s41592-021-01255-8",
+  "n_clusters": 7,
+  "K_source": "Existing label-free median cluster count at resolution 0.5 on the stored PCA baseline",
+  "seeds": [0, 1, 2, 3, 4],
+  "preprocessing": "raw counts; filter genes present in >=3 spots; remove ERCC/MT-prefixed genes; normalize_total 10000; log1p",
+  "settings": {"histology": false, "p": 0.5, "num_pcs": 50, "lr": 0.005, "max_epochs": 2000, "optimizer": "Adam", "initialization": "kmeans", "tolerance": 0.001},
+  "limitation": "Single section; no source histology image; reference cluster field is an in-house partition rather than independent ground truth"
+}

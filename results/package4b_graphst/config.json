@@ -1,0 +1,292 @@
+{
+  "protocol_id": "spatial_graphst_panel_v1",
+  "prefix": "20260930-graphst4b-v5",
+  "inputs": {
+    "20260930-graphst4b-v5-align-Br5292": {
+      "sha256": "9a6722804f3df5ff1ca91946f13ef452bbd48fb2f597b4316180b210f39a3198",
+      "size_bytes": 1341
+    },
+    "20260930-graphst4b-v5-align-Br5595": {
+      "sha256": "0b3e357855b0f6c8f87c97672e14b4d6d45c5a095366850a36c3d1b811407578",
+      "size_bytes": 1341
+    },
+    "20260930-graphst4b-v5-align-Br8100": {
+      "sha256": "10393e762ab7f3d7ad508abb22e102c43e5e53e26e1255dfc5c1137cc28619ff",
+      "size_bytes": 1342
+    },
+    "20260930-graphst4b-v5-k-selection": {
+      "sha256": "38e9bb5bc2707c39ec8f830a5adc3015f7a8d88a3434311c1d123eba985d02ec",
+      "size_bytes": 2151
+    },
+    "20260930-graphst4b-v5-graphst-Br5292-s0": {
+      "sha256": "98bd1d1b67363d91f6257b18f9587e62a0cd520eff7fc767ec610603ca581cdf",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br5292-s1": {
+      "sha256": "9db2496da1b74bfb85f97d45bd794d0bf59e9bf96e9d78f29d9c0487c3f498e6",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br5292-s2": {
+      "sha256": "04cfddfc8db0a7364cdbe7b0627301b2811f81f18ce4fdf0be55c26fde95bae5",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br5292-s3": {
+      "sha256": "fc390ed88c43776b52f78295d054ec338ebeb507f0e4ffbaa180880d89ebffa8",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br5292-s4": {
+      "sha256": "5c0d4aa443dc5a8a2285d02539c3e0d6f924ef4601362d5e76789d1309351f3e",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br5595-s0": {
+      "sha256": "2ccb7b9105ff0b126ea4db07c29e7562d936e50ee7c0c36463dffa45ad30d9dc",
+      "size_bytes": 1355
+    },
+    "20260930-graphst4b-v5-graphst-Br5595-s1": {
+      "sha256": "d1b18ffa991b5c09c290abede87d561fb676c3049fd440f3a5d18ad5bf3b2ae4",
+      "size_bytes": 1355
+    },
+    "20260930-graphst4b-v5-graphst-Br5595-s2": {
+      "sha256": "51eb051334ec254f2369a4653268a44e10fc549710443bd5d7e6a76fecd77a2a",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br5595-s3": {
+      "sha256": "0d7f6974a421615d6ca796246395ce788d06d1c9126447a0f9f312b296b8b114",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br5595-s4": {
+      "sha256": "e16f16204c17434165e38f4a2d431b2634864cf10c686ca44a431880958b36bb",
+      "size_bytes": 1355
+    },
+    "20260930-graphst4b-v5-graphst-Br8100-s0": {
+      "sha256": "68aec49694486c86d20f0dc601f62a366d2a3e77527addc0839e80629fccd862",
+      "size_bytes": 1355
+    },
+    "20260930-graphst4b-v5-graphst-Br8100-s1": {
+      "sha256": "f8b6d0016a7d8f44c5b798b2648c6ba0b503d566dd20503f2faccb60926c40b4",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br8100-s2": {
+      "sha256": "381906c20968451f8cb0a5c285085c76551b1c7a0c653f566758cb692f2c8092",
+      "size_bytes": 1354
+    },
+    "20260930-graphst4b-v5-graphst-Br8100-s3": {
+      "sha256": "20ccbdc2ecd266188126cf3d9d7507a26c786fa4ee859de4667ac39cf2c8ff9a",
+      "size_bytes": 1355
+    },
+    "20260930-graphst4b-v5-graphst-Br8100-s4": {
+      "sha256": "0e898954e7cc71358d21b9b3346f8d668eb7f03e6bc0c4cdb85844f4484c3d61",
+      "size_bytes": 1355
+    },
+    "20260930-graphst4b-v5-score-section-151507-s0": {
+      "sha256": "eef868029f48ac465adee2dfd8362f38f6e7bc5757007888515efb380523637e",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151508-s0": {
+      "sha256": "5956109e8b177b4b9f61ec1b1bd2fe28b607deafc410a04cb5d92fd34867106d",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151507-s1": {
+      "sha256": "c0cb4ff138ee0b6537473f340d56e1ea982d750f86e48367f3cdfac35f130e4a",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151508-s1": {
+      "sha256": "1e3cfdd061eae2d3f1de72a27eb87084bb365d9afc14ca0d03fbc0036bb3931b",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151507-s2": {
+      "sha256": "33d55c233aafa64f717a1192955f88d77fc8ee6cecf0aac99d1bac6f7a133d80",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151508-s2": {
+      "sha256": "e96294383b5358815f240582d12ccef971f8cf792561cf45cf36bb54b3a0c70c",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151507-s3": {
+      "sha256": "0e5c7a8815e02782fe9ccd0a4244b181583577a05bfb9afcc98f5471fa0305ea",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151508-s3": {
+      "sha256": "3c856ad67425ff8c4971e16acf94ba9d4b74baae26e059667963e7a125202638",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151507-s4": {
+      "sha256": "2637e26c0258142c8b9581ebcf20799e19a09acc693780b255c362aef22eff33",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151508-s4": {
+      "sha256": "a19e1bf0002779a153817a24f2a98dcdf11b67b34f72ff4d494697fa9603f2f5",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151669-s0": {
+      "sha256": "5f67524a36d21fc30dd87130448fbaf8ffab80b30143dbf75a3fdaed778a2858",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151670-s0": {
+      "sha256": "46ead4fccaf87e1fcda5592829f690e69bcbde69db5c85ae9b49cde3203ee252",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151669-s1": {
+      "sha256": "c40fc289e77070a600e819f0699f4b9ffc42f103b8943f64d3c5009016c9ae97",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151670-s1": {
+      "sha256": "3b0637e93129b0d0964fc8304edb67b4589c4a47d3c65afaa1484fae9fbd7293",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151669-s2": {
+      "sha256": "4ced4017efa79e19b30323060421301045072f160c3a416cc9c9ebab3a128657",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151670-s2": {
+      "sha256": "dee4bd4597445fe230cab115b67ecf7ce0625afd58993d2d2b64d7ff7b99125e",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151669-s3": {
+      "sha256": "1f375f893b904e5416d4f3e36f027644a4782a97b0f6bd2c38c3aed8685412ef",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151670-s3": {
+      "sha256": "876e770db2af7341923ab88c5491843b767726b65cea878040b55ebf9a17e5aa",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151669-s4": {
+      "sha256": "6570a72768d3109790eb2a610e4ed4a84b5effa2327e2defaa0ec8af8f9b0494",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151670-s4": {
+      "sha256": "209bdd85badaad51d5bffd916dfd85bcb1135f42a539c1fc906b239b4fa0321a",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151673-s0": {
+      "sha256": "1d774b63a91a0c352c12bd41d013d947de741a59f08c926d3529d07139c1e8ba",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151674-s0": {
+      "sha256": "3b51b77124d4e16872a43c28f38aa0b6bf795a94afeddae718a4834dceb14e5e",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151673-s1": {
+      "sha256": "5c0c982ac12857ce4f5b390ec10c667cae3df56fdec928ded79eaa353f686750",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151674-s1": {
+      "sha256": "a2d6b5bf1d73ebc91f95718c3d72783edaead4365812482a72c79ac8c38038b0",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151673-s2": {
+      "sha256": "0f828f4be458dbceb63aa766176d154e9aa7de41043da6f65d53c1a5cf932be6",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151674-s2": {
+      "sha256": "f9153aafe731ef2e67c05e317b02b6c60ca4a90b0fbfdd616d0a9e065d193d31",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151673-s3": {
+      "sha256": "2ea0306a0bb64771ffc317e604412591a7e523dc826e971db3dc16389497f5a4",
+      "size_bytes": 4746
+    },
+    "20260930-graphst4b-v5-score-section-151674-s3": {
+      "sha256": "b4aefa65e2ac456256e332b4cea2fae111442f7e3d7013d75a3a3f5a950d11fe",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151673-s4": {
+      "sha256": "f6ed0325e5fd9abc8f8cb4df1bccd1ff2146a0991ae9b4e98cd8ac6047a53ab2",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-section-151674-s4": {
+      "sha256": "d9796409a50ae161450cf0dbbe919d080e404df3ad34f08187dd2b977e9085b7",
+      "size_bytes": 4747
+    },
+    "20260930-graphst4b-v5-score-donor-Br5292-s0": {
+      "sha256": "b374f94a1a3c3d0e22adaf928b8fa713ec98fb3a948904008e3942c7d72aa870",
+      "size_bytes": 1633
+    },
+    "20260930-graphst4b-v5-score-donor-Br5292-s1": {
+      "sha256": "73401fd9b9d54b727a15a270182997ce0eb7a41eb2776e52016aa5545ecccbe5",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br5292-s2": {
+      "sha256": "1c6dc0016be5411654360b78635e2bd1a47763d2fe0c7e5bcfc8c72e8571e5f0",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br5292-s3": {
+      "sha256": "ebf3b9ac887692ddfb0a9fd7396db4f8d6b644eb30ac8cec472105dc691d9a62",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br5292-s4": {
+      "sha256": "3c720be37c26f50abc30abee1dbb16658a9a9c73a8c9eaca3aba9a28889e84eb",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br5595-s0": {
+      "sha256": "cea325966f229c47c998782a66a456f0e41978b4b573e10f2b3c484d5dc26443",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br5595-s1": {
+      "sha256": "6510471adbcb79dd8fbb93ab8ca6e64e78c5a57f30d2f6609a1782bfc2456162",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br5595-s2": {
+      "sha256": "bc2aa7d6dbe3f19cd7c1b4691e5d969720ebec6af5f2390f35be60626d439bed",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br5595-s3": {
+      "sha256": "8e59db6169d8a95a9c59b163cd8983be57b74c8268c128260f7a10c34e7b7e33",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br5595-s4": {
+      "sha256": "bcf1d3ea2d098574dcf5f552e8845ee736ac619788ac7f2d9688c3cd901b11b8",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br8100-s0": {
+      "sha256": "0eea8f3d44be225c26e2ca8581de9d88bbbd9c6bd2cf61b7e3034a8f3c5fe54f",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br8100-s1": {
+      "sha256": "0c904dc3ae6a94701afab986a1bd7d8367202814af924bf60884faf1a0bad272",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br8100-s2": {
+      "sha256": "c412d082bc76bbcd6341a554256c28819655feb1116bf02f5f494d562718ccdd",
+      "size_bytes": 1632
+    },
+    "20260930-graphst4b-v5-score-donor-Br8100-s3": {
+      "sha256": "477428c752de86736a41e405a2ad7080a3b6f378f0573973ed3f22f274e0c222",
+      "size_bytes": 1631
+    },
+    "20260930-graphst4b-v5-score-donor-Br8100-s4": {
+      "sha256": "92d442d1bb030eb305a1dbea500b2668c4ccac9c2926c5a0742e044994a6d54d",
+      "size_bytes": 1632
+    }
+  },
+  "aggregation": {
+    "order": [
+      "algorithmic seeds within section",
+      "two sections within donor",
+      "three donor macro-average"
+    ],
+    "seed_role": "descriptive algorithmic repeats, not biological replicates",
+    "section_weighting": "equal within donor",
+    "donor_weighting": "equal",
+    "p_values": false
+  },
+  "runtime": {
+    "python_executable": "<PYTHON_ENV>",
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.5.2",
+      "scanpy": "1.9.8",
+      "leidenalg": "0.11.0",
+      "igraph": "1.0.0",
+      "numba": "0.65.1",
+      "scib-metrics": "0.5.8",
+      "anndata": "0.10.9",
+      "threadpoolctl": "3.6.0"
+    },
+    "wsl_distribution": "Ubuntu-24.04",
+    "validated": true
+  }
+}

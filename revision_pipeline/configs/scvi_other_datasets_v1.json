@@ -1,0 +1,31 @@
+{
+  "protocol_id": "scvi_other_datasets_v1",
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "method": "scVI",
+  "scvi_tools_version": "1.4.3",
+  "latent_dim": 32,
+  "hidden": 128,
+  "layers": 2,
+  "gene_likelihood": "nb",
+  "dispersion": "gene-batch",
+  "max_epochs": 200,
+  "batch_size": 256,
+  "early_stopping": true,
+  "seeds": [0, 1, 2, 3, 4],
+  "label_use": "none during feature selection or scVI training; reference labels are used only for evaluation",
+  "datasets": {
+    "mouse_senis": {
+      "source": "MouseDataset/Dataset/tabula-muris_sub50k_combined.h5ad",
+      "matrix": "raw/X",
+      "feature_selection": "MouseDataset/Benchmark_Mouse_Out/mouse_hvg_canonical.txt",
+      "batch_key": "dataset",
+      "input_status": "integer raw matrix; droplet and FACS have markedly different library-size distributions and are modeled as batches"
+    },
+    "pancreas_five_study": {
+      "matrix": "the five supplied 2000-feature MAT matrices in canonical study order",
+      "feature_selection": "all 2000 supplied features; original gene identities are unavailable",
+      "batch_key": "batch",
+      "input_status": "sensitivity analysis only: the supplied studies mix integer and transformed noninteger expression scales; no exact raw-count source is present locally"
+    }
+  }
+}

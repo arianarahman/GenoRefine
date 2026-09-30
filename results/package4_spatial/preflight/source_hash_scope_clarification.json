@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "record_role": "append-only clarification; the original preflight receipt is preserved unchanged",
+  "panel": "20260929-spatial-panel-v1",
+  "original_preflight_receipt": {
+    "path": "revision_pipeline/runs/_preflight-20260929-spatial-panel-v1/preflight_receipt.json",
+    "sha256": "ff6bb519c0801ff9186be2cac048f577cc1587af72a15f94084bfcafffa1de1c",
+    "size_bytes": 1448
+  },
+  "base_global_snapshot": {
+    "sha256": "4c61b60a8755122c8b5a13a49a61ca2dbbf4b1ab94d28d90b48c945de4c16304",
+    "scope": "base/global project source inventory returned by revision_pipeline.pilot.common.snapshot",
+    "note": "This is the value stored in the original preflight field current_frozen_source_tree_sha256. The field name did not distinguish the narrower base/global inventory from the Package-4-specific inventory."
+  },
+  "package4_specific_snapshot": {
+    "sha256": "bb0f67f14ca3a460a9f708a920c2b64aa44f526994737d84b6e427b46f387b4f",
+    "scope": "base/global source inventory plus the Package 4 runtime and orchestration recipes",
+    "additional_entries": {
+      "revision_pipeline/spatial_multisection/Dockerfile.spagcn-gpu": {
+        "sha256": "684ba47f3ce5394437416200e12552e91cadc58683ec654a6dc3c92f6973fd48",
+        "size_bytes": 455
+      },
+      "revision_pipeline/spatial_multisection/run_panel.ps1": {
+        "sha256": "5c669645078386c0ed578066fa7628016f6da1a60bc00f2b772a21bd5954b1bf",
+        "size_bytes": 11487
+      }
+    },
+    "authoritative_evidence": {
+      "path": "revision_pipeline/runs/20260929-spatial-panel-v1-full-panel/source_manifest.json",
+      "sha256": "443d83c40ecaeb32ad6d202080ae5ff83b35d4db3ac5604823f935c430973145",
+      "size_bytes": 80346,
+      "run_manifest_path": "revision_pipeline/runs/20260929-spatial-panel-v1-full-panel/run.json",
+      "run_manifest_sha256": "9d83c5bd7ee40620fd95666e93c8676dc679a9a7349cac9c15657d525872abeb",
+      "run_manifest_size_bytes": 2077
+    }
+  },
+  "verification": "Canonical hashing of the 475-entry completed-panel source manifest gives bb0f67f14ca3a460a9f708a920c2b64aa44f526994737d84b6e427b46f387b4f. Removing only the two explicitly listed Package-4-specific entries gives the 473-entry base/global hash 4c61b60a8755122c8b5a13a49a61ca2dbbf4b1ab94d28d90b48c945de4c16304.",
+  "interpretation": "The hashes describe nested source inventories, not competing versions of the scientific panel. The authoritative source hash recorded by all completed Package 4 scientific runs is bb0f67f14ca3a460a9f708a920c2b64aa44f526994737d84b6e427b46f387b4f."
+}

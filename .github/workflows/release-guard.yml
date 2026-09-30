@@ -1,0 +1,20 @@
+name: Data-free release guard
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify release contents
+        run: python scripts/check_release.py
+      - name: Verify release manifest
+        run: python scripts/write_manifest.py --check
+      - name: Compile Python sources
+        run: python -m compileall -q revision_pipeline HPCBDataset MouseDataset PancreasDataset PBMCSingeBatchDataset

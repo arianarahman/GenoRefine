@@ -1,0 +1,18 @@
+FROM nvcr.io/nvidia/pytorch:25.02-py3
+
+ENV PIP_CONFIG_FILE=/dev/null
+
+# Keep NumPy 1.x because the NGC 25.02 PyTorch binaries were compiled against
+# that ABI.  The remaining pins prevent later transitive releases from silently
+# upgrading NumPy and invalidating NumPy-to-Torch conversion.
+RUN python -m pip install --no-cache-dir --index-url https://pypi.org/simple \
+    scvi-tools==1.4.3 \
+    numpy==1.26.4 \
+    pandas==2.2.3 \
+    scipy==1.15.3 \
+    anndata==0.11.4 \
+    scanpy==1.11.5 \
+    zarr==2.18.7 \
+    numcodecs==0.15.1 \
+    mudata==0.3.2 \
+    scikit-learn==1.6.1

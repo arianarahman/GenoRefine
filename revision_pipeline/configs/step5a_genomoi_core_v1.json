@@ -1,0 +1,28 @@
+{
+  "protocol_id": "step5a_genomoi_core_v1",
+  "role": "post_step4_matched_legacy_core_diagnostic",
+  "authorization": "User: Run what is ever is the next",
+  "preregistered": false,
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "dataset": "hpcb",
+  "embedding": "Scanorama",
+  "input_shape": [16382, 100],
+  "replicate_seeds": [0, 1, 2, 3, 4],
+  "k_selection": "revision_pipeline/runs/20260917T181031Z-f7e46860148e/k_selection.json",
+  "n_clusters": 14,
+  "map_side": 36,
+  "latent_dim": 32,
+  "batch_size": 64,
+  "pretrain_epochs": 100,
+  "max_updates": 512,
+  "target_update_interval": 50,
+  "input_scaling": "none",
+  "output_scaling": "genoMOI native per-coordinate z-score",
+  "training_order": "canonical",
+  "comparator_entry_point": "genomap.genoMOI.genoMOI.extract_genoVis_features",
+  "matched_factors": ["cells", "cell order", "upstream embedding", "feature space", "map size", "output dimensions", "K", "pretraining epochs", "joint update budget", "batch size", "loss weights"],
+  "native_differences_retained": ["legacy last-cell map defect", "legacy unshuffled joint batches", "legacy early-stop behavior", "genoMOI output z-score", "legacy random-state plumbing"],
+  "scope_limit": "The compared genoMOI helper and GenoDR share the GenoMap cartography plus ConvIDEC core. This is not an independent-architecture comparison and does not test the full genoMOIvis upstream wrapper.",
+  "stopping_rule": "Run seed 0 first. Continue seeds 1-4 only if output integrity passes and the measured per-seed cost is operationally acceptable; retain all outcomes without tuning."
+}
+

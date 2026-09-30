@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "protocol_id": "spatial_graphst_panel_v1",
+  "status": "implementation_complete_execution_not_started",
+  "scope": {
+    "role": "separate GraphST Package 4b supporting spatial-integration comparator",
+    "primary_package_reused_not_rerun": "20260929-spatial-panel-v1",
+    "not_an_exhaustive_spatial_benchmark": true,
+    "boundary_fidelity_metric_preregistered": false
+  },
+  "foundation": {
+    "path": "revision_pipeline/runs/20260929T102000Z-spatial-multisection-foundation-v1",
+    "kind": "spatial_multisection_foundation",
+    "run_manifest_sha256": "2cbf706000d7f954a54f15dcc5f3a9300aa9b725d4548dcad2afc54302472e00",
+    "run_manifest_size_bytes": 2469,
+    "retained_spots": 22968,
+    "source_spots_before_complete_case_filter": 23081,
+    "spots_excluded_for_missing_manual_layer_label": 113,
+    "cohort_boundary": "The reused Package 4 foundation is a complete-case cohort selected upstream for nonmissing manual cortical-layer labels; layer identities/values are not used by Package 4b fitting.",
+    "counts_file": "counts_pooled_min3.npz",
+    "gene_metadata_file": "gene_metadata.tsv",
+    "metadata_file": "cell_metadata.tsv"
+  },
+  "package4_bindings": {
+    "fixed_harmony": {
+      "path": "revision_pipeline/runs/20260929-spatial-panel-v1-harmony-fixed10",
+      "kind": "spatial_multisection_harmony_fixed",
+      "run_manifest_sha256": "bd68d70e41bffa0bff30fa4c1251d96d30a62c5fd404648ee19210aad7bf7abe",
+      "run_manifest_size_bytes": 1371,
+      "embedding_sha256": "49c154851974b3f37e01f3284eb78ee9731600586b92a443585698490c3f7a47"
+    },
+    "k_selection": {
+      "path": "revision_pipeline/runs/20260929-spatial-panel-v1-k-selection",
+      "kind": "spatial_multisection_k_selection",
+      "run_manifest_sha256": "5ba62cb961d6c3a2cbf4beed436c889e34f8707daed45d8ebece8dda0ee32f6f",
+      "run_manifest_size_bytes": 3560,
+      "role": "section-level Package 4 record; donor-pair K is derived separately from the same fixed Harmony representation"
+    },
+    "completed_panel": {
+      "path": "revision_pipeline/runs/20260929-spatial-panel-v1-full-panel",
+      "kind": "spatial_multisection_panel",
+      "run_manifest_sha256": "9d83c5bd7ee40620fd95666e93c8676dc679a9a7349cac9c15657d525872abeb",
+      "run_manifest_size_bytes": 2077,
+      "source_tree_sha256": "bb0f67f14ca3a460a9f708a920c2b64aa44f526994737d84b6e427b46f387b4f"
+    }
+  },
+  "sections": ["151507", "151508", "151669", "151670", "151673", "151674"],
+  "donors": {
+    "Br5292": ["151507", "151508"],
+    "Br5595": ["151669", "151670"],
+    "Br8100": ["151673", "151674"]
+  },
+  "evaluation": {
+    "config": "revision_pipeline/configs/evaluation_primary_v1.json",
+    "sha256": "142e6c0b56d6c3f2bba6b604a81150a718ce13b034e0e38a564dcfa173d2e567",
+    "fixed_resolution": 0.5,
+    "leiden_seeds": [0, 1, 2],
+    "section_metrics": [
+      "ARI",
+      "NMI",
+      "predicted_cluster_silhouette",
+      "reference_label_silhouette",
+      "label_neighbor_purity",
+      "spatial_latent_knn_jaccard",
+      "physical_distance_among_latent_neighbors"
+    ],
+    "donor_pair_metrics": ["iLISI", "D_batch"],
+    "spatial_neighbor_k": 6,
+    "label_neighbor_purity_k": 30,
+    "runtime": {
+      "wsl_distribution": "Ubuntu-24.04",
+      "python_executable": "<PYTHON_ENV>",
+      "python": "3.12.3",
+      "packages": {
+        "numpy": "1.26.4",
+        "scipy": "1.13.1",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.5.2",
+        "scanpy": "1.9.8",
+        "leidenalg": "0.11.0",
+        "igraph": "1.0.0",
+        "numba": "0.65.1",
+        "scib-metrics": "0.5.8",
+        "anndata": "0.10.9",
+        "threadpoolctl": "3.6.0"
+      }
+    }
+  },
+  "donor_cluster_count_selection": {
+    "input": "Package 4 fixed-10 pooled Harmony restricted to each donor pair",
+    "resolution": 0.5,
+    "leiden_seeds": [0, 1, 2],
+    "rule": "median fixed-resolution cluster count",
+    "reference_labels_used": false
+  },
+  "sources": {
+    "graphst": {
+      "name": "GraphST",
+      "version": "1.1.1",
+      "repository": "https://github.com/JinmiaoChenLab/GraphST",
+      "commit": "d62b0b7b6cd38ee285f3ac8cd67b7341a10bcc74",
+      "archive_url": "https://codeload.github.com/JinmiaoChenLab/GraphST/tar.gz/d62b0b7b6cd38ee285f3ac8cd67b7341a10bcc74",
+      "archive_sha256": "61179872860ec46898cf49d92780b81f1b304f1f0d28647cf04c4d1a9c61b088",
+      "archive_size_bytes": 15895745,
+      "archive_root": "GraphST-d62b0b7b6cd38ee285f3ac8cd67b7341a10bcc74",
+      "destination": "revision_pipeline/external/GraphST-1.1.1",
+      "files": {
+        "GraphST/GraphST.py": "2d1e033e2d759b81109c4a10993b835783880ef8823d2acb9e563f8047597f18",
+        "GraphST/model.py": "014788892c21eccd7fdc939985079175898d7ba1e9fc90531598643b8ae88c95",
+        "GraphST/preprocess.py": "5959887f0045fd545011b15c4ba3ddccab7b95fbd0a62ccc2d63ffb06ce4b321",
+        "GraphST/utils.py": "3d2833cec32429c4c4cf9726130fb1d77c8a830793b5f3c7f7ed896ef70ff388",
+        "GraphST/__init__.py": "c5fe0e3d6d9f21b21117135b866f7504117b88c6dbc07007411efa7dcd3688b6",
+        "setup.py": "20a0c3234b2960c33fb14c8496379f6f89ced838a8697f7b6bda1e498c3b55a6",
+        "requirement.txt": "80d79de97683c266183bbdb9a77033b63d709eb94121a119dc1b336290b5f7c8"
+      }
+    },
+    "paste": {
+      "name": "PASTE",
+      "version": "1.4.0",
+      "repository": "https://github.com/raphael-group/paste",
+      "commit": "a9b10b24ba33e94a89dd89e8ee5e4900e18b1886",
+      "archive_url": "https://codeload.github.com/raphael-group/paste/tar.gz/a9b10b24ba33e94a89dd89e8ee5e4900e18b1886",
+      "archive_sha256": "ec1b3395558350b8a2924ac231158342645700bc7765cf580a973ae03de4649f",
+      "archive_size_bytes": 5347052,
+      "archive_root": "paste-a9b10b24ba33e94a89dd89e8ee5e4900e18b1886",
+      "destination": "revision_pipeline/external/PASTE-1.4.0",
+      "files": {
+        "src/paste/PASTE.py": "de0b264267b2211165076dc151a2b4b2f2ad2b1648d731ca47a1fe37167b0b21",
+        "src/paste/helper.py": "d2d97e3e1e230035ee20bee0eac8e13ac0a1b52ff3460b7a5bfbfd94b373e9a8",
+        "src/paste/visualization.py": "073482395fffc539eb9f38bd2d9eac527043956df8ec0d16b0ad10efd60189ad",
+        "src/paste/__init__.py": "cc817a730f3af03d595bc2d0632e7ba2657b717b3bc97272e9901db97eac42bb",
+        "setup.py": "5b0e146d973f8091110351f3f46badd5a905dacb6bb08279014a00dbd8c9921f",
+        "setup.cfg": "48d71d0aef5b5196226eaa0a9ab095c0f6d801743e3281e4c4441c24328dedc9",
+        "pyproject.toml": "4b5f4916dfc7c0e05e65ad70950e2d236857767ee01e21d82ef8e0783cd7315a",
+        "requirements.txt": "bcbea6a1d3176b7de38cf01d342721ecdcac918c240a34c9d819c1a923599c6c"
+      }
+    },
+    "mclust": {
+      "version": "6.1.1",
+      "archive_url": "https://cran.r-project.org/src/contrib/Archive/mclust/mclust_6.1.1.tar.gz",
+      "archive_sha256": "ddd7018e5e6ea7f92c7fc9872b391491b7e91c2cd89ef1dcaf4408afb5116775",
+      "archive_size_bytes": 2753243
+    }
+  },
+  "paste_alignment": {
+    "scope": "one deterministic alignment per donor pair, reused across five GraphST seeds",
+    "coordinate_input": ["pxl_col_in_fullres", "pxl_row_in_fullres"],
+    "coordinate_rationale": "full-resolution Visium pixel coordinates preserve the physical hex-lattice geometry used by official GraphST spatial-neighbor construction",
+    "expression_representation": "frozen uncorrected PCA50 via official use_rep API",
+    "use_harmony_for_alignment": false,
+    "alpha": 0.1,
+    "dissimilarity": "euclidean",
+    "expression_cost_mathematical_endpoint": "POT ot.dist default squared-Euclidean cost invoked by the official PASTE 1.4.0 euclidean API branch",
+    "norm": true,
+    "normalization_rationale": "PASTE rescales each within-slice spatial distance matrix by its smallest nonzero distance so the FGW trade-off is not an artifact of full-resolution pixel units; GraphST still receives the rigidly aligned full-resolution coordinates",
+    "numItermax": 200,
+    "distributions": "explicit uniform",
+    "backend": "POT NumpyBackend CPU",
+    "threads": 1,
+    "stacking": "official stack_slices_pairwise generalized Procrustes",
+    "reference_labels_used": false
+  },
+  "graphst": {
+    "models": "one pooled two-section model per donor and seed",
+    "seeds": [0, 1, 2, 3, 4],
+    "datatype": "10X",
+    "preprocessing": {
+      "official_graphst_1_1_1_defaults": true,
+      "hvg_flavor": "seurat_v3",
+      "n_top_genes": 3000,
+      "normalize_total": 10000.0,
+      "log1p": true,
+      "scale_zero_center": false,
+      "scale_max_value": 10,
+      "spatial_neighbors": 3,
+      "aligned_coordinates_used": true
+    },
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "epochs": 600,
+    "dim_output": 64,
+    "continuous_representation": {
+      "official_train_output": "GraphST 1.1.1 adata.obsm['emb']: reconstructed 3,000-HVG feature representation",
+      "official_train_output_dimensions": 3000,
+      "common_evaluator_input": "GraphST 1.1.1 clustering() adata.obsm['emb_pca']",
+      "common_evaluator_dimensions": 20,
+      "pca_random_state": 42,
+      "hidden_bottleneck_dimensions": 64,
+      "hidden_bottleneck_reported_as_official_emb": false
+    },
+    "alpha": 10.0,
+    "beta": 1.0,
+    "theta": 0.1,
+    "native_clustering": {
+      "role": "secondary task-native endpoint",
+      "pca_components": 20,
+      "pca_random_state": 42,
+      "method": "mclust",
+      "modelNames": "EEE",
+      "mclust_random_seed": 2020,
+      "K": "label-free donor-pair Harmony median fixed-resolution cluster count",
+      "refinement": "official refine_label on PASTE-aligned coordinates",
+      "refinement_radius": 50
+    },
+    "reference_labels_used": false
+  },
+  "runtime": {
+    "image_tag": "genorefine-graphst:1.1.1-panel-v1",
+    "image_id": "sha256:34021f3e00629eabe776538c1934cbc019d77fbbe64307a47b74d7dd42aa0812",
+    "base_image": "nvcr.io/nvidia/pytorch:25.02-py3@sha256:50e2ea138815ed088a60e6d642c9d0298b98a42b90666f7f19924640ccc519eb",
+    "dockerfile": "revision_pipeline/spatial_graphst/Dockerfile.graphst-gpu",
+    "dockerfile_sha256": "f52ac1a121595b48c457e645c549739c932b2c6292db30d75f8a9ec9c386ab94",
+    "requirements": "revision_pipeline/spatial_graphst/requirements-graphst-gpu.txt",
+    "requirements_sha256": "ad290e3fb7f857b01a14196ae3ffd8ac0e7e0b52055bb682136371eee2c2cdd6",
+    "full_environment_inventory_sha256": "e8b9c8f38d6aa451c6c41521a35b11804ad18f2532c1300a7e9d3430f248fe61",
+    "cuda_required_for_training": true,
+    "alignment_device": "cpu",
+    "environment_variable_for_image_id": "GRAPHST_IMAGE_ID",
+    "packages": {
+      "python": "3.12.3",
+      "torch": "2.7.0a0+ecf3bae40a.nv25.02",
+      "numpy": "1.26.4",
+      "scipy": "1.11.4",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.5.2",
+      "scanpy": "1.11.4",
+      "anndata": "0.11.4",
+      "POT": "0.9.0",
+      "scikit-misc": "0.5.1",
+      "rpy2": "3.5.17",
+      "mclust": "6.1.1"
+    }
+  },
+  "aggregation": {
+    "order": ["algorithmic seeds within section", "two sections within donor", "three donor macro-average"],
+    "seed_role": "descriptive algorithmic repeats, not biological replicates",
+    "section_weighting": "equal within donor",
+    "donor_weighting": "equal",
+    "p_values": false
+  },
+  "validation_gates": {
+    "all_three_alignments_required": true,
+    "all_fifteen_training_runs_required": true,
+    "all_thirty_section_scores_required": true,
+    "all_fifteen_donor_scores_required": true,
+    "finite_outputs_required": true,
+    "complete_seed_set": [0, 1, 2, 3, 4],
+    "native_raw_mclust_must_have_requested_K": true,
+    "official_reconstructed_embedding_dimensions": 3000,
+    "common_evaluator_embedding_dimensions": 20,
+    "preflight_same_seed_repeat_must_be_bitwise_identical": true
+  },
+  "label_policy": "Package 4b never reads or uses manual cortical-layer identities/values during PASTE alignment, GraphST fitting, graph construction, label-free K selection, mclust, or spatial refinement; the labels enter Package 4b only during evaluation. The reused Package 4 foundation is nevertheless an inherited complete-case cohort restricted upstream to the 22,968 spots with nonmissing manual labels (113 of 23,081 spots excluded), so fitting is label-blind conditional on label availability rather than independent of it."
+}

@@ -1,0 +1,15 @@
+{
+  "policy_id": "pancreas_harmony_fixed10_descriptive_v3",
+  "status": "post_failure_fixed_budget_sensitivity_requested_by_user",
+  "preserve_prior_failure_evidence": true,
+  "canonical_order": ["Baron", "Muraro", "Segerstolpe", "Wang", "Xin"],
+  "pinned_harmonypy": "0.0.10",
+  "max_iter_harmony": 10,
+  "max_iter_kmeans": 20,
+  "epsilon_harmony": 0.0001,
+  "epsilon_cluster": 0.00001,
+  "completion_rule": "Run exactly ten outer Harmony iterations. Do not use the harmonypy 0.0.10 signed early-stop test and do not claim numerical convergence.",
+  "reason": "Both strict v1 and objective-only v2 convergence attempts failed. Ten iterations matches the historical/default Harmony budget and supplies a reproducible descriptive sensitivity comparison without tuning to labels or scores.",
+  "downstream_policy": "Require two fresh processes to produce bitwise-identical embeddings and diagnostics before the unchanged five-seed GenoRefine and frozen evaluation workflow.",
+  "reporting": "Label every resulting main-table use as fixed-10 descriptive sensitivity, not a convergence-verified primary Harmony result."
+}

@@ -1,0 +1,24 @@
+{
+  "protocol_id": "inductive_validation_v1",
+  "dataset": "hpcb",
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "source_h5ad": "HPCBDataset/Dataset/human_pancreas_norm_complexBatch.h5ad",
+  "split": {
+    "rule": "sha256(cell_id|20260920) modulo 5 equals zero within every technology batch",
+    "fraction": 0.2,
+    "seed": 20260920,
+    "label_use": "none"
+  },
+  "upstream": {
+    "feature_selection": "top 2000 training-cell variances; canonical feature-index tie break",
+    "scaling": "training mean and standard deviation",
+    "pca_components": 100,
+    "pca_solver": "randomized",
+    "pca_seed": 20260920,
+    "integration": "training-derived technology centering in PCA space"
+  },
+  "evaluation_config": "revision_pipeline/configs/evaluation_primary_v1.json",
+  "evaluation_sha256": "142e6c0b56d6c3f2bba6b604a81150a718ce13b034e0e38a564dcfa173d2e567",
+  "replicate_seeds": [0, 1, 2, 3, 4],
+  "claim_boundary": "Fully held-out-cell transfer for the specified PCA-plus-batch-centering upstream; not held-out Scanorama and not held-out-cohort generalization"
+}

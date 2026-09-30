@@ -1,0 +1,75 @@
+{
+  "protocol_id": "independent_marker_foundation_v1",
+  "source_lock_config": "revision_pipeline/configs/external_marker_sources_v1.json",
+  "source_directory": "revision_pipeline/data/external/marker_sources_v1",
+  "store_run": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "minimum_exact_marker_genes": 5,
+  "minimum_reference_cells": 10,
+  "normalization": {
+    "method": "library_size_log1p",
+    "target_sum": 10000.0,
+    "score_method": "zscore_mean",
+    "arithmetic": "float64_sparse"
+  },
+  "datasets": [
+    {
+      "id": "hpcb",
+      "expression_path": "HPCBDataset/Dataset/human_pancreas_norm_complexBatch.h5ad",
+      "expression_source": "layers[counts]",
+      "reference_label_key": "celltype",
+      "external_source_id": "panglaodb_markers_2020_03_27",
+      "label_policy": {
+        "pool": {
+          "activated_stellate": "stellate",
+          "quiescent_stellate": "stellate"
+        },
+        "rename": {
+          "t_cell": "T cell"
+        },
+        "retained_as_nonendpoint": [
+          "schwann"
+        ]
+      },
+      "external_crosswalk": {
+        "T cell": ["T cells"],
+        "acinar": ["Acinar cells"],
+        "alpha": ["Alpha cells"],
+        "beta": ["Beta cells"],
+        "delta": ["Delta cells"],
+        "ductal": ["Ductal cells"],
+        "endothelial": ["Endothelial cells"],
+        "epsilon": ["Epsilon cells"],
+        "gamma": ["Gamma (PP) cells"],
+        "macrophage": ["Macrophages"],
+        "mast": ["Mast cells"],
+        "stellate": ["Fibroblasts"]
+      }
+    },
+    {
+      "id": "mouse_senis",
+      "expression_path": "MouseDataset/Dataset/tabula-muris_sub50k_combined.h5ad",
+      "expression_source": "raw.X",
+      "reference_label_key": "official_source_join[cell_ontology_class]",
+      "external_source_id": "cellmarker_2_bulk_retrieved_2026_09_29",
+      "ontology_source_id": "cell_ontology_2022_09_15",
+      "official_sources": {
+        "droplet": "MouseDataset/Dataset/tabula-muris-droplet.h5ad",
+        "facs": "MouseDataset/Dataset/tabula-muris-facs.h5ad"
+      },
+      "external_filter": {
+        "species": "Mouse",
+        "cancer_type": "Normal",
+        "maximum_publication_year": 2016,
+        "ontology_resolution": "exact_nonobsolete_CL_name",
+        "deduplication": "CL_ID_and_GeneID",
+        "conflicting_symbol_policy": "exclude_pair"
+      },
+      "local_cell_ontology_id_policy": "audit_and_reject_as_authoritative"
+    }
+  ],
+  "selection_boundary": {
+    "result_independent": true,
+    "evaluated_embedding_or_score_used": false,
+    "reference_labels_used_only_for_fixed_crosswalk_and_evaluation_eligibility": true
+  }
+}

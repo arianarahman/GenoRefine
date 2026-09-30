@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "run_id": "20260929-spatial-panel-v1-full-panel",
+  "kind": "spatial_multisection_panel",
+  "status": "succeeded",
+  "created_at_utc": "2026-09-30T09:55:03.566530+00:00",
+  "config_sha256": "d96c05849e811dfd32faebaffa4cfff685875bce446071bea9920642240946c8",
+  "wall_seconds": 2.8628138659996694,
+  "peak_memory_bytes": null,
+  "peak_memory_status": "not_measured",
+  "scientific_experiment": true,
+  "started_at_utc": "2026-09-30T09:55:03.568321+00:00",
+  "source_tree_sha256": "bb0f67f14ca3a460a9f708a920c2b64aa44f526994737d84b6e427b46f387b4f",
+  "experiment_role": "complete_multi_section_spatial_panel",
+  "training_performed": false,
+  "scoring_performed": false,
+  "finished_at_utc": "2026-09-30T09:55:06.431109+00:00",
+  "artifacts": {
+    "completion.json": {
+      "sha256": "aa36380af4faba3d90330b6f7eaa1d339abf18a92f58d3d04c2bc8601d39b9d8",
+      "size_bytes": 386
+    },
+    "config.json": {
+      "sha256": "e086bc58edd6aef6397e9af23dc860ba30ab50c8c0204e8662300d096b556f0f",
+      "size_bytes": 17992
+    },
+    "donor_mixing_summary.json": {
+      "sha256": "6c18ffe6dd204ecce48ad3172040d2970294f46ce0c4bfb34ac3cfe04a26f61b",
+      "size_bytes": 5899
+    },
+    "donor_seed_rows.json": {
+      "sha256": "1704564cdc3e3217cbf10f9186407e475b4e95fecc43eab9eb52c1f4e751d645",
+      "size_bytes": 12806
+    },
+    "report.md": {
+      "sha256": "7c1c4275d2023d21a814640b5127a213225c8cad20bd761d39887c0587085b9e",
+      "size_bytes": 1232
+    },
+    "section_seed_rows.csv": {
+      "sha256": "cea93f1d7572564b707c86d9fd9dc13ec97f83507c20b77319fc1b537356463c",
+      "size_bytes": 13612
+    },
+    "section_seed_rows.json": {
+      "sha256": "756baca16c2b7f16f45794eedf7a8a7885ce88a12511493a0df26de1f131c0fa",
+      "size_bytes": 133291
+    },
+    "section_summary.json": {
+      "sha256": "b6c14ac554c862d46c8f95c137b0ceb52708c78912e5419f2aad47bf3fca280f",
+      "size_bytes": 63102
+    },
+    "source_manifest.json": {
+      "sha256": "443d83c40ecaeb32ad6d202080ae5ff83b35d4db3ac5604823f935c430973145",
+      "size_bytes": 80346
+    }
+  }
+}

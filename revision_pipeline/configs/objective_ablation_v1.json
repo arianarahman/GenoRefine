@@ -1,0 +1,26 @@
+{
+  "protocol_id": "objective_ablation_v1",
+  "role": "reviewer_requested_loss_objective_ablation",
+  "dataset": "hpcb",
+  "embedding": "Scanorama",
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "input_shape": [16382, 100],
+  "replicate_seeds": [0, 1, 2, 3, 4],
+  "n_clusters": 14,
+  "variants": {
+    "cluster_weight_0p01": {"reconstruction_weight": 1.0, "clustering_weight": 0.01},
+    "cluster_weight_1p0": {"reconstruction_weight": 1.0, "clustering_weight": 1.0},
+    "no_reconstruction": {"reconstruction_weight": 0.0, "clustering_weight": 0.1}
+  },
+  "source_pretraining_runs": {
+    "0": "revision_pipeline/runs/20260917T181031Z-f7e46860148e-seed_0_initial",
+    "1": "revision_pipeline/runs/20260917T181031Z-f7e46860148e-seed_1_panel",
+    "2": "revision_pipeline/runs/20260917T181031Z-f7e46860148e-seed_2_panel",
+    "3": "revision_pipeline/runs/20260917T181031Z-f7e46860148e-seed_3_panel",
+    "4": "revision_pipeline/runs/20260917T181031Z-f7e46860148e-seed_4_panel"
+  },
+  "evaluation_config": "revision_pipeline/configs/evaluation_primary_v1.json",
+  "boundary": "Identical seed-specific Step 4A pretrained weights, layout, cells, order, K, fresh Adam, 512 updates",
+  "selection": "Weights 0.01 and 1.0 were requested before outcomes; 0.1 is the original branch. No-reconstruction is a DEC-style continuation after identical autoencoder pretraining.",
+  "inference": "descriptive_five_algorithmic_seeds_no_variant_selection"
+}

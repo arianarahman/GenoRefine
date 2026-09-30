@@ -1,0 +1,11 @@
+# WSL/Linux Python 3.12. Minimal staged-refiner runtime, not the integration stack.
+# Observed core versions; validate by smoke tests before freezing all dependencies.
+numpy==1.26.4
+scipy==1.13.1
+scikit-learn==1.5.2
+POT==0.9.6.post1
+tensorflow==2.16.2
+keras==3.14.0
+h5py==3.16.0
+ml-dtypes==0.3.2
+protobuf==4.25.9

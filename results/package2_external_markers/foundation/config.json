@@ -1,0 +1,29 @@
+{
+  "schema": "genorefine.independent_marker_foundation.v1",
+  "protocol": {
+    "path": "revision_pipeline/configs/independent_marker_foundation_v1.json",
+    "fingerprint": {
+      "sha256": "dfaf39b0a93e10ceb97aadddc01bfb5b37109b1cfef1d6ad7f9e1e2541560220",
+      "size_bytes": 2641
+    }
+  },
+  "external_source_lock": {
+    "path": "revision_pipeline/configs/external_marker_sources_v1.json",
+    "fingerprint": {
+      "sha256": "1462dba27230688e7983011d71532d175d6257ed6b581cc969b5a76da3a6a476",
+      "size_bytes": 2005
+    }
+  },
+  "store": {
+    "path": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+    "manifest": {
+      "sha256": "64c972e2404c5bfe9824c3af03cbd6238e219795ccf0dd6dcc6958aa1c58ddf5",
+      "size_bytes": 19716
+    }
+  },
+  "selection_boundary": {
+    "result_independent": true,
+    "evaluated_embedding_or_score_used": false,
+    "reference_labels_used_only_for_fixed_crosswalk_and_evaluation_eligibility": true
+  }
+}

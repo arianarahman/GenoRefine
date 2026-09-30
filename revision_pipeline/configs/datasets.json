@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    {
+      "id": "pancreas_five_study",
+      "display_name": "Five-study pancreas",
+      "cohort_group": "pancreas_shared_studies_pending_cell_overlap",
+      "provenance_status": "pending",
+      "observed_cells": 14767,
+      "batch_evaluation": true,
+      "spatial_evaluation": false,
+      "inputs": [
+        {"path": "PancreasDataset/Dataset/dataBaronX.mat", "role": "expression_Baron"},
+        {"path": "PancreasDataset/Dataset/dataMuraroX.mat", "role": "expression_Muraro"},
+        {"path": "PancreasDataset/Dataset/dataScapleX.mat", "role": "expression_Segerstolpe_token_to_verify"},
+        {"path": "PancreasDataset/Dataset/dataWangX.mat", "role": "expression_Wang"},
+        {"path": "PancreasDataset/Dataset/dataXinX.mat", "role": "expression_Xin"},
+        {"path": "PancreasDataset/Dataset/classLabel.mat", "role": "labels_in_concatenation_order"}
+      ],
+      "notes": [
+        "Cell count observed in prior MAT metadata audit, not revalidated by the foundation audit.",
+        "Original gene identities, feature selection, accessions and stable cell IDs need verification.",
+        "MAT classLabel includes code 15, absent from the legacy script's 1–14 name map. Preserve numeric codes; block biological names until the mapping is verified.",
+        "HP-CB shares contributing studies; do not treat these as independent biological replications."
+      ]
+    },
+    {
+      "id": "hpcb",
+      "display_name": "HP-CB pancreas",
+      "cohort_group": "pancreas_shared_studies_pending_cell_overlap",
+      "provenance_status": "pending",
+      "observed_cells": 16382,
+      "batch_evaluation": true,
+      "spatial_evaluation": false,
+      "inputs": [
+        {"path": "HPCBDataset/Dataset/human_pancreas_norm_complexBatch.h5ad", "role": "expression_and_annotations"}
+      ],
+      "notes": [
+        "Composition is consistent with the scIB pancreas collection; confirm download/accession chain.",
+        "Study-level overlap is supported; exact shared-cell percentage is not yet established.",
+        "Published labels alone do not establish an independent marker-validation panel."
+      ]
+    },
+    {
+      "id": "mouse_senis",
+      "display_name": "Mouse Tabula Muris Senis subset",
+      "cohort_group": "mouse_senis",
+      "provenance_status": "pending",
+      "observed_cells": 50000,
+      "batch_evaluation": true,
+      "spatial_evaluation": false,
+      "inputs": [
+        {"path": "MouseDataset/Dataset/tabula-muris_sub50k_combined.h5ad", "role": "expression_and_annotations"}
+      ],
+      "notes": [
+        "Observed age range supports Senis, not the original 2018 atlas; verify source and subsampling.",
+        "Droplet/FACS is confounded with other biological/technical attributes; retain donor metadata.",
+        "A historical removed-cells file conflicts with complete final IDs; numeric/lineage checks remain."
+      ]
+    },
+    {
+      "id": "pbmc_control",
+      "display_name": "Single-batch PBMC control",
+      "cohort_group": "pbmc_control_source_pending",
+      "provenance_status": "pending",
+      "observed_cells": 6548,
+      "batch_evaluation": false,
+      "spatial_evaluation": false,
+      "inputs": [
+        {"path": "PBMCSingeBatchDataset/Dataset/pbmcs_ctrl_labeled.h5ad", "role": "expression_and_annotations"}
+      ],
+      "notes": [
+        "Current H5AD labels differ from exported metadata; trace annotation-generation history.",
+        "The stored celltype annotation groups 10 Leiden clusters into seven categories; use grouped Leiden-derived partition agreement, not independent ground truth.",
+        "External feedback reports four swapped names, but the authoritative correction is unresolved. Step 3A blocks named biological outputs instead of silently relabeling.",
+        "Sensitivity code uses PCA when only one batch exists; an X_scanorama key is not evidence of integration.",
+        "Batch-mixing metrics are inapplicable; marker circularity must be audited before validation."
+      ]
+    }
+  ],
+  "excluded_inputs": [
+    {"path": "PancreasDataset/Dataset/dataBaronX.csv", "reason": "Ambiguous duplicate CSV family; use verified MAT loading route pending provenance."},
+    {"path": "PancreasDataset/Dataset/dataScapleX.csv", "reason": "Full-file hash duplicates dataBaronX.csv despite different study name."},
+    {"path": "PancreasDataset/Dataset/dataXin.csv", "reason": "Full-file hash duplicates dataBaronX.csv despite different study name."},
+    {"path": "PancreasDataset/Dataset/dataMuraroX.csv", "reason": "Ambiguous duplicate CSV family; use verified MAT loading route pending provenance."},
+    {"path": "PancreasDataset/Dataset/dataWang.csv", "reason": "Full-file hash duplicates dataMuraroX.csv despite different study name."}
+  ]
+}

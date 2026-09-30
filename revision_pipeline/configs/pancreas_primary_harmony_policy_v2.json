@@ -1,0 +1,18 @@
+{
+  "policy_id": "pancreas_harmony_convergence_v2",
+  "status": "post_failure_objective_only_amendment_requested_by_user",
+  "supersedes_for_new_extension": "pancreas_harmony_convergence_v1",
+  "preserve_v1_failure_evidence": true,
+  "canonical_order": ["Baron", "Muraro", "Segerstolpe", "Wang", "Xin"],
+  "pinned_harmonypy": "0.0.10",
+  "max_iter_harmony": 200,
+  "max_iter_kmeans": 20,
+  "epsilon_harmony": 0.0001,
+  "epsilon_cluster": 0.00001,
+  "period2_comparisons": 6,
+  "acceptance": "Accept the first outer iteration at which either the absolute adjacent relative objective change is below epsilon_harmony, or each of the final six two-step relative objective changes is below epsilon_harmony. All objectives must be finite and denominators nonzero.",
+  "implementation_reason": "harmonypy 0.0.10 uses a signed adjacent change and therefore stopped the v1 runs on an objective increase. A diagnostic continuation showed a shrinking period-two objective oscillation. The v2 rule recognizes objective-only stabilization without consulting annotations or evaluation metrics.",
+  "phase_selection": "Use the deterministic terminal embedding from the first iteration satisfying the declared gate; no downstream-score selection.",
+  "on_failure": "If neither objective-only criterion passes by 200 iterations, retain and label the output nonconverged and do not train GenoRefine.",
+  "downstream_policy": "Require two fresh processes to produce bitwise-identical embeddings and diagnostics before baseline scoring; then run all five predeclared GenoRefine seeds and the unchanged frozen evaluator."
+}

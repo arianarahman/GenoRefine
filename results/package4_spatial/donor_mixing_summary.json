@@ -1,0 +1,207 @@
+{
+  "harmony_fixed": {
+    "donors": {
+      "Br5292": {
+        "iLISI": {
+          "value": 0.8872461318969727,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "D_batch": {
+          "value": 1.9658094222288605,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "Br5595": {
+        "iLISI": {
+          "value": 0.9011106491088867,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "D_batch": {
+          "value": 1.9755581756803513,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "Br8100": {
+        "iLISI": {
+          "value": 0.7994074821472168,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "D_batch": {
+          "value": 1.8555266412378024,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      }
+    },
+    "macro": {
+      "iLISI": {
+        "mean": 0.862588087717692,
+        "donor_values": {
+          "Br5292": 0.8872461318969727,
+          "Br5595": 0.9011106491088867,
+          "Br8100": 0.7994074821472168
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "equal macro-average over three donors"
+      },
+      "D_batch": {
+        "mean": 1.9322980797156715,
+        "donor_values": {
+          "Br5292": 1.9658094222288605,
+          "Br5595": 1.9755581756803513,
+          "Br8100": 1.8555266412378024
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "equal macro-average over three donors"
+      }
+    },
+    "role": "primary"
+  },
+  "genorefine": {
+    "donors": {
+      "Br5292": {
+        "iLISI": {
+          "mean": 0.8907400369644165,
+          "sd": 0.00255229912407735,
+          "minimum": 0.8869132995605469,
+          "maximum": 0.8931467533111572,
+          "n_algorithmic_seeds": 5
+        },
+        "D_batch": {
+          "mean": 1.972084100575132,
+          "sd": 0.000917226207630827,
+          "minimum": 1.9708734477306797,
+          "maximum": 1.9734202021680705,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br5595": {
+        "iLISI": {
+          "mean": 0.8972831249237061,
+          "sd": 0.0023565752061672383,
+          "minimum": 0.8934516906738281,
+          "maximum": 0.8990905284881592,
+          "n_algorithmic_seeds": 5
+        },
+        "D_batch": {
+          "mean": 1.9785782065094444,
+          "sd": 0.0009675524682784431,
+          "minimum": 1.9771485951318306,
+          "maximum": 1.9796858915945856,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br8100": {
+        "iLISI": {
+          "mean": 0.8463865518569946,
+          "sd": 0.005768844635388171,
+          "minimum": 0.8403134346008301,
+          "maximum": 0.8547191619873047,
+          "n_algorithmic_seeds": 5
+        },
+        "D_batch": {
+          "mean": 1.8925066310514602,
+          "sd": 0.0072633621855897985,
+          "minimum": 1.882723798520705,
+          "maximum": 1.9008531890420206,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "macro": {
+      "iLISI": {
+        "mean": 0.8781365712483724,
+        "sd": 0.002658996721994614,
+        "minimum": 0.8755359649658203,
+        "maximum": 0.8821709950764974,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "equal macro-average over three donors"
+      },
+      "D_batch": {
+        "mean": 1.9477229793786788,
+        "sd": 0.002525147557787363,
+        "minimum": 1.9442963589409417,
+        "maximum": 1.9504559582652525,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "equal macro-average over three donors"
+      }
+    },
+    "role": "primary"
+  },
+  "harmony_native_sensitivity": {
+    "donors": {
+      "Br5292": {
+        "iLISI": {
+          "value": 0.8884875774383545,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "D_batch": {
+          "value": 1.9676942262919126,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "Br5595": {
+        "iLISI": {
+          "value": 0.8964078426361084,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "D_batch": {
+          "value": 1.9696178929359427,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "Br8100": {
+        "iLISI": {
+          "value": 0.7909479141235352,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "D_batch": {
+          "value": 1.8475572952919053,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      }
+    },
+    "macro": {
+      "iLISI": {
+        "mean": 0.858614444732666,
+        "donor_values": {
+          "Br5292": 0.8884875774383545,
+          "Br5595": 0.8964078426361084,
+          "Br8100": 0.7909479141235352
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "equal macro-average over three donors"
+      },
+      "D_batch": {
+        "mean": 1.9282898048399202,
+        "donor_values": {
+          "Br5292": 1.9676942262919126,
+          "Br5595": 1.9696178929359427,
+          "Br8100": 1.8475572952919053
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "equal macro-average over three donors"
+      }
+    },
+    "role": "sensitivity_only"
+  }
+}

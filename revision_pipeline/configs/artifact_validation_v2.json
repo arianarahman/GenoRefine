@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "protocol_id": "artifact_validation_v2",
+  "role": "post_review_exploratory_real_embedding_artifact_correction_benchmark",
+  "preregistered": false,
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "store_manifest": {
+    "sha256": "64c972e2404c5bfe9824c3af03cbd6238e219795ccf0dd6dcc6958aa1c58ddf5",
+    "size_bytes": 19716
+  },
+  "main_benchmark_index": "revision_pipeline/runs/20260921T003801Z-c055558a1a7c/run_index.json",
+  "main_benchmark_index_fingerprint": {
+    "sha256": "cc8bffa0f19cd5cdeeaee2f54055a4c9d224a741c43cf9a36440b37e1abce30c",
+    "size_bytes": 5218
+  },
+  "datasets": ["pancreas_five_study", "hpcb", "mouse_senis"],
+  "backbones": ["Scanorama", "Harmony"],
+  "artifacts": [
+    {
+      "id": "batch_simplex",
+      "implementation": "batch_regular_simplex_translation_v2",
+      "strength": 1.0,
+      "scale_k_nonself": 15
+    },
+    {
+      "id": "target_local_warp",
+      "implementation": "target_local_nonlinear_batch_warp_v2",
+      "strength": 1.0,
+      "scale_k_same_class_nonself": 15
+    }
+  ],
+  "replicate_seeds": [0, 1, 2, 3, 4],
+  "working_memory_mb": 64,
+  "rare_fraction_max": 0.01,
+  "training_K_policy": {
+    "rule": "median_baseline_leiden_count",
+    "resolution": 0.5,
+    "leiden_seeds": [0, 1, 2],
+    "reference_labels_used": false,
+    "recompute_for_each": ["dataset", "backbone", "artifact"],
+    "preparation_status": "metadata_only_not_computed_until_training_binding"
+  },
+  "cases": [
+    {
+      "id": "pan_scanorama",
+      "dataset": "pancreas_five_study",
+      "display_dataset": "Pancreas",
+      "backbone": "Scanorama",
+      "target_label": "3",
+      "target_label_status": "raw_supplied_MAT_class_code_not_a_verified_biological_name",
+      "shape": [14767, 100],
+      "case_run": "revision_pipeline/runs/20260918T173250Z-e18ad182446b",
+      "case_manifest": {"sha256": "6ffc1d13f069a5d7876d9c323bd5dc245177882e3a3776d089303a4e3136ce01", "size_bytes": 1977},
+      "parent_reference": {
+        "dataset_fingerprint": "f4fde579ed7ffcc8ccbf4d018f34f24846f7c0b293ca7ad04c547e9bfbc2dd1f",
+        "embedding_id": "Scanorama",
+        "stored_values_file_sha256": "4f13b2ba9b1160a1afe82e9b9e2d6fb05ca3e0fd5b2df85338e718a2f9a3edc6",
+        "selected_values_sha256": "0bf9bc0c70d9cbf7868f92d9fe962d9770e4f8e8d639383827f4588cbcde155e",
+        "cell_order_sha256": "2a8503e6d75b7709f5304fab03bd6a087ee8805f30882303d13cf5ac18d01491",
+        "shape": [14767, 100]
+      }
+    },
+    {
+      "id": "pan_harmony",
+      "dataset": "pancreas_five_study",
+      "display_dataset": "Pancreas",
+      "backbone": "Harmony",
+      "target_label": "3",
+      "target_label_status": "raw_supplied_MAT_class_code_not_a_verified_biological_name",
+      "shape": [14767, 50],
+      "store": "revision_pipeline/runs/20260921T001000Z-pan-harmony-fixed10-build0",
+      "store_manifest": {"sha256": "be8a838ae4d26adc79a2a3f093915a2ec40f4576ccb30c8d4cdffbf1c6098aba", "size_bytes": 18532},
+      "case_run": "revision_pipeline/runs/20260921T010000Z-pan-harmony-fixed10-final",
+      "case_manifest": {"sha256": "85f252969ff12bb5887913e549c01e9410fae84a8abe3a2b976cff6239a259bc", "size_bytes": 1944},
+      "parent_reference": {
+        "dataset_fingerprint": "f4fde579ed7ffcc8ccbf4d018f34f24846f7c0b293ca7ad04c547e9bfbc2dd1f",
+        "embedding_id": "Harmony",
+        "stored_values_file_sha256": "77ba23b6bfe0c05d20515fdc3ec9faa213aae1204e5da2a3549042b1334457eb",
+        "selected_values_sha256": "6c9fce7bd647c4b3d72358140c7a1745d456b0981ba91706793d7bc9e54b3fc5",
+        "cell_order_sha256": "2a8503e6d75b7709f5304fab03bd6a087ee8805f30882303d13cf5ac18d01491",
+        "shape": [14767, 50]
+      }
+    },
+    {
+      "id": "hp_scanorama",
+      "dataset": "hpcb",
+      "display_dataset": "HP-CB",
+      "backbone": "Scanorama",
+      "target_label": "alpha",
+      "target_label_status": "supplied_annotation_name_provenance_pending",
+      "shape": [16382, 100],
+      "case_run": "revision_pipeline/runs/20260917T205442Z-9126614c7423",
+      "case_manifest": {"sha256": "a874466610f3dc38a2067d88f94a29e85c239cbbdcfed4ecd16d56403e25a75b", "size_bytes": 1283},
+      "parent_reference": {
+        "dataset_fingerprint": "28a54a029f37ab3411149ba1410c37e94c78820d8afc9624842ad552d0f3e17d",
+        "embedding_id": "Scanorama",
+        "stored_values_file_sha256": "f24189b2f75f16785d8a4335cfdbbdbd44643078beec75c9a3e0817fc7ca8767",
+        "selected_values_sha256": "a4177ee7d74fb6ca5f68eef593e27845a9defe92f370ac2bc26511234658a235",
+        "cell_order_sha256": "8fab26b1eb83df039bbfef2a2af0c236f891dbab93961654fc11306a1ef2f508",
+        "shape": [16382, 100]
+      }
+    },
+    {
+      "id": "hp_harmony",
+      "dataset": "hpcb",
+      "display_dataset": "HP-CB",
+      "backbone": "Harmony",
+      "target_label": "alpha",
+      "target_label_status": "supplied_annotation_name_provenance_pending",
+      "shape": [16382, 50],
+      "case_run": "revision_pipeline/runs/20260918T080920Z-79dd3dd1533a",
+      "case_manifest": {"sha256": "fdef49650c4d6e65d51cc2ad6a515e3a2724fbd39fb43955fd97fb3ccc3743de", "size_bytes": 1823},
+      "parent_reference": {
+        "dataset_fingerprint": "28a54a029f37ab3411149ba1410c37e94c78820d8afc9624842ad552d0f3e17d",
+        "embedding_id": "Harmony",
+        "stored_values_file_sha256": "8f6637c018c9a25eedcd1f7cda250e4114c055755ffa4fbf3b337f14e779e19f",
+        "selected_values_sha256": "1408e0717983c7b399b6e9dca18aa8f83c189b07fd2074d56684159956abd21e",
+        "cell_order_sha256": "8fab26b1eb83df039bbfef2a2af0c236f891dbab93961654fc11306a1ef2f508",
+        "shape": [16382, 50]
+      }
+    },
+    {
+      "id": "mouse_scanorama",
+      "dataset": "mouse_senis",
+      "display_dataset": "Mouse",
+      "backbone": "Scanorama",
+      "target_label": "B cell",
+      "target_label_status": "supplied_annotation_name_official_source_join_available_provenance_conditioned_on_subset",
+      "shape": [50000, 100],
+      "case_run": "revision_pipeline/runs/20260919T134701Z-2caa77e4e312",
+      "case_manifest": {"sha256": "8bdae46b5551f244bc71fd61d91de492a0d934257e65d1800eeb3d7d4d159fd0", "size_bytes": 1822},
+      "parent_reference": {
+        "dataset_fingerprint": "a4b26962bc5caf315ca826cb2aef46e8958952deeb64434f0ff48f5794fb3d93",
+        "embedding_id": "Scanorama",
+        "stored_values_file_sha256": "f9cdfb1cf042abd285aea9b95bd63e1b06b97a5945086b5bf5e7c88e61587071",
+        "selected_values_sha256": "26fa9d77122d274caa58d0a9b9431586bd5536e234932587c564c9c1e4fd56c0",
+        "cell_order_sha256": "756d5388a6360586460b2aa673ecef6de70418377df2579bfd93a2067f6d0175",
+        "shape": [50000, 100]
+      }
+    },
+    {
+      "id": "mouse_harmony",
+      "dataset": "mouse_senis",
+      "display_dataset": "Mouse",
+      "backbone": "Harmony",
+      "target_label": "B cell",
+      "target_label_status": "supplied_annotation_name_official_source_join_available_provenance_conditioned_on_subset",
+      "shape": [50000, 50],
+      "case_run": "revision_pipeline/runs/20260920T065519Z-c0a9a894c60f",
+      "case_manifest": {"sha256": "3c470dc60de05932b80240d5d05bc68c79aff2062b6036c1910493b295354994", "size_bytes": 1781},
+      "parent_reference": {
+        "dataset_fingerprint": "a4b26962bc5caf315ca826cb2aef46e8958952deeb64434f0ff48f5794fb3d93",
+        "embedding_id": "Harmony",
+        "stored_values_file_sha256": "9be56b1565a2bff74dbeec04342b208667e1d17eef7791a283a174801dbb11fa",
+        "selected_values_sha256": "8fe6807ff642ce0dc275c9cad948f486bae190516c13a21ec45c98e1c3134c3d",
+        "cell_order_sha256": "756d5388a6360586460b2aa673ecef6de70418377df2579bfd93a2067f6d0175",
+        "shape": [50000, 50]
+      }
+    }
+  ],
+  "failure_policy": "preserve_failed_run_stop_no_parameter_or_seed_substitution",
+  "claim_boundary": "controlled_artifact_correction_on_existing_real_embeddings_not_external_cohort_or_general_biological_validation"
+}

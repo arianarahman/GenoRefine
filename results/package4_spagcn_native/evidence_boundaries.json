@@ -1,0 +1,10 @@
+{
+  "label_policy": {
+    "cohort_freeze": "Layer-label availability defined the frozen evaluation cohort: 22,968 labeled spots were retained and 113 spots without a manual cortical-layer identity were excluded and recorded.",
+    "fitting_and_selection": "Cortical-layer identity values were withheld from preprocessing, Harmony, K selection, GenoRefine fitting, SpaGCN fitting, common graph construction, and all model selection.",
+    "evaluation": "Manual cortical-layer identities were introduced only after fitting and graph construction to calculate evaluation endpoints."
+  },
+  "fixed_resolution_cluster_granularity": "The common-evaluator ARI and NMI use Leiden resolution 0.5 and three Leiden seeds for every continuous representation, but the resulting number of clusters may differ by method and section. Those endpoints therefore reflect both representation geometry and fixed-resolution partition granularity. SpaGCN predicted and hex-refined partitions are reported separately as task-native secondary endpoints and are not interchangeable with the common-evaluator partitions.",
+  "spatial_preservation": "Spatial kNN Jaccard at k=6 and physical distance among latent neighbors quantify local spatial continuity. They do not test cortical-layer boundary fidelity, histological boundary agreement, trajectory preservation, or general spatial performance beyond these six frozen sections.",
+  "spagcn_mixing": "SpaGCN was fitted independently within each section, so donor-pair cross-section iLISI and D_batch are not defined for this comparator."
+}

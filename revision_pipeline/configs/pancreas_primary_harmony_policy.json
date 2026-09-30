@@ -1,0 +1,14 @@
+{
+  "policy_id": "pancreas_harmony_convergence_v1",
+  "status": "prospective_policy_only_no_recomputation_authorized_here",
+  "preserve_historical_10_iteration_embedding": true,
+  "canonical_order": ["Baron", "Muraro", "Segerstolpe", "Wang", "Xin"],
+  "pinned_harmonypy": "0.0.10",
+  "max_iter_harmony": 50,
+  "max_iter_kmeans": 20,
+  "epsilon_harmony": 0.0001,
+  "epsilon_cluster": 0.00001,
+  "other_settings": "Retain explicit Step 3A preprocessing and Harmony parameters; apply the same rule to all membership conditions and replicates.",
+  "acceptance": "Final two outer objectives finite with nonzero previous objective, and absolute relative change < epsilon_harmony. Record signed change and native stop reason separately: the native 0.0.10 rule also accepts objective increases.",
+  "on_failure": "Retain and label nonconverged output; exclude from primary paired conclusions, report missingness/failure count, and do not increase the iteration cap or tune parameters based on ARI. Any later amendment applies consistently before rerunning all affected conditions."
+}

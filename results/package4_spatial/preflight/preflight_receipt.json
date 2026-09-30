@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "panel": "20260929-spatial-panel-v1",
+  "preflight_date": "2026-09-30",
+  "current_frozen_source_tree_sha256": "4c61b60a8755122c8b5a13a49a61ca2dbbf4b1ab94d28d90b48c945de4c16304",
+  "previous_package4_preflight_source_tree_sha256": "2a17638ea192187473754ac10521bed9b9b1a7f46493d23c440bb380148e122a",
+  "source_transition_note": "The global project source hash advanced only because the completed Package 3 scorer recovery changed artifact-validation files. Package 4 was re-preflighted under the current hash before launch.",
+  "protocol": {
+    "path": "revision_pipeline/configs/spatial_multisection_panel_v1.json",
+    "sha256": "9a87e6919f75f79e710a1214fe3c27521abd22c1a12c8ffeb24142caf0980ead",
+    "size_bytes": 8037
+  },
+  "orchestrator": {
+    "path": "revision_pipeline/spatial_multisection/run_panel.ps1",
+    "sha256": "5c669645078386c0ed578066fa7628016f6da1a60bc00f2b772a21bd5954b1bf",
+    "size_bytes": 11487
+  },
+  "spatial_source_inventory": {
+    "files": 20,
+    "inventory_sha256": "1a78ea961e3992ee992421191324f910640b99d536d2ed7100bd5c416fd1269c"
+  },
+  "tests": {
+    "windows": "20 passed, 1 expected CUDA-only skip",
+    "authoritative_spagcn_gpu": "4 passed",
+    "plan_run_directories": 131
+  },
+  "images": {
+    "genorefine": "sha256:9f215e1ad258685d300d5162b70464363915020beca6d2584a799f60a51f2c8b",
+    "spagcn": "sha256:6eb8c07971d19ad54839f5cbb6fa7990ad15cec839d04e361797ee44778e79c6"
+  }
+}

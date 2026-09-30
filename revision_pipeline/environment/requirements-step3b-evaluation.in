@@ -1,0 +1,7 @@
+# Separate development/new-evaluation environment; not the historical regression env.
+# Keep the validated numerical/Leiden stack, add explicitly versioned metric APIs.
+-r requirements-step3b-historical.in
+scib-metrics==0.5.8
+jax==0.4.35
+jaxlib==0.4.35
+chex==0.1.87

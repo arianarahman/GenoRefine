@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "dataset": "pancreas_five_study",
+  "parent_store": {
+    "path": "revision_pipeline/runs/20260916T215448Z-25fabcba4343",
+    "manifest_fingerprint": {
+      "sha256": "b7d4c98086ee78fb56dfa97a3a6b2e351f7518abbf1220b70960ff78aa2a76c6",
+      "size_bytes": 16313
+    }
+  },
+  "feature_file": "PancreasDataset/Benchmark_Out/pancreas_hvg_canonical.txt",
+  "feature_md5_file": "PancreasDataset/Benchmark_Out/pancreas_hvg_canonical.md5",
+  "feature_manifest": "PancreasDataset/Benchmark_Out/pancreas_hvg_manifest.json",
+  "feature_source_pins": {
+    "PancreasDataset/Benchmark_Out/pancreas_hvg_canonical.txt": {
+      "sha256": "4eea234ca92fc0b545cb489a5d6a2935b1d624e1343fe02094c78688054500eb",
+      "size_bytes": 10890
+    },
+    "PancreasDataset/Benchmark_Out/pancreas_hvg_canonical.md5": {
+      "sha256": "12a57b09a37499927e8f23904520cc5aa98e6573b845f02c8d653da6421e4b14",
+      "size_bytes": 34
+    },
+    "PancreasDataset/Benchmark_Out/pancreas_hvg_manifest.json": {
+      "sha256": "0577b76568a0a2cfad1da8fc2f8a1a02f76f5f13f2fc28601a7571af7b0357d8",
+      "size_bytes": 5247
+    }
+  },
+  "expected_cells": 14767,
+  "expected_source_features": 2000,
+  "batch_order": [
+    "Baron",
+    "Muraro",
+    "Segerstolpe",
+    "Wang",
+    "Xin"
+  ],
+  "seed": 0,
+  "preprocessing": {
+    "normalize_target_sum": 10000,
+    "log1p_base": null,
+    "scale_zero_center": true,
+    "scale_max_value": 10,
+    "pca_components": 50,
+    "pca_zero_center": true,
+    "pca_solver": "arpack",
+    "pca_dtype": "float32",
+    "pca_use_highly_variable": false
+  },
+  "scanorama": {
+    "return_dimred": true,
+    "batch_size": 5000,
+    "verbose": 2,
+    "ds_names": null,
+    "dimred": 100,
+    "approx": true,
+    "sigma": 15,
+    "alpha": 0.1,
+    "knn": 20,
+    "return_dense": false,
+    "hvg": null,
+    "union": false,
+    "seed": 0
+  },
+  "harmony": {
+    "theta": null,
+    "lamb": null,
+    "sigma": 0.1,
+    "nclust": null,
+    "tau": 0,
+    "block_size": 0.05,
+    "max_iter_harmony": 10,
+    "max_iter_kmeans": 20,
+    "epsilon_cluster": 0.00001,
+    "epsilon_harmony": 0.0001,
+    "plot_convergence": false,
+    "verbose": true,
+    "reference_values": null,
+    "cluster_prior": null,
+    "random_state": 0,
+    "cluster_fn": "kmeans"
+  },
+  "scope": "Full-data transductive baseline recomputation; not historical recovery; no labels supplied to fitting."
+}

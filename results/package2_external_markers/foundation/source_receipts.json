@@ -1,0 +1,148 @@
+{
+  "external_sources": {
+    "panglaodb_markers_2020_03_27": {
+      "source_id": "panglaodb_markers_2020_03_27",
+      "url": "https://panglaodb.se/markers/PanglaoDB_markers_27_Mar_2020.tsv.gz",
+      "filename": "PanglaoDB_markers_27_Mar_2020.tsv.gz",
+      "size_bytes": 311558,
+      "sha256": "6779952ad40aa5a124de7bd0e18975c6630bd6006d6b3ef210a916caaa6b53c9",
+      "schema": {
+        "kind": "delimited",
+        "delimiter": "\t",
+        "required_columns": [
+          "species",
+          "official gene symbol",
+          "cell type",
+          "canonical marker"
+        ],
+        "exact_columns": [
+          "species",
+          "official gene symbol",
+          "cell type",
+          "nicknames",
+          "ubiquitousness index",
+          "product description",
+          "gene type",
+          "canonical marker",
+          "germ layer",
+          "organ",
+          "sensitivity_human",
+          "sensitivity_mouse",
+          "specificity_human",
+          "specificity_mouse"
+        ]
+      },
+      "schema_lock_sha256": "a2eaa0e544a8d6a0027add87fb5c8e0e131e7e7fc257d1599017d6d704447e0d",
+      "path": "<PROJECT_ROOT>/revision_pipeline/data/external/marker_sources_v1/PanglaoDB_markers_27_Mar_2020.tsv.gz",
+      "fingerprint": {
+        "sha256": "6779952ad40aa5a124de7bd0e18975c6630bd6006d6b3ef210a916caaa6b53c9",
+        "size_bytes": 311558
+      },
+      "observed_schema": {
+        "kind": "delimited",
+        "columns": [
+          "species",
+          "official gene symbol",
+          "cell type",
+          "nicknames",
+          "ubiquitousness index",
+          "product description",
+          "gene type",
+          "canonical marker",
+          "germ layer",
+          "organ",
+          "sensitivity_human",
+          "sensitivity_mouse",
+          "specificity_human",
+          "specificity_mouse"
+        ],
+        "columns_sha256": "330b2ea697a777649793f316e17a0a3a3728a7b1a3407de630b4b4af714951cc"
+      },
+      "verified": true
+    },
+    "cellmarker_2_bulk_retrieved_2026_09_29": {
+      "source_id": "cellmarker_2_bulk_retrieved_2026_09_29",
+      "url": "https://bio-bigdata.hrbmu.edu.cn/CellMarker2.0/CellMarker_download_files/file/Cell_marker_All.xlsx",
+      "filename": "Cell_marker_All.xlsx",
+      "size_bytes": 10010437,
+      "sha256": "8c03c3ddd47aff8cad04e67ba8493a3becb8f75c229afae4cd75f3f08264dae2",
+      "schema": {
+        "kind": "xlsx",
+        "sheet": "All",
+        "required_columns": [
+          "species",
+          "cancer_type",
+          "cell_name",
+          "cellontology_id",
+          "Symbol",
+          "GeneID",
+          "year"
+        ]
+      },
+      "schema_lock_sha256": "3676bae761751990af262ecd81b1d9938087f818d613ed03f650e653089d599f",
+      "path": "<PROJECT_ROOT>/revision_pipeline/data/external/marker_sources_v1/Cell_marker_All.xlsx",
+      "fingerprint": {
+        "sha256": "8c03c3ddd47aff8cad04e67ba8493a3becb8f75c229afae4cd75f3f08264dae2",
+        "size_bytes": 10010437
+      },
+      "observed_schema": {
+        "kind": "xlsx",
+        "sheet": "All",
+        "columns": [
+          "species",
+          "tissue_class",
+          "tissue_type",
+          "uberonongology_id",
+          "cancer_type",
+          "cell_type",
+          "cell_name",
+          "cellontology_id",
+          "marker",
+          "Symbol",
+          "GeneID",
+          "Genetype",
+          "Genename",
+          "UNIPROTID",
+          "technology_seq",
+          "marker_source",
+          "PMID",
+          "Title",
+          "journal",
+          "year"
+        ],
+        "columns_sha256": "3f24305af6858d9a1cc9ec2381c3ffb68eb9cc55e95453cbcf6a4d236bb1bb97"
+      },
+      "verified": true
+    },
+    "cell_ontology_2022_09_15": {
+      "source_id": "cell_ontology_2022_09_15",
+      "url": "https://purl.obolibrary.org/obo/cl/releases/2022-09-15/cl.obo",
+      "filename": "cl_2022-09-15.obo",
+      "size_bytes": 14609925,
+      "sha256": "2f678bde4f58048537db9a5de2333068e1cfe442a29925c9ef83b6da5c1b2620",
+      "schema": {
+        "kind": "obo",
+        "minimum_term_count": 16000
+      },
+      "schema_lock_sha256": "23528f51467ece2c4b86b57e3e6c25c537dc2ce3419026e4f2ed5a4d7a6984d1",
+      "path": "<PROJECT_ROOT>/revision_pipeline/data/external/marker_sources_v1/cl_2022-09-15.obo",
+      "fingerprint": {
+        "sha256": "2f678bde4f58048537db9a5de2333068e1cfe442a29925c9ef83b6da5c1b2620",
+        "size_bytes": 14609925
+      },
+      "observed_schema": {
+        "kind": "obo",
+        "term_count": 16862
+      },
+      "verified": true
+    }
+  },
+  "store_manifest": {
+    "sha256": "64c972e2404c5bfe9824c3af03cbd6238e219795ccf0dd6dcc6958aa1c58ddf5",
+    "size_bytes": 19716
+  },
+  "protocol": {
+    "sha256": "dfaf39b0a93e10ceb97aadddc01bfb5b37109b1cfef1d6ad7f9e1e2541560220",
+    "size_bytes": 2641
+  }
+}

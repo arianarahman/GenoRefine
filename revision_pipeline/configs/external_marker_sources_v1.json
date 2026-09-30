@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "panglaodb_markers_2020_03_27",
+      "url": "https://panglaodb.se/markers/PanglaoDB_markers_27_Mar_2020.tsv.gz",
+      "filename": "PanglaoDB_markers_27_Mar_2020.tsv.gz",
+      "size_bytes": 311558,
+      "sha256": "6779952ad40aa5a124de7bd0e18975c6630bd6006d6b3ef210a916caaa6b53c9",
+      "schema": {
+        "kind": "delimited",
+        "delimiter": "\t",
+        "required_columns": [
+          "species",
+          "official gene symbol",
+          "cell type",
+          "canonical marker"
+        ],
+        "exact_columns": [
+          "species",
+          "official gene symbol",
+          "cell type",
+          "nicknames",
+          "ubiquitousness index",
+          "product description",
+          "gene type",
+          "canonical marker",
+          "germ layer",
+          "organ",
+          "sensitivity_human",
+          "sensitivity_mouse",
+          "specificity_human",
+          "specificity_mouse"
+        ]
+      }
+    },
+    {
+      "source_id": "cellmarker_2_bulk_retrieved_2026_09_29",
+      "url": "https://bio-bigdata.hrbmu.edu.cn/CellMarker2.0/CellMarker_download_files/file/Cell_marker_All.xlsx",
+      "filename": "Cell_marker_All.xlsx",
+      "size_bytes": 10010437,
+      "sha256": "8c03c3ddd47aff8cad04e67ba8493a3becb8f75c229afae4cd75f3f08264dae2",
+      "schema": {
+        "kind": "xlsx",
+        "sheet": "All",
+        "required_columns": [
+          "species",
+          "cancer_type",
+          "cell_name",
+          "cellontology_id",
+          "Symbol",
+          "GeneID",
+          "year"
+        ]
+      }
+    },
+    {
+      "source_id": "cell_ontology_2022_09_15",
+      "url": "https://purl.obolibrary.org/obo/cl/releases/2022-09-15/cl.obo",
+      "filename": "cl_2022-09-15.obo",
+      "size_bytes": 14609925,
+      "sha256": "2f678bde4f58048537db9a5de2333068e1cfe442a29925c9ef83b6da5c1b2620",
+      "schema": {
+        "kind": "obo",
+        "minimum_term_count": 16000
+      }
+    }
+  ]
+}

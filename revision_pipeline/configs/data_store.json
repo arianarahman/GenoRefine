@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "registry": "revision_pipeline/configs/datasets.json",
+  "source_lock": "revision_pipeline/configs/step3a_source_lock.json",
+  "loaders": {
+    "pancreas_five_study": {
+      "format": "mat_parts",
+      "label_key": "class_code",
+      "batch_key": "batch",
+      "parts": [
+        {
+          "path": "PancreasDataset/Dataset/dataBaronX.mat",
+          "key": "dataBaron",
+          "batch": "Baron"
+        },
+        {
+          "path": "PancreasDataset/Dataset/dataMuraroX.mat",
+          "key": "dataMuraro",
+          "batch": "Muraro"
+        },
+        {
+          "path": "PancreasDataset/Dataset/dataScapleX.mat",
+          "key": "dataScaple",
+          "batch": "Segerstolpe"
+        },
+        {
+          "path": "PancreasDataset/Dataset/dataWangX.mat",
+          "key": "dataWang",
+          "batch": "Wang"
+        },
+        {
+          "path": "PancreasDataset/Dataset/dataXinX.mat",
+          "key": "dataXin",
+          "batch": "Xin"
+        }
+      ],
+      "label_path": "PancreasDataset/Dataset/classLabel.mat",
+      "label_variable": "classLabel",
+      "annotation_policy": {
+        "named_labels_allowed": false,
+        "partition_description": "Agreement with supplied MAT class codes; independent annotation provenance pending.",
+        "restriction_reason": "Original biological label mapping is unverified; old script names only 1–14, while code 15 is present."
+      }
+    },
+    "hpcb": {
+      "format": "h5ad",
+      "path": "HPCBDataset/Dataset/human_pancreas_norm_complexBatch.h5ad",
+      "label_key": "celltype",
+      "batch_key": "tech",
+      "annotation_policy": {
+        "named_labels_allowed": true,
+        "partition_description": "Agreement with supplied HP-CB celltype annotations; independence/provenance pending.",
+        "restriction_reason": "Do not claim independent marker validation or independence from the five-study pancreas cohort."
+      }
+    },
+    "mouse_senis": {
+      "format": "h5ad",
+      "path": "MouseDataset/Dataset/tabula-muris_sub50k_combined.h5ad",
+      "label_key": "cell_ontology_class",
+      "batch_key": "dataset",
+      "annotation_policy": {
+        "named_labels_allowed": true,
+        "partition_description": "Agreement with supplied Senis cell_ontology_class annotations; source/subsampling lineage pending.",
+        "restriction_reason": "Retain donor, tissue, age and method metadata; droplet/FACS are not unconfounded batch replicates."
+      }
+    },
+    "pbmc_control": {
+      "format": "h5ad",
+      "path": "PBMCSingeBatchDataset/Dataset/pbmcs_ctrl_labeled.h5ad",
+      "label_key": "celltype",
+      "batch_key": "batch",
+      "annotation_policy": {
+        "named_labels_allowed": false,
+        "partition_description": "Agreement with grouped Leiden-derived annotation, not independently established biological ground truth.",
+        "restriction_reason": "Reported four swapped names are unresolved, not corrected. Block named biological outputs until an authoritative annotation map is established."
+      }
+    }
+  },
+  "embeddings": [
+    {
+      "dataset": "hpcb",
+      "id": "Scanorama",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_Scanorama.csv",
+      "dimensions": 100,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "GenoDR_Scanorama",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_Scanorama.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "Scanorama",
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "Harmony",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_Harmony.csv",
+      "dimensions": 50,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "GenoDR_Harmony",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_Harmony.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "Harmony",
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "Seurat",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_Seurat.csv",
+      "dimensions": 50,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "GenoDR_Seurat",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_Seurat.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "Seurat",
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "Online_iNMF",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_Online_iNMF.csv",
+      "dimensions": 30,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "GenoDR_Online_iNMF",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_Online_iNMF.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "Online_iNMF",
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "DiffusionMap",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_DiffusionMap.csv",
+      "dimensions": 30,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "GenoDR_DiffusionMap",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_DiffusionMap.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "DiffusionMap",
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "PHATE",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_PHATE.csv",
+      "dimensions": 30,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "GenoDR_PHATE",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_PHATE.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "PHATE",
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "hpcb",
+      "id": "BBKNN",
+      "path": "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_BBKNN.csv",
+      "dimensions": 50,
+      "kind": "graph_proxy",
+      "claimed_baseline": null,
+      "source_set": "Apr-29 HP-CB saved set; exact bytes pinned"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "Scanorama",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_Scanorama.csv",
+      "dimensions": 100,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "GenoDR_Scanorama",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_Scanorama.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "Scanorama",
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "Harmony",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_Harmony.csv",
+      "dimensions": 50,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "GenoDR_Harmony",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_Harmony.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "Harmony",
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "Seurat",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_Seurat.csv",
+      "dimensions": 50,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "GenoDR_Seurat",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_Seurat.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "Seurat",
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "Online_iNMF",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_Online_iNMF.csv",
+      "dimensions": 30,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "GenoDR_Online_iNMF",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_Online_iNMF.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "Online_iNMF",
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "DiffusionMap",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_DiffusionMap.csv",
+      "dimensions": 30,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "GenoDR_DiffusionMap",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_DiffusionMap.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "DiffusionMap",
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "PHATE",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_PHATE.csv",
+      "dimensions": 30,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "GenoDR_PHATE",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_PHATE.csv",
+      "dimensions": 32,
+      "kind": "historical_refined",
+      "claimed_baseline": "PHATE",
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "mouse_senis",
+      "id": "BBKNN",
+      "path": "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_BBKNN.csv",
+      "dimensions": 50,
+      "kind": "graph_proxy",
+      "claimed_baseline": null,
+      "source_set": "Main mouse saved set; lineage pending"
+    },
+    {
+      "dataset": "pancreas_five_study",
+      "id": "Seurat",
+      "path": "PancreasDataset/Benchmark_Out/X_seurat_pancreas.csv",
+      "dimensions": 50,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Saved R backbone; input IDs explicit; preprocessing lineage pending"
+    },
+    {
+      "dataset": "pancreas_five_study",
+      "id": "Online_iNMF",
+      "path": "PancreasDataset/Benchmark_Out/X_online_inmf_pancreas.csv",
+      "dimensions": 30,
+      "kind": "baseline",
+      "claimed_baseline": null,
+      "source_set": "Saved R backbone; input IDs explicit; preprocessing lineage pending"
+    }
+  ],
+  "evidence_files": [
+    {
+      "dataset": "mouse_senis",
+      "path": "MouseDataset/Benchmark_Mouse_Out/X_online_inmf_mouse_removed_cells.txt",
+      "kind": "historical_removed_cells"
+    }
+  ],
+  "excluded_embedding_roots": [
+    {
+      "path": "HPCBDataset/Dataset/Benchmark_Hie_Out",
+      "reason": "Stale February HP-CB export, not the selected April main benchmark set."
+    }
+  ],
+  "not_imported": [
+    {
+      "dataset": "pancreas_five_study",
+      "items": [
+        "Scanorama",
+        "Harmony",
+        "DiffusionMap",
+        "PHATE",
+        "GenoDR outputs"
+      ],
+      "reason": "No matching saved main-benchmark embeddings registered; recomputation is later work."
+    },
+    {
+      "dataset": "pbmc_control",
+      "items": [
+        "Historical embedding outputs"
+      ],
+      "reason": "No outputs selected for Step 3A. Annotation names remain blocked."
+    }
+  ]
+}

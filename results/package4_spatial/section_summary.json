@@ -1,0 +1,1861 @@
+{
+  "harmony_fixed": {
+    "sections": {
+      "151507": {
+        "ARI": {
+          "mean": 0.14581286572572055,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "NMI": {
+          "mean": 0.21915132546142363,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.041266207893689476,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "reference_label_silhouette": {
+          "mean": -0.028523188084363937,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "label_neighbor_purity": {
+          "mean": 0.4110479349285319,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.010640879297595714,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2682.075340314547,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 19.12010766614681,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "151508": {
+        "ARI": {
+          "mean": 0.18584485290075062,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "NMI": {
+          "mean": 0.24417813057524962,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.04409379263718923,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "reference_label_silhouette": {
+          "mean": -0.01909109391272068,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "label_neighbor_purity": {
+          "mean": 0.43097466331887696,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.010985453715424042,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2692.102644475036,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 19.186776737219187,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "151669": {
+        "ARI": {
+          "mean": 0.15105188269871989,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "NMI": {
+          "mean": 0.2201365365922664,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.06831641495227814,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "reference_label_silhouette": {
+          "mean": -0.004876327235251665,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "label_neighbor_purity": {
+          "mean": 0.5726439310597726,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.010534386772010533,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2430.9175156276306,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 17.154110893284283,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "151670": {
+        "ARI": {
+          "mean": 0.17090871869184426,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "NMI": {
+          "mean": 0.18783031442058612,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.0743378500143687,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "reference_label_silhouette": {
+          "mean": -0.00709237577393651,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "label_neighbor_purity": {
+          "mean": 0.5972349789513968,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.009531886024423338,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2471.6807652356356,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 17.515460151908485,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "151673": {
+        "ARI": {
+          "mean": 0.13219596495965086,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "NMI": {
+          "mean": 0.22304244805035003,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.05381057287255923,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "reference_label_silhouette": {
+          "mean": -0.02216864936053753,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "label_neighbor_purity": {
+          "mean": 0.4368503646266039,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.012559267557882899,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2252.2878026020853,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 15.922485847885048,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      },
+      "151674": {
+        "ARI": {
+          "mean": 0.19492976267933712,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "NMI": {
+          "mean": 0.28551457992809376,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.04793900748093923,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "reference_label_silhouette": {
+          "mean": -0.024571942165493965,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "label_neighbor_purity": {
+          "mean": 0.4426868408986703,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.020819473969405197,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2088.443680475828,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 14.7276600541495,
+          "n_algorithmic_seeds": 0,
+          "deterministic_single_embedding": true
+        }
+      }
+    },
+    "donors": {
+      "Br5292": {
+        "ARI": {
+          "mean": 0.1658288593132356,
+          "section_values": {
+            "151507": 0.14581286572572055,
+            "151508": 0.18584485290075062
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "NMI": {
+          "mean": 0.23166472801833662,
+          "section_values": {
+            "151507": 0.21915132546142363,
+            "151508": 0.24417813057524962
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.042680000265439354,
+          "section_values": {
+            "151507": 0.041266207893689476,
+            "151508": 0.04409379263718923
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "reference_label_silhouette": {
+          "mean": -0.02380714099854231,
+          "section_values": {
+            "151507": -0.028523188084363937,
+            "151508": -0.01909109391272068
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "label_neighbor_purity": {
+          "mean": 0.42101129912370444,
+          "section_values": {
+            "151507": 0.4110479349285319,
+            "151508": 0.43097466331887696
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.010813166506509878,
+          "section_values": {
+            "151507": 0.010640879297595714,
+            "151508": 0.010985453715424042
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2687.0889923947916,
+          "section_values": {
+            "151507": 2682.075340314547,
+            "151508": 2692.102644475036
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 19.153442201683,
+          "section_values": {
+            "151507": 19.12010766614681,
+            "151508": 19.186776737219187
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        }
+      },
+      "Br5595": {
+        "ARI": {
+          "mean": 0.16098030069528207,
+          "section_values": {
+            "151669": 0.15105188269871989,
+            "151670": 0.17090871869184426
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "NMI": {
+          "mean": 0.20398342550642626,
+          "section_values": {
+            "151669": 0.2201365365922664,
+            "151670": 0.18783031442058612
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.07132713248332342,
+          "section_values": {
+            "151669": 0.06831641495227814,
+            "151670": 0.0743378500143687
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "reference_label_silhouette": {
+          "mean": -0.005984351504594088,
+          "section_values": {
+            "151669": -0.004876327235251665,
+            "151670": -0.00709237577393651
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "label_neighbor_purity": {
+          "mean": 0.5849394550055846,
+          "section_values": {
+            "151669": 0.5726439310597726,
+            "151670": 0.5972349789513968
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.010033136398216937,
+          "section_values": {
+            "151669": 0.010534386772010533,
+            "151670": 0.009531886024423338
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2451.299140431633,
+          "section_values": {
+            "151669": 2430.9175156276306,
+            "151670": 2471.6807652356356
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 17.334785522596384,
+          "section_values": {
+            "151669": 17.154110893284283,
+            "151670": 17.515460151908485
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        }
+      },
+      "Br8100": {
+        "ARI": {
+          "mean": 0.16356286381949398,
+          "section_values": {
+            "151673": 0.13219596495965086,
+            "151674": 0.19492976267933712
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "NMI": {
+          "mean": 0.2542785139892219,
+          "section_values": {
+            "151673": 0.22304244805035003,
+            "151674": 0.28551457992809376
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.05087479017674923,
+          "section_values": {
+            "151673": 0.05381057287255923,
+            "151674": 0.04793900748093923
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "reference_label_silhouette": {
+          "mean": -0.023370295763015747,
+          "section_values": {
+            "151673": -0.02216864936053753,
+            "151674": -0.024571942165493965
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "label_neighbor_purity": {
+          "mean": 0.4397686027626371,
+          "section_values": {
+            "151673": 0.4368503646266039,
+            "151674": 0.4426868408986703
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.016689370763644046,
+          "section_values": {
+            "151673": 0.012559267557882899,
+            "151674": 0.020819473969405197
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2170.3657415389566,
+          "section_values": {
+            "151673": 2252.2878026020853,
+            "151674": 2088.443680475828
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 15.325072951017273,
+          "section_values": {
+            "151673": 15.922485847885048,
+            "151674": 14.7276600541495
+          },
+          "n_sections": 2,
+          "n_algorithmic_seeds": 0
+        }
+      }
+    },
+    "macro": {
+      "ARI": {
+        "mean": 0.1634573412760039,
+        "donor_values": {
+          "Br5292": 0.1658288593132356,
+          "Br5595": 0.16098030069528207,
+          "Br8100": 0.16356286381949398
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "NMI": {
+        "mean": 0.22997555583799492,
+        "donor_values": {
+          "Br5292": 0.23166472801833662,
+          "Br5595": 0.20398342550642626,
+          "Br8100": 0.2542785139892219
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "predicted_cluster_silhouette": {
+        "mean": 0.05496064097517067,
+        "donor_values": {
+          "Br5292": 0.042680000265439354,
+          "Br5595": 0.07132713248332342,
+          "Br8100": 0.05087479017674923
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "reference_label_silhouette": {
+        "mean": -0.017720596088717382,
+        "donor_values": {
+          "Br5292": -0.02380714099854231,
+          "Br5595": -0.005984351504594088,
+          "Br8100": -0.023370295763015747
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "label_neighbor_purity": {
+        "mean": 0.4819064522973087,
+        "donor_values": {
+          "Br5292": 0.42101129912370444,
+          "Br5595": 0.5849394550055846,
+          "Br8100": 0.4397686027626371
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "spatial_latent_knn_jaccard": {
+        "mean": 0.012511891222790287,
+        "donor_values": {
+          "Br5292": 0.010813166506509878,
+          "Br5595": 0.010033136398216937,
+          "Br8100": 0.016689370763644046
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+        "mean": 2436.251291455127,
+        "donor_values": {
+          "Br5292": 2687.0889923947916,
+          "Br5595": 2451.299140431633,
+          "Br8100": 2170.3657415389566
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "physical_distance_ratio_to_local_spatial_knn_mean": {
+        "mean": 17.271100225098884,
+        "donor_values": {
+          "Br5292": 19.153442201683,
+          "Br5595": 17.334785522596384,
+          "Br8100": 15.325072951017273
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true,
+        "aggregation": "section mean within donor, then equal donor macro"
+      }
+    }
+  },
+  "genorefine": {
+    "sections": {
+      "151507": {
+        "ARI": {
+          "mean": 0.1352229963010459,
+          "sd": 0.011959943561828478,
+          "minimum": 0.12635052026379384,
+          "maximum": 0.1537592568601256,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.21015782035685504,
+          "sd": 0.021872210882337435,
+          "minimum": 0.17837341302402815,
+          "maximum": 0.23037362936944722,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.04294627904891968,
+          "sd": 0.004107651621031362,
+          "minimum": 0.03757723545034727,
+          "maximum": 0.048834736148516335,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.03209871053695679,
+          "sd": 0.00043466029689968747,
+          "minimum": -0.03265031799674034,
+          "maximum": -0.03149474412202835,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.3759377714601595,
+          "sd": 0.005469162960552827,
+          "minimum": 0.3673773987206823,
+          "maximum": 0.3814183052989023,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.008603980714854916,
+          "sd": 0.0006456528855170883,
+          "minimum": 0.007760619700918209,
+          "maximum": 0.009275412260486888,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2833.584988030813,
+          "sd": 21.011512784534215,
+          "minimum": 2805.907022200905,
+          "maximum": 2859.569535329386,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 20.191112887869185,
+          "sd": 0.1525740186428312,
+          "minimum": 19.990490381453082,
+          "maximum": 20.377495234983,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151508": {
+        "ARI": {
+          "mean": 0.1471218145955704,
+          "sd": 0.016787754538779554,
+          "minimum": 0.12516381041593078,
+          "maximum": 0.16864940323838176,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.21169991896045043,
+          "sd": 0.012966372811247349,
+          "minimum": 0.20021905939176307,
+          "maximum": 0.23033050308231034,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.0424333106726408,
+          "sd": 0.0040693793814343664,
+          "minimum": 0.036574127773443856,
+          "maximum": 0.047969430685043335,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.02454848401248455,
+          "sd": 0.000862651288732534,
+          "minimum": -0.0254316758364439,
+          "maximum": -0.023326607421040535,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.39466179715437877,
+          "sd": 0.0051176890413996,
+          "minimum": 0.38857186334931143,
+          "maximum": 0.40022064977554594,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.008249119821820118,
+          "sd": 0.0004772966098134224,
+          "minimum": 0.007546360662087665,
+          "maximum": 0.00875267166068353,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2886.576614031748,
+          "sd": 28.017115416508723,
+          "minimum": 2857.7110065736133,
+          "maximum": 2915.694077633493,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 20.56717393285979,
+          "sd": 0.20337850343535607,
+          "minimum": 20.36328670695643,
+          "maximum": 20.780532882812533,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151669": {
+        "ARI": {
+          "mean": 0.24093813190439856,
+          "sd": 0.06517644254140306,
+          "minimum": 0.1298559366185325,
+          "maximum": 0.2899158181458955,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.2193608892937711,
+          "sd": 0.018530897168641577,
+          "minimum": 0.1961604200461006,
+          "maximum": 0.2452253220502726,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.04708412711819013,
+          "sd": 0.007839596958875044,
+          "minimum": 0.04085587958494822,
+          "maximum": 0.06080411250392596,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.014882521331310272,
+          "sd": 0.0033700019526336227,
+          "minimum": -0.01957537792623043,
+          "maximum": -0.011028960347175598,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.5606453978731206,
+          "sd": 0.005938462355267655,
+          "minimum": 0.5541529152915292,
+          "maximum": 0.5684176751008434,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.009068240157349068,
+          "sd": 0.0004554827619023456,
+          "minimum": 0.008535853585358535,
+          "maximum": 0.009667633430009669,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2567.720488473898,
+          "sd": 19.83552676657328,
+          "minimum": 2550.289239480914,
+          "maximum": 2599.1115480485,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 18.132362538589877,
+          "sd": 0.1324192815259693,
+          "minimum": 18.012562539781023,
+          "maximum": 18.33840491502216,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151670": {
+        "ARI": {
+          "mean": 0.25946260999552345,
+          "sd": 0.062243154360588256,
+          "minimum": 0.1761963660508727,
+          "maximum": 0.327643827764292,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.20186381056609634,
+          "sd": 0.029745017929598837,
+          "minimum": 0.16814198314369402,
+          "maximum": 0.23479223881207592,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.061152676989634835,
+          "sd": 0.01862939269141402,
+          "minimum": 0.039280773450930916,
+          "maximum": 0.08047585810224216,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.015326212719082832,
+          "sd": 0.003259337434175453,
+          "minimum": -0.02037041261792183,
+          "maximum": -0.011467388831079006,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.5876827401454267,
+          "sd": 0.004279745634140777,
+          "minimum": 0.5804917719096824,
+          "maximum": 0.5910639112131649,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.0077403193821104265,
+          "sd": 0.0001773517724182135,
+          "minimum": 0.0075687993598441364,
+          "maximum": 0.008000208746477404,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2605.526813992051,
+          "sd": 26.439408929192172,
+          "minimum": 2569.242667591507,
+          "maximum": 2631.8900426217897,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 18.479303614774217,
+          "sd": 0.18891399850091123,
+          "minimum": 18.21818644671984,
+          "maximum": 18.663433649306562,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151673": {
+        "ARI": {
+          "mean": 0.11285673924779747,
+          "sd": 0.011259979904265194,
+          "minimum": 0.09469226431747935,
+          "maximum": 0.12540345855598556,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.21334277365052035,
+          "sd": 0.00652342656678241,
+          "minimum": 0.20597329328155575,
+          "maximum": 0.22040226322170695,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.0351420891781648,
+          "sd": 0.015475619761850612,
+          "minimum": 0.021206774438420933,
+          "maximum": 0.05717538297176361,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.03702599480748177,
+          "sd": 0.0024712399694291807,
+          "minimum": -0.03959100693464279,
+          "maximum": -0.03372075408697128,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.38203821656050957,
+          "sd": 0.003964801316376365,
+          "minimum": 0.3779839379673221,
+          "maximum": 0.3862826548509185,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.010722959307838844,
+          "sd": 0.0003031604059708084,
+          "minimum": 0.010455426600538758,
+          "maximum": 0.011152790715238791,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2424.6820270523226,
+          "sd": 23.728070326792686,
+          "minimum": 2400.7452878360714,
+          "maximum": 2462.5533324246367,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 17.155713320769955,
+          "sd": 0.16826290740071442,
+          "minimum": 16.987765045719975,
+          "maximum": 17.422031260969106,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151674": {
+        "ARI": {
+          "mean": 0.13076261305403797,
+          "sd": 0.015360908941971566,
+          "minimum": 0.1163326651680227,
+          "maximum": 0.153201450682399,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.21503380464552493,
+          "sd": 0.018330827599828552,
+          "minimum": 0.19613239053136816,
+          "maximum": 0.24488663381579753,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.02761071262260278,
+          "sd": 0.004016819328131839,
+          "minimum": 0.02306402288377285,
+          "maximum": 0.032417902102073036,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.04646642506122589,
+          "sd": 0.0024024131168420225,
+          "minimum": -0.0492696650326252,
+          "maximum": -0.043918460607528687,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.38066391563502977,
+          "sd": 0.005527126926981812,
+          "minimum": 0.375818431911967,
+          "maximum": 0.3883081155433287,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.01687849610270518,
+          "sd": 0.0011060431382903034,
+          "minimum": 0.015432453836855486,
+          "maximum": 0.018309366012254597,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2256.2656734339503,
+          "sd": 31.291588580149764,
+          "minimum": 2224.1967434317644,
+          "maximum": 2303.2350629972643,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 15.93036668312361,
+          "sd": 0.22500496085559124,
+          "minimum": 15.69714153323053,
+          "maximum": 16.266368954356246,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "donors": {
+      "Br5292": {
+        "ARI": {
+          "mean": 0.14117240544830814,
+          "sd": 0.01055878807920774,
+          "minimum": 0.12600647769165021,
+          "maximum": 0.1495639137111165,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.21092886965865273,
+          "sd": 0.0156484024524292,
+          "minimum": 0.19077733044871897,
+          "maximum": 0.23035206622587878,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.04268979486078024,
+          "sd": 0.002323372566912015,
+          "minimum": 0.0390800063808759,
+          "maximum": 0.045354061449567475,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.02832359727472067,
+          "sd": 0.0005292673155505101,
+          "minimum": -0.028751258738338947,
+          "maximum": -0.027410675771534443,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.38529978430726913,
+          "sd": 0.005134050831797634,
+          "minimum": 0.37797463103499684,
+          "maximum": 0.3900574148348629,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.008426550268337517,
+          "sd": 0.0004418855032877612,
+          "minimum": 0.007653490181502937,
+          "maximum": 0.008713847595108945,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2860.0808010312803,
+          "sd": 24.072085915578047,
+          "minimum": 2831.809014387259,
+          "maximum": 2886.769983375841,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 20.379143410364488,
+          "sd": 0.17476106942841363,
+          "minimum": 20.176888544204758,
+          "maximum": 20.57042069522549,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br5595": {
+        "ARI": {
+          "mean": 0.250200370949961,
+          "sd": 0.0551748800796327,
+          "minimum": 0.1752469454580601,
+          "maximum": 0.30877982295509376,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.21061234992993372,
+          "sd": 0.021489289520107962,
+          "minimum": 0.18556850417967136,
+          "maximum": 0.24000878043117424,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.05411840205391248,
+          "sd": 0.012023343379727774,
+          "minimum": 0.04006832651793957,
+          "maximum": 0.06912244918445747,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.015104367025196552,
+          "sd": 0.0031898938471225766,
+          "minimum": -0.01997289527207613,
+          "maximum": -0.011248174589127302,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.5741640690092737,
+          "sd": 0.00489237243295108,
+          "minimum": 0.5673223436006058,
+          "maximum": 0.579582928633468,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.008404279769729748,
+          "sd": 0.0002921296323862888,
+          "minimum": 0.008052326472601335,
+          "maximum": 0.008833921088243536,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2586.623651232974,
+          "sd": 19.844396256340687,
+          "minimum": 2559.765953536211,
+          "maximum": 2614.7402637041155,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 18.305833076682045,
+          "sd": 0.138183633417762,
+          "minimum": 18.11537449325043,
+          "maximum": 18.49867449564311,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br8100": {
+        "ARI": {
+          "mean": 0.12180967615091773,
+          "sd": 0.009174855381740506,
+          "minimum": 0.11168649794158096,
+          "maximum": 0.13431865396027906,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.21418828914802265,
+          "sd": 0.006656822016337855,
+          "minimum": 0.20807897969033007,
+          "maximum": 0.22542996354867664,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.031376400900383794,
+          "sd": 0.009388799700810645,
+          "minimum": 0.02251117335011562,
+          "maximum": 0.043392875542243324,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.04174620993435383,
+          "sd": 0.0024045407058207835,
+          "minimum": -0.044430335983633995,
+          "maximum": -0.038819607347249985,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.3813510660977697,
+          "sd": 0.004593288143904859,
+          "minimum": 0.37697041783911833,
+          "maximum": 0.3869815293861756,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.013800727705272011,
+          "sd": 0.0006364893959079847,
+          "minimum": 0.01297708809177853,
+          "maximum": 0.014731078363746694,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2340.4738502431364,
+          "sd": 25.847277359803947,
+          "minimum": 2316.993731409316,
+          "maximum": 2382.8941977109507,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 16.543040001946782,
+          "sd": 0.18417546611405328,
+          "minimum": 16.37080385235004,
+          "maximum": 16.844200107662676,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "macro": {
+      "ARI": {
+        "mean": 0.17106081751639562,
+        "sd": 0.02332092964788699,
+        "minimum": 0.13764664036376376,
+        "maximum": 0.19719061792229953,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "NMI": {
+        "mean": 0.21190983624553636,
+        "sd": 0.011685641867850849,
+        "minimum": 0.19947360288856622,
+        "maximum": 0.22614660878246104,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "predicted_cluster_silhouette": {
+        "mean": 0.04272819927169217,
+        "sd": 0.0068423332361528776,
+        "minimum": 0.03503801301121712,
+        "maximum": 0.0505317770358589,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "reference_label_silhouette": {
+        "mean": -0.028391391411423682,
+        "sd": 0.0011792726959497313,
+        "minimum": -0.029517502058297396,
+        "maximum": -0.026456779955575865,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "label_neighbor_purity": {
+        "mean": 0.4469383064714375,
+        "sd": 0.0038452135449968676,
+        "minimum": 0.4422842297709541,
+        "maximum": 0.452169648355878,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "spatial_latent_knn_jaccard": {
+        "mean": 0.010210519247779758,
+        "sd": 0.0004100111112365886,
+        "minimum": 0.00963328444822817,
+        "maximum": 0.01075449494010895,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+        "mean": 2595.7261008357973,
+        "sd": 22.329083814231982,
+        "minimum": 2569.5228997775953,
+        "maximum": 2628.1348149303026,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "physical_distance_ratio_to_local_spatial_knn_mean": {
+        "mean": 18.40933882966444,
+        "sd": 0.1588922832068322,
+        "minimum": 18.221022296601742,
+        "maximum": 18.637765099510425,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      }
+    }
+  },
+  "spagcn": {
+    "sections": {
+      "151507": {
+        "ARI": {
+          "mean": 0.23893422420124105,
+          "sd": 0.016038969093882034,
+          "minimum": 0.21465568259923673,
+          "maximum": 0.2537540147507661,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.41072731748067925,
+          "sd": 0.008251197167629783,
+          "minimum": 0.4005433892976711,
+          "maximum": 0.42095870775783106,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.26624917387962344,
+          "sd": 0.005988039810450388,
+          "minimum": 0.2606105903784434,
+          "maximum": 0.2743486563364665,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": 0.059033054113388064,
+          "sd": 0.008207286680567064,
+          "minimum": 0.04531727358698845,
+          "maximum": 0.06683605909347534,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.5839627260522783,
+          "sd": 0.008993005669552563,
+          "minimum": 0.5773355444997236,
+          "maximum": 0.5992181947405828,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.0148339112518217,
+          "sd": 0.0009516372998308537,
+          "minimum": 0.013405555196599974,
+          "maximum": 0.015900296497311422,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2910.220887729838,
+          "sd": 48.840861294508,
+          "minimum": 2833.8611704665277,
+          "maximum": 2954.954759828354,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 20.74017793954863,
+          "sd": 0.3503594308949728,
+          "minimum": 20.193552848898427,
+          "maximum": 21.0611476650071,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151508": {
+        "ARI": {
+          "mean": 0.1295269502038419,
+          "sd": 0.012280464155733209,
+          "minimum": 0.11252069447818766,
+          "maximum": 0.1450965872638802,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.26772924047562596,
+          "sd": 0.01606832918918376,
+          "minimum": 0.24013665464200043,
+          "maximum": 0.2810634384742481,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.2701819916566213,
+          "sd": 0.013199648761772436,
+          "minimum": 0.2554299334685008,
+          "maximum": 0.28417763113975525,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.006680764071643352,
+          "sd": 0.01512740834544414,
+          "minimum": -0.026218175888061523,
+          "maximum": 0.008827250450849533,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.44188237084379517,
+          "sd": 0.01373870661595342,
+          "minimum": 0.4201019554135281,
+          "maximum": 0.4563493875066576,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.007977146493466968,
+          "sd": 0.0009682387752202074,
+          "minimum": 0.006977789767107274,
+          "maximum": 0.009520449876532963,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 3334.9382376762437,
+          "sd": 78.19199797798076,
+          "minimum": 3228.953747524576,
+          "maximum": 3439.6882155190656,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 23.756369406304064,
+          "sd": 0.5588329283919983,
+          "minimum": 23.00112435972727,
+          "maximum": 24.50086666497889,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151669": {
+        "ARI": {
+          "mean": 0.12303602041281901,
+          "sd": 0.03653365065373422,
+          "minimum": 0.07644684321754946,
+          "maximum": 0.17387779616819612,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.3260902747276951,
+          "sd": 0.0637067186743258,
+          "minimum": 0.24420439549205344,
+          "maximum": 0.40884446006020814,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.2835525890191396,
+          "sd": 0.015077671064856687,
+          "minimum": 0.2657793164253235,
+          "maximum": 0.30548857649167377,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": 0.026227766089141367,
+          "sd": 0.046115346746953195,
+          "minimum": -0.0044770450331270695,
+          "maximum": 0.10677311569452286,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.7272002200220022,
+          "sd": 0.0458040909292817,
+          "minimum": 0.6594242757609096,
+          "maximum": 0.772020535386872,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.01601155353630601,
+          "sd": 0.0023878372840293763,
+          "minimum": 0.013107977464413107,
+          "maximum": 0.01896165807056896,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2686.5439032861505,
+          "sd": 113.05098956641292,
+          "minimum": 2588.646545696393,
+          "maximum": 2876.159027801133,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 18.95429428187076,
+          "sd": 0.7988970361756604,
+          "minimum": 18.253874672327555,
+          "maximum": 20.293122218039493,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151670": {
+        "ARI": {
+          "mean": 0.07899801933206195,
+          "sd": 0.024787151183587687,
+          "minimum": 0.058040364312990624,
+          "maximum": 0.11344798525440386,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.24230386115154962,
+          "sd": 0.05158763075770769,
+          "minimum": 0.199974186331257,
+          "maximum": 0.30200764896961607,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.28561768531799314,
+          "sd": 0.023354211546337846,
+          "minimum": 0.2575456400712331,
+          "maximum": 0.30576345324516296,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.03256387230940163,
+          "sd": 0.02560929024801931,
+          "minimum": -0.06244146078824997,
+          "maximum": 0.0034225264098495245,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.7020225794106391,
+          "sd": 0.03427537956869618,
+          "minimum": 0.6691924990432452,
+          "maximum": 0.7483352468427095,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.015425146992311173,
+          "sd": 0.00400024250634245,
+          "minimum": 0.011982047802943327,
+          "maximum": 0.020187523918867207,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2711.697333624098,
+          "sd": 161.325643491589,
+          "minimum": 2469.9763158188384,
+          "maximum": 2913.0711901970676,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 19.19518547116704,
+          "sd": 1.1614578782981713,
+          "minimum": 17.453643285397696,
+          "maximum": 20.643717272974666,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151673": {
+        "ARI": {
+          "mean": 0.14735936324478843,
+          "sd": 0.050802589442036,
+          "minimum": 0.10880503589934114,
+          "maximum": 0.23165743572105335,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.30805873905468445,
+          "sd": 0.06407520661508814,
+          "minimum": 0.2626180719697235,
+          "maximum": 0.4192125222389438,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.2850279291470845,
+          "sd": 0.0069637966621681245,
+          "minimum": 0.2773433526357015,
+          "maximum": 0.292852520942688,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": 0.0017735884059220553,
+          "sd": 0.023636253540846638,
+          "minimum": -0.020364660769701004,
+          "maximum": 0.041134681552648544,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.48278039324286903,
+          "sd": 0.07477755747119913,
+          "minimum": 0.42245915258931044,
+          "maximum": 0.6007661774208437,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.015635294272790812,
+          "sd": 0.004469417805305826,
+          "minimum": 0.010924531943640224,
+          "maximum": 0.021458842090246136,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2571.9650677433965,
+          "sd": 144.646481167005,
+          "minimum": 2380.748782881302,
+          "maximum": 2742.9482560433394,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 18.181260641083693,
+          "sd": 1.0406196647876587,
+          "minimum": 16.813756874843076,
+          "maximum": 19.41580121630056,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151674": {
+        "ARI": {
+          "mean": 0.15626533646371743,
+          "sd": 0.02474600651920776,
+          "minimum": 0.13090058072100846,
+          "maximum": 0.19074135165696526,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.30674299932105764,
+          "sd": 0.01876738156016,
+          "minimum": 0.2900758408204957,
+          "maximum": 0.336647344958841,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.2738703141609828,
+          "sd": 0.017205773975270306,
+          "minimum": 0.25632603963216144,
+          "maximum": 0.2958565652370453,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.01169845350086689,
+          "sd": 0.01652262191116322,
+          "minimum": -0.031924594193696976,
+          "maximum": 0.00560529762879014,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.4520421824850986,
+          "sd": 0.014982333710027686,
+          "minimum": 0.437542411737735,
+          "maximum": 0.4727281063732233,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.016580574858429054,
+          "sd": 0.0055575486145227814,
+          "minimum": 0.01002328254047649,
+          "maximum": 0.022537618273519237,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2492.862550933878,
+          "sd": 302.3802173088697,
+          "minimum": 2212.940764507777,
+          "maximum": 2880.836808061144,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 17.632475170007698,
+          "sd": 2.166063784342366,
+          "minimum": 15.629576187465535,
+          "maximum": 20.40897919337294,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "donors": {
+      "Br5292": {
+        "ARI": {
+          "mean": 0.18423058720254146,
+          "sd": 0.009229477196953554,
+          "minimum": 0.17049462870515686,
+          "maximum": 0.19464045213560643,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.3392282789781526,
+          "sd": 0.00944994481856361,
+          "minimum": 0.32461664880931335,
+          "maximum": 0.3490303164008664,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.26821558276812235,
+          "sd": 0.005611782934909509,
+          "minimum": 0.2611768444379171,
+          "maximum": 0.27309159437815345,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": 0.026176145020872354,
+          "sd": 0.007804920033742742,
+          "minimum": 0.016761671751737595,
+          "maximum": 0.03783165477216244,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.5129225484480368,
+          "sd": 0.006488814260036391,
+          "minimum": 0.5022882042723489,
+          "maximum": 0.5188094321492611,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.011405528872644333,
+          "sd": 0.0006429847547474889,
+          "minimum": 0.0107351312342676,
+          "maximum": 0.012252345863223227,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 3122.5795627030407,
+          "sd": 36.157321239724105,
+          "minimum": 3091.9542536764648,
+          "maximum": 3180.868633246756,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 22.24827367292635,
+          "sd": 0.25717611082433356,
+          "minimum": 22.031136012367185,
+          "maximum": 22.66307195612787,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br5595": {
+        "ARI": {
+          "mean": 0.10101701987244048,
+          "sd": 0.020566814919507913,
+          "minimum": 0.08004150543761561,
+          "maximum": 0.1354764145304838,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.28419706793962235,
+          "sd": 0.04228048810832124,
+          "minimum": 0.2437777476306111,
+          "maximum": 0.3554260545149121,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.28458513716856637,
+          "sd": 0.016300347273301492,
+          "minimum": 0.26166247824827826,
+          "maximum": 0.3047132144371668,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.0031680531101301312,
+          "sd": 0.033710621786103984,
+          "minimum": -0.03269568714313209,
+          "maximum": 0.05509782105218619,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.7146113997163207,
+          "sd": 0.028964850470578018,
+          "minimum": 0.6877565818196821,
+          "maximum": 0.7601778911147907,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.01571835026430859,
+          "sd": 0.0030949033620368024,
+          "minimum": 0.013162554295995998,
+          "maximum": 0.01957459099471808,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2699.1206184551243,
+          "sd": 108.9122917045112,
+          "minimum": 2544.951726430445,
+          "maximum": 2804.3598529965693,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 19.074739876518898,
+          "sd": 0.7788770386647467,
+          "minimum": 17.96765296530095,
+          "maximum": 19.82489861237959,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br8100": {
+        "ARI": {
+          "mean": 0.15181234985425293,
+          "sd": 0.03209075656243301,
+          "minimum": 0.11985280831017481,
+          "maximum": 0.1984896885378704,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.307400869187871,
+          "sd": 0.029960162326419106,
+          "minimum": 0.28032432049954487,
+          "maximum": 0.35464418152971977,
+          "n_algorithmic_seeds": 5
+        },
+        "predicted_cluster_silhouette": {
+          "mean": 0.2794491216540336,
+          "sd": 0.012027438267841953,
+          "minimum": 0.26683469613393146,
+          "maximum": 0.29435454308986664,
+          "n_algorithmic_seeds": 5
+        },
+        "reference_label_silhouette": {
+          "mean": -0.004962432547472417,
+          "sd": 0.010842764777690205,
+          "minimum": -0.01713306037709117,
+          "maximum": 0.004605043679475784,
+          "n_algorithmic_seeds": 5
+        },
+        "label_neighbor_purity": {
+          "mean": 0.4674112878639838,
+          "sd": 0.038813388317677874,
+          "minimum": 0.43025002060162854,
+          "maximum": 0.5215064266288079,
+          "n_algorithmic_seeds": 5
+        },
+        "spatial_latent_knn_jaccard": {
+          "mean": 0.01610793456560993,
+          "sd": 0.004896387985166973,
+          "minimum": 0.010473907242058357,
+          "maximum": 0.021005238762481365,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+          "mean": 2532.4138093386373,
+          "sd": 215.77802018737341,
+          "minimum": 2358.6018691891622,
+          "maximum": 2811.8925320522417,
+          "n_algorithmic_seeds": 5
+        },
+        "physical_distance_ratio_to_local_spatial_knn_mean": {
+          "mean": 17.906867905545695,
+          "sd": 1.5482379997893934,
+          "minimum": 16.666166397682062,
+          "maximum": 19.91239020483675,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "macro": {
+      "ARI": {
+        "mean": 0.14568665230974495,
+        "sd": 0.015674777513742442,
+        "minimum": 0.12802086886812214,
+        "maximum": 0.16815357725783703,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "NMI": {
+        "mean": 0.31027540536854864,
+        "sd": 0.023669096301484928,
+        "minimum": 0.28814188756967724,
+        "maximum": 0.3495442152919421,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "predicted_cluster_silhouette": {
+        "mean": 0.27741661386357414,
+        "sd": 0.007985508304716725,
+        "minimum": 0.26807259519894916,
+        "maximum": 0.2874012506670422,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "reference_label_silhouette": {
+        "mean": 0.006015219787756602,
+        "sd": 0.013689515368388345,
+        "minimum": -0.004501808900386095,
+        "maximum": 0.028753748279996216,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "label_neighbor_purity": {
+        "mean": 0.5649817453427805,
+        "sd": 0.022949071072256782,
+        "minimum": 0.5433239825078805,
+        "maximum": 0.599593162825702,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "spatial_latent_knn_jaccard": {
+        "mean": 0.014410604567520953,
+        "sd": 0.0027048607458803973,
+        "minimum": 0.011771062816443873,
+        "maximum": 0.01739056712093354,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+        "mean": 2784.704663498934,
+        "sd": 99.44878292904576,
+        "minimum": 2671.363014772093,
+        "maximum": 2901.319818184535,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      },
+      "physical_distance_ratio_to_local_spatial_knn_mean": {
+        "mean": 19.743293818330315,
+        "sd": 0.7121849980141869,
+        "minimum": 18.932089052221354,
+        "maximum": 20.57784549185528,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "section mean within donor, then equal donor macro"
+      }
+    }
+  },
+  "harmony_native_sensitivity": {
+    "role": "sensitivity_only",
+    "macro": {
+      "ARI": {
+        "mean": 0.14984049281201334,
+        "donor_values": {
+          "Br5292": 0.158907608398321,
+          "Br5595": 0.13542398512447668,
+          "Br8100": 0.15518988491324232
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true
+      },
+      "NMI": {
+        "mean": 0.24546645310072002,
+        "donor_values": {
+          "Br5292": 0.2271080941638285,
+          "Br5595": 0.23605460044803311,
+          "Br8100": 0.27323666469029845
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true
+      },
+      "predicted_cluster_silhouette": {
+        "mean": 0.04875136622124248,
+        "donor_values": {
+          "Br5292": 0.03794028672079245,
+          "Br5595": 0.05343896212677161,
+          "Br8100": 0.054874849816163376
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true
+      },
+      "reference_label_silhouette": {
+        "mean": -0.01754447165876627,
+        "donor_values": {
+          "Br5292": -0.023445687256753445,
+          "Br5595": -0.010052982717752457,
+          "Br8100": -0.019134745001792908
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true
+      },
+      "label_neighbor_purity": {
+        "mean": 0.48504013297342463,
+        "donor_values": {
+          "Br5292": 0.42011989000119565,
+          "Br5595": 0.5801084227251658,
+          "Br8100": 0.45489208619391236
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true
+      },
+      "spatial_latent_knn_jaccard": {
+        "mean": 0.012565451583266015,
+        "donor_values": {
+          "Br5292": 0.010533545597100229,
+          "Br5595": 0.009791165205307366,
+          "Br8100": 0.017371643947390453
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true
+      },
+      "physical_distance_among_latent_neighbors_mean_fullres_pixels": {
+        "mean": 2431.2026231637096,
+        "donor_values": {
+          "Br5292": 2686.9085116641645,
+          "Br5595": 2470.928966675392,
+          "Br8100": 2135.7703911515723
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true
+      },
+      "physical_distance_ratio_to_local_spatial_knn_mean": {
+        "mean": 17.235284907856126,
+        "donor_values": {
+          "Br5292": 19.151628191171312,
+          "Br5595": 17.4746776270091,
+          "Br8100": 15.079548905387965
+        },
+        "n_donors": 3,
+        "n_algorithmic_seeds": 0,
+        "dispersion_across_donors_not_reported_as_seed_sd": true
+      }
+    }
+  }
+}

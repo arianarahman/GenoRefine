@@ -1,0 +1,1569 @@
+{
+  "schema_version": 1,
+  "method": "SpaGCN 1.2.7",
+  "endpoint_role": "secondary task-native partitions; separate from common fixed-resolution evaluator",
+  "aggregation_order": [
+    "retain algorithmic-seed values within each section",
+    "within each seed, equally average the two frozen sections for each donor",
+    "within each seed, equally macro-average the three donor means",
+    "report descriptive mean and sample SD across five algorithmic seeds"
+  ],
+  "seed_role": "descriptive algorithmic repeats, not biological replicates",
+  "p_values_reported": false,
+  "sections": {
+    "151507": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.32817467654305726,
+          "sd": 0.025900856790977044,
+          "minimum": 0.2947688606654786,
+          "maximum": 0.36535302193225616,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.36535302193225616
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.3274784597569222
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.2947688606654786
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3171490794849595
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.33612396087567
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.4391388349462184,
+          "sd": 0.008768751943449466,
+          "minimum": 0.4259952706508084,
+          "maximum": 0.4469708919169021,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.44612267845613424
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.4469708919169021
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.4259952706508084
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.4348896608856943
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.441715672821553
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 5
+            }
+          ],
+          "unique_values": [
+            5
+          ]
+        }
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.37274815755455304,
+          "sd": 0.03375003335348124,
+          "minimum": 0.3306500047268005,
+          "maximum": 0.4234198593565418,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.4234198593565418
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.36192004069100997
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.3306500047268005
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3669258545535092
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.38082502844490373
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.4832551826821865,
+          "sd": 0.015755354033436912,
+          "minimum": 0.4609357075117472,
+          "maximum": 0.5040584492976221,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.5040584492976221
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.47740044045031405
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.4609357075117472
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.4874633361630008
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.4864179799882482
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 5
+            }
+          ],
+          "unique_values": [
+            5
+          ]
+        }
+      }
+    },
+    "151508": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.23535135249797653,
+          "sd": 0.020919388664125873,
+          "minimum": 0.20134987404834542,
+          "maximum": 0.2575944215081497,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.2413426886985878
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.23338190260231914
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.2575944215081497
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.24308787563248063
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.20134987404834542
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.3104316832029447,
+          "sd": 0.022371407666585637,
+          "minimum": 0.27345261129221526,
+          "maximum": 0.32761434079116675,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.30569880500461055
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.32761434079116675
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.32552305998983183
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3198695989368989
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.27345261129221526
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 4
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 4
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 4
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 4
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 4
+            }
+          ],
+          "unique_values": [
+            4
+          ]
+        }
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.2691717381778232,
+          "sd": 0.023316269410971976,
+          "minimum": 0.23183682251684698,
+          "maximum": 0.2940400763421766,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.27978948058847586
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.2652064749017395
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.2940400763421766
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.27498583653987696
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.23183682251684698
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.35723886491083096,
+          "sd": 0.02524089112138995,
+          "minimum": 0.312518718110382,
+          "maximum": 0.372853401050876,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.3637723739553283
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.372853401050876
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.36661855222104306
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3704312792165253
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.312518718110382
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 4
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 4
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 4
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 4
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 4
+            }
+          ],
+          "unique_values": [
+            4
+          ]
+        }
+      }
+    },
+    "151669": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.18609184114485966,
+          "sd": 0.0420361646534463,
+          "minimum": 0.13786134414876197,
+          "maximum": 0.23862438317969709,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.13786134414876197
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.16968014614145877
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.23862438317969709
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.16351414791855132
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.22077918433582916
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.3442022221350195,
+          "sd": 0.058386020348004004,
+          "minimum": 0.2713553675583321,
+          "maximum": 0.42369165191985286,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.2713553675583321
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.32569043595500463
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.42369165191985286
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.32187598450761784
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.37839767073429015
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 7
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 7
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 7
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 7
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 7
+            }
+          ],
+          "unique_values": [
+            7
+          ]
+        }
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.20408303701814534,
+          "sd": 0.046979238236851954,
+          "minimum": 0.15092649604550465,
+          "maximum": 0.26256112708688123,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.15092649604550465
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.1979203426164514
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.26256112708688123
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.16883459041056192
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.24017262893132754
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.37721810802630196,
+          "sd": 0.06146737117847359,
+          "minimum": 0.2974446507237806,
+          "maximum": 0.45228548580853406,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.2974446507237806
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.37607305991653805
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.45228548580853406
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.34080154302992477
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.41948580065273233
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 7
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 7
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 7
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 7
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 7
+            }
+          ],
+          "unique_values": [
+            7
+          ]
+        }
+      }
+    },
+    "151670": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.14374953264948395,
+          "sd": 0.02783218764281277,
+          "minimum": 0.11935448018853219,
+          "maximum": 0.18676683256448506,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.18676683256448506
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.1333468616991936
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.15562285607115892
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.11935448018853219
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.12365663272404993
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.27460096485460833,
+          "sd": 0.04906026393264161,
+          "minimum": 0.23146471196756435,
+          "maximum": 0.3324164300556547,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.32343969190617955
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.23146471196756435
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.3324164300556547
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.23954138247330675
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.24614260787033637
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 6
+            }
+          ],
+          "unique_values": [
+            6
+          ]
+        }
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.15691019396180764,
+          "sd": 0.024971197310530435,
+          "minimum": 0.13022641118687134,
+          "maximum": 0.19266945650511216,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.19266945650511216
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.1521889432164959
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.17009087544892584
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.13022641118687134
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.139375283451633
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.29978771874678417,
+          "sd": 0.047987779422246545,
+          "minimum": 0.25692771729366704,
+          "maximum": 0.3584808572592966,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.34513737011632134
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.2684262650559601
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.3584808572592966
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.25692771729366704
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.26996638400867573
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 6
+            }
+          ],
+          "unique_values": [
+            6
+          ]
+        }
+      }
+    },
+    "151673": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.20970228267719704,
+          "sd": 0.03862654208440587,
+          "minimum": 0.17802057401176025,
+          "maximum": 0.27291634488585875,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.20845466287462977
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.2104996708970245
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.27291634488585875
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.17802057401176025
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.17862016071671197
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.3471497453281988,
+          "sd": 0.05319960504204742,
+          "minimum": 0.3105660698613898,
+          "maximum": 0.44009252084841693,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.33668887538571307
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.3337220143855028
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.44009252084841693
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3146792461599715
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.3105660698613898
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 6
+            }
+          ],
+          "unique_values": [
+            6
+          ]
+        }
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.23165450915594932,
+          "sd": 0.03962491430320427,
+          "minimum": 0.19485666625321166,
+          "maximum": 0.2897268852581708,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.23171285825835058
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.24674174626095605
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.2897268852581708
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.19523438974905746
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.19485666625321166
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.3670647827727068,
+          "sd": 0.05634860386444479,
+          "minimum": 0.32102683204442994,
+          "maximum": 0.4624305803169719,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.35762739897932183
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.364466649699372
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.4624305803169719
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3297724528234386
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.32102683204442994
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 6
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 6
+            }
+          ],
+          "unique_values": [
+            6
+          ]
+        }
+      }
+    },
+    "151674": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.2299256613397811,
+          "sd": 0.02737720903053956,
+          "minimum": 0.19412085714792432,
+          "maximum": 0.27079227679566936,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.22341422302098124
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.27079227679566936
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.19412085714792432
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.23177575192022457
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.229525197814106
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.3671421604482864,
+          "sd": 0.01957731044667881,
+          "minimum": 0.33292805173586026,
+          "maximum": 0.38026702913996324,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.36895021005239176
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.377512731283166
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.33292805173586026
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3760527800300508
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.38026702913996324
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 5
+            }
+          ],
+          "unique_values": [
+            5
+          ]
+        }
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.24439019700559966,
+          "sd": 0.03180500036441083,
+          "minimum": 0.20139957861569643,
+          "maximum": 0.286796978241882,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.22855859651409738
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.286796978241882
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.20139957861569643
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.25527475703464875
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.2499210746216738
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.3865287955332737,
+          "sd": 0.027559837556285466,
+          "minimum": 0.3420252852944055,
+          "maximum": 0.408561377738005,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.3781760140130393
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.39824186754749563
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.3420252852944055
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.40563943307342304
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.408561377738005
+            }
+          ]
+        },
+        "clusters": {
+          "values_by_seed": [
+            {
+              "algorithmic_seed": 0,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 5
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 5
+            }
+          ],
+          "unique_values": [
+            5
+          ]
+        }
+      }
+    }
+  },
+  "donors": {
+    "Br5292": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.2817630145205169,
+          "sd": 0.012953930220775315,
+          "minimum": 0.2687369174620077,
+          "maximum": 0.30334785531542197,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.30334785531542197
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.28043018117962065
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.27618164108681414
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.2801184775587201
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.2687369174620077
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.37478525907458154,
+          "sd": 0.01073846331411965,
+          "minimum": 0.35758414205688416,
+          "maximum": 0.38729261635403445,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.3759107417303724
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.38729261635403445
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.3757591653203201
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3773796299112966
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.35758414205688416
+            }
+          ]
+        },
+        "aggregation": "equal mean over the donor's frozen sections within each algorithmic seed; descriptive statistics across the five seed-specific means"
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.3209599478661881,
+          "sd": 0.017902757874663302,
+          "minimum": 0.30633092548087537,
+          "maximum": 0.35160466997250883,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.35160466997250883
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.31356325779637473
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.3123450405344885
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.3209558455466931
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.30633092548087537
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.4202470237965087,
+          "sd": 0.01378355915296081,
+          "minimum": 0.3994683490493151,
+          "maximum": 0.4339154116264752,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.4339154116264752
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.425126920750595
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.41377712986639514
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.4289473076897631
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.3994683490493151
+            }
+          ]
+        },
+        "aggregation": "equal mean over the donor's frozen sections within each algorithmic seed; descriptive statistics across the five seed-specific means"
+      }
+    },
+    "Br5595": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.16492068689717182,
+          "sd": 0.021380101382679047,
+          "minimum": 0.14143431405354176,
+          "maximum": 0.19712361962542801,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.16231408835662353
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.1515135039203262
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.19712361962542801
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.14143431405354176
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.17221790852993954
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.30940159349481394,
+          "sd": 0.04073968554541557,
+          "minimum": 0.27857757396128446,
+          "maximum": 0.37805404098775375,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.29739752973225586
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.27857757396128446
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.37805404098775375
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.2807086834904623
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.3122701393023133
+            }
+          ]
+        },
+        "aggregation": "equal mean over the donor's frozen sections within each algorithmic seed; descriptive statistics across the five seed-specific means"
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.1804966154899765,
+          "sd": 0.024667770392078795,
+          "minimum": 0.14953050079871663,
+          "maximum": 0.21632600126790352,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.1717979762753084
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.17505464291647366
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.21632600126790352
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.14953050079871663
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.18977395619148027
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.3385029133865431,
+          "sd": 0.04075324573451581,
+          "minimum": 0.2988646301617959,
+          "maximum": 0.40538317153391534,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.321291010420051
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.3222496624862491
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.40538317153391534
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.2988646301617959
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.34472609233070406
+            }
+          ]
+        },
+        "aggregation": "equal mean over the donor's frozen sections within each algorithmic seed; descriptive statistics across the five seed-specific means"
+      }
+    },
+    "Br8100": {
+      "predicted": {
+        "ARI": {
+          "mean": 0.21981397200848907,
+          "sd": 0.0166366279574522,
+          "minimum": 0.20407267926540898,
+          "maximum": 0.24064597384634695,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.2159344429478055
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.24064597384634695
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.23351860101689154
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.2048981629659924
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.20407267926540898
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.3571459528882426,
+          "sd": 0.01702692238448308,
+          "minimum": 0.34536601309501114,
+          "maximum": 0.38651028629213857,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.3528195427190524
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.35561737283433437
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.38651028629213857
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.34536601309501114
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.3454165495006765
+            }
+          ]
+        },
+        "aggregation": "equal mean over the donor's frozen sections within each algorithmic seed; descriptive statistics across the five seed-specific means"
+      },
+      "refined": {
+        "ARI": {
+          "mean": 0.2380223530807745,
+          "sd": 0.01839073294332312,
+          "minimum": 0.2223888704374427,
+          "maximum": 0.266769362251419,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.23013572738622398
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.266769362251419
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.24556323193693363
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.22525457339185312
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.2223888704374427
+            }
+          ]
+        },
+        "NMI": {
+          "mean": 0.37679678915299025,
+          "sd": 0.015599230791391977,
+          "minimum": 0.36479410489121744,
+          "maximum": 0.4022279328056887,
+          "n_algorithmic_seeds": 5,
+          "seed_values": [
+            {
+              "algorithmic_seed": 0,
+              "value": 0.3679017064961806
+            },
+            {
+              "algorithmic_seed": 1,
+              "value": 0.3813542586234338
+            },
+            {
+              "algorithmic_seed": 2,
+              "value": 0.4022279328056887
+            },
+            {
+              "algorithmic_seed": 3,
+              "value": 0.36770594294843084
+            },
+            {
+              "algorithmic_seed": 4,
+              "value": 0.36479410489121744
+            }
+          ]
+        },
+        "aggregation": "equal mean over the donor's frozen sections within each algorithmic seed; descriptive statistics across the five seed-specific means"
+      }
+    }
+  },
+  "macro": {
+    "predicted": {
+      "ARI": {
+        "mean": 0.22216589114205926,
+        "sd": 0.010482780460261801,
+        "minimum": 0.20881698485941808,
+        "maximum": 0.23560795390971123,
+        "n_algorithmic_seeds": 5,
+        "seed_values": [
+          {
+            "algorithmic_seed": 0,
+            "value": 0.22719879553995034
+          },
+          {
+            "algorithmic_seed": 1,
+            "value": 0.22419655298209792
+          },
+          {
+            "algorithmic_seed": 2,
+            "value": 0.23560795390971123
+          },
+          {
+            "algorithmic_seed": 3,
+            "value": 0.20881698485941808
+          },
+          {
+            "algorithmic_seed": 4,
+            "value": 0.21500916841911874
+          }
+        ]
+      },
+      "NMI": {
+        "mean": 0.34711093515254604,
+        "sd": 0.018662341188761686,
+        "minimum": 0.33448477549892336,
+        "maximum": 0.3801078308667375,
+        "n_algorithmic_seeds": 5,
+        "seed_values": [
+          {
+            "algorithmic_seed": 0,
+            "value": 0.3420426047272269
+          },
+          {
+            "algorithmic_seed": 1,
+            "value": 0.3404958543832178
+          },
+          {
+            "algorithmic_seed": 2,
+            "value": 0.3801078308667375
+          },
+          {
+            "algorithmic_seed": 3,
+            "value": 0.33448477549892336
+          },
+          {
+            "algorithmic_seed": 4,
+            "value": 0.33842361028662465
+          }
+        ]
+      },
+      "aggregation": "for each algorithmic seed: equal section mean within donor, then equal macro-average over three donors; descriptive statistics are then calculated over seeds"
+    },
+    "refined": {
+      "ARI": {
+        "mean": 0.24649297214564636,
+        "sd": 0.010556814760914251,
+        "minimum": 0.23191363991242095,
+        "maximum": 0.2580780912464419,
+        "n_algorithmic_seeds": 5,
+        "seed_values": [
+          {
+            "algorithmic_seed": 0,
+            "value": 0.25117945787801377
+          },
+          {
+            "algorithmic_seed": 1,
+            "value": 0.2517957543214225
+          },
+          {
+            "algorithmic_seed": 2,
+            "value": 0.2580780912464419
+          },
+          {
+            "algorithmic_seed": 3,
+            "value": 0.23191363991242095
+          },
+          {
+            "algorithmic_seed": 4,
+            "value": 0.23949791736993278
+          }
+        ]
+      },
+      "NMI": {
+        "mean": 0.37851557544534736,
+        "sd": 0.01656433993800386,
+        "minimum": 0.3651726269333299,
+        "maximum": 0.4071294114019997,
+        "n_algorithmic_seeds": 5,
+        "seed_values": [
+          {
+            "algorithmic_seed": 0,
+            "value": 0.37436937618090227
+          },
+          {
+            "algorithmic_seed": 1,
+            "value": 0.376243613953426
+          },
+          {
+            "algorithmic_seed": 2,
+            "value": 0.4071294114019997
+          },
+          {
+            "algorithmic_seed": 3,
+            "value": 0.3651726269333299
+          },
+          {
+            "algorithmic_seed": 4,
+            "value": 0.3696628487570789
+          }
+        ]
+      },
+      "aggregation": "for each algorithmic seed: equal section mean within donor, then equal macro-average over three donors; descriptive statistics are then calculated over seeds"
+    }
+  }
+}

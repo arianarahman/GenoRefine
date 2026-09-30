@@ -1,0 +1,23 @@
+{
+  "name": "development_full_euclidean_fixed05",
+  "purpose": "development_only",
+  "dimensions": null,
+  "metric": "euclidean",
+  "n_neighbors": 15,
+  "graph_seed": 0,
+  "leiden_seeds": [0, 1, 2],
+  "resolutions": [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6],
+  "selection": "fixed_resolution",
+  "fixed_resolution": 0.5,
+  "precision": "preserve",
+  "row_order": "canonical",
+  "metrics": ["D_batch", "iLISI_scib_metrics", "reference_ASW", "isolated_label_ASW", "predicted_cluster_ASW", "reference_knn_purity"],
+  "geometry_k": 30,
+  "lisi_k": 90,
+  "lisi_perplexity": 30.0,
+  "silhouette_max_cells": 5000,
+  "sampling_seed": 0,
+  "isolated_batch_threshold": 1,
+  "working_memory_mb": 64,
+  "neighbor_threads": 1
+}

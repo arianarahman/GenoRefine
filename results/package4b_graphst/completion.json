@@ -1,0 +1,20 @@
+{
+  "six_sections_complete": true,
+  "three_donors_complete": true,
+  "alignment_runs": 3,
+  "training_runs": 15,
+  "section_scores": 30,
+  "expected_section_scores": 30,
+  "donor_scores": 15,
+  "expected_donor_scores": 15,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "algorithmic_seeds_not_biological_replicates": true,
+  "p_values_reported": false,
+  "common_evaluator_and_native_endpoints_separated": true
+}

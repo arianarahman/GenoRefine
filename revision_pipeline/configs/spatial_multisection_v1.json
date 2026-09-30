@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "protocol_id": "spatial_multisection_v1",
+  "dataset": {
+    "name": "LIBD Human DLPFC Visium",
+    "study_doi": "10.1038/s41593-020-00787-0",
+    "repository": "https://github.com/LieberInstitute/HumanPilot",
+    "repository_commit": "044446d6bd8fc154aa74f7be62ec67effb1ec376",
+    "source_root": "revision_pipeline/data/external/dlpfc_humanpilot_044446d6",
+    "sections": [
+      {
+        "id": "151507",
+        "donor": "Br5292",
+        "expected_spots": 4226,
+        "expected_labeled_spots": 4221,
+        "expected_missing_labels": 5
+      },
+      {
+        "id": "151508",
+        "donor": "Br5292",
+        "expected_spots": 4384,
+        "expected_labeled_spots": 4381,
+        "expected_missing_labels": 3
+      },
+      {
+        "id": "151669",
+        "donor": "Br5595",
+        "expected_spots": 3661,
+        "expected_labeled_spots": 3636,
+        "expected_missing_labels": 25
+      },
+      {
+        "id": "151670",
+        "donor": "Br5595",
+        "expected_spots": 3498,
+        "expected_labeled_spots": 3484,
+        "expected_missing_labels": 14
+      },
+      {
+        "id": "151673",
+        "donor": "Br8100",
+        "expected_spots": 3639,
+        "expected_labeled_spots": 3611,
+        "expected_missing_labels": 28
+      },
+      {
+        "id": "151674",
+        "donor": "Br8100",
+        "expected_spots": 3673,
+        "expected_labeled_spots": 3635,
+        "expected_missing_labels": 38
+      }
+    ],
+    "expected_total_spots": 23081,
+    "expected_labeled_spots": 22968,
+    "expected_missing_labels": 113,
+    "label_classes": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "WM"
+    ],
+    "label_policy": "Manual cortical-layer labels are retained for later evaluation. Spots without a retained manual label are excluded and recorded; class values are not used for gene filtering, HVG selection, PCA, or Harmony."
+  },
+  "sources": [
+    {
+      "role": "source_manifest",
+      "section": null,
+      "relative_path": "AWS_File_locations.tsv",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/AWS_File_locations.tsv",
+      "sha256": "3b94d56bb361830e6314249f98da52b1dc150c8446611bf273c4243a1abbaafe",
+      "size_bytes": 6245
+    },
+    {
+      "role": "labels",
+      "section": null,
+      "relative_path": "barcode_level_layer_map.tsv",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/barcode_level_layer_map.tsv",
+      "sha256": "b5d81f0e61810bb74d8a02495eda8f84e0eb9335211dcdd03513d747036e5ca9",
+      "size_bytes": 1372541
+    },
+    {
+      "role": "counts",
+      "section": "151507",
+      "relative_path": "151507_filtered_feature_bc_matrix.h5",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/h5/151507_filtered_feature_bc_matrix.h5",
+      "sha256": "686521ab02a68dfdd810c3cde26daea2257d016c8047859877ffb8c7ac5bdd01",
+      "size_bytes": 10239582
+    },
+    {
+      "role": "positions",
+      "section": "151507",
+      "relative_path": "151507_tissue_positions_list.txt",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151507/tissue_positions_list.txt",
+      "sha256": "5c5be4dcd51c914bad02634f1ed2d96bd0c200ae487e236f644d94ded983efd0",
+      "size_bytes": 186265
+    },
+    {
+      "role": "counts",
+      "section": "151508",
+      "relative_path": "151508_filtered_feature_bc_matrix.h5",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/h5/151508_filtered_feature_bc_matrix.h5",
+      "sha256": "48ab74b340c79f19070e433b8b7db67932a6e889d421a691f70293587fff0621",
+      "size_bytes": 9253574
+    },
+    {
+      "role": "positions",
+      "section": "151508",
+      "relative_path": "151508_tissue_positions_list.txt",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151508/tissue_positions_list.txt",
+      "sha256": "cf10de46b124381a2cd28dbe3e8bdcfa469ceb5659f26de1039c9a5b9da1a257",
+      "size_bytes": 186319
+    },
+    {
+      "role": "counts",
+      "section": "151669",
+      "relative_path": "151669_filtered_feature_bc_matrix.h5",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/h5/151669_filtered_feature_bc_matrix.h5",
+      "sha256": "4c92c56291f22c31abdc76eb4d7e638ffc5b72e3c08de1142cd76ca731cbea14",
+      "size_bytes": 11041430
+    },
+    {
+      "role": "positions",
+      "section": "151669",
+      "relative_path": "151669_tissue_positions_list.txt",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151669/tissue_positions_list.txt",
+      "sha256": "00147e492d41a3724c413934ef777c94f72f15636933346783fcd3e7903bddb4",
+      "size_bytes": 186818
+    },
+    {
+      "role": "counts",
+      "section": "151670",
+      "relative_path": "151670_filtered_feature_bc_matrix.h5",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/h5/151670_filtered_feature_bc_matrix.h5",
+      "sha256": "931f50b5de5aaa6a9e9c9d795f072a1f1f7f42a1602c849c61540b7f2258a5b1",
+      "size_bytes": 10043925
+    },
+    {
+      "role": "positions",
+      "section": "151670",
+      "relative_path": "151670_tissue_positions_list.txt",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151670/tissue_positions_list.txt",
+      "sha256": "cf1cf68a6efe052f10b86b32c0b7f142d6d4bfcfa107aafa92c56234b08ec25a",
+      "size_bytes": 186856
+    },
+    {
+      "role": "counts",
+      "section": "151673",
+      "relative_path": "151673_filtered_feature_bc_matrix.h5",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/h5/151673_filtered_feature_bc_matrix.h5",
+      "sha256": "216e8010e1c313925afa0f174207da7c8947497c960e81b07edbd16176460413",
+      "size_bytes": 12887164
+    },
+    {
+      "role": "positions",
+      "section": "151673",
+      "relative_path": "151673_tissue_positions_list.txt",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151673/tissue_positions_list.txt",
+      "sha256": "c1ce0eafc855982bb2a9773f147ce6c5aef68dfd06600caa8a7e7a0e6f7cc5e8",
+      "size_bytes": 186583
+    },
+    {
+      "role": "counts",
+      "section": "151674",
+      "relative_path": "151674_filtered_feature_bc_matrix.h5",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/h5/151674_filtered_feature_bc_matrix.h5",
+      "sha256": "0ecbabdb0ea98893f41bf7b557d8de50f1e9833eb2e55b69740b85b985c01880",
+      "size_bytes": 15416986
+    },
+    {
+      "role": "positions",
+      "section": "151674",
+      "relative_path": "151674_tissue_positions_list.txt",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151674/tissue_positions_list.txt",
+      "sha256": "bc8738299011382ad81a35d81c5bcb1546b17b5c10a5a6411baf9bc1f58acca7",
+      "size_bytes": 186575
+    },
+    {
+      "role": "histology_hires",
+      "section": "151507",
+      "relative_path": "151507_tissue_hires_image.png",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/images/151507_tissue_hires_image.png",
+      "sha256": "4c8824cdeab60de15edf2949d1f08717f7007cbfd31c6d56911eb800bd6bcc34",
+      "size_bytes": 6718558
+    },
+    {
+      "role": "scalefactors",
+      "section": "151507",
+      "relative_path": "151507_scalefactors_json.json",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151507/scalefactors_json.json",
+      "sha256": "0831c11047ae9acb6eaa281ef9ed89554252b8527f5e2a2ab1208de6fbd82119",
+      "size_bytes": 163
+    },
+    {
+      "role": "histology_hires",
+      "section": "151508",
+      "relative_path": "151508_tissue_hires_image.png",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/images/151508_tissue_hires_image.png",
+      "sha256": "1613657f0a3143c7da6133144b4fac58733fcdc05648c6c777c2cbf4bf141c00",
+      "size_bytes": 6773366
+    },
+    {
+      "role": "scalefactors",
+      "section": "151508",
+      "relative_path": "151508_scalefactors_json.json",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151508/scalefactors_json.json",
+      "sha256": "9649a055c191d7c1eb3202c08358c6d63de5b332771f8b8fdf4ac66b40a5523e",
+      "size_bytes": 163
+    },
+    {
+      "role": "histology_hires",
+      "section": "151669",
+      "relative_path": "151669_tissue_hires_image.png",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/images/151669_tissue_hires_image.png",
+      "sha256": "7bed057883387d20af5ba8f7dea58d661ebc7cff1e885d755a5b0c9a2c88e254",
+      "size_bytes": 5639012
+    },
+    {
+      "role": "scalefactors",
+      "section": "151669",
+      "relative_path": "151669_scalefactors_json.json",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151669/scalefactors_json.json",
+      "sha256": "46422f5b8e256c6f532b9e3bd59671a16536bb6e4640f44fbf69fc654b53c5d3",
+      "size_bytes": 163
+    },
+    {
+      "role": "histology_hires",
+      "section": "151670",
+      "relative_path": "151670_tissue_hires_image.png",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/images/151670_tissue_hires_image.png",
+      "sha256": "a4dcb4b2134414dfd6bfb9d1f88abde16eb0950d5538043d3e04ea031cef0ee2",
+      "size_bytes": 5585969
+    },
+    {
+      "role": "scalefactors",
+      "section": "151670",
+      "relative_path": "151670_scalefactors_json.json",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151670/scalefactors_json.json",
+      "sha256": "125b25b3df2a99c60bc3364c398f0c7cd9ae47401551f87265ed5e580a3fea2f",
+      "size_bytes": 163
+    },
+    {
+      "role": "histology_hires",
+      "section": "151673",
+      "relative_path": "151673_tissue_hires_image.png",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/images/151673_tissue_hires_image.png",
+      "sha256": "547a0ef24c417934b117adeeaa373bc5480113b8c616c17d9f5bf8b4e8e563b0",
+      "size_bytes": 6148725
+    },
+    {
+      "role": "scalefactors",
+      "section": "151673",
+      "relative_path": "151673_scalefactors_json.json",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151673/scalefactors_json.json",
+      "sha256": "91c4beb9ca8145855a6a6df0a00eda6541931fc12d82d09cf8f01c9c15179dbc",
+      "size_bytes": 162
+    },
+    {
+      "role": "histology_hires",
+      "section": "151674",
+      "relative_path": "151674_tissue_hires_image.png",
+      "url": "https://spatial-dlpfc.s3.us-east-2.amazonaws.com/images/151674_tissue_hires_image.png",
+      "sha256": "a00506f3f4b83f31f14be108997921b18d44393daabeb8fa987d5ce386f544a7",
+      "size_bytes": 5825181
+    },
+    {
+      "role": "scalefactors",
+      "section": "151674",
+      "relative_path": "151674_scalefactors_json.json",
+      "url": "https://raw.githubusercontent.com/LieberInstitute/HumanPilot/044446d6bd8fc154aa74f7be62ec67effb1ec376/10X/151674/scalefactors_json.json",
+      "sha256": "869be1c7c2bc7722b1858e1f41a491305264208d083d641786e6f102fc723bac",
+      "size_bytes": 162
+    }
+  ],
+  "preprocessing": {
+    "pooled_gene_min_cells": 3,
+    "normalize_total_target_sum": 10000.0,
+    "log1p": true,
+    "hvg": {
+      "n_top_genes": 2000,
+      "flavor": "seurat",
+      "batch_key": "section"
+    },
+    "scale": {
+      "zero_center": true,
+      "max_value": 10.0
+    },
+    "pca": {
+      "n_components": 50,
+      "svd_solver": "arpack",
+      "random_state": 0
+    },
+    "harmony": {
+      "batch_key": "section",
+      "max_iter_harmony": 50,
+      "epsilon_harmony": 0.0001,
+      "random_state": 0,
+      "thread_limit": 1
+    }
+  },
+  "scope": {
+    "included": "Locked source acquisition and deterministic pooled preprocessing through the 50-dimensional Harmony embedding.",
+    "excluded": [
+      "GenoRefine training",
+      "SpaGCN training",
+      "metric scoring",
+      "figure generation",
+      "manuscript editing"
+    ]
+  }
+}

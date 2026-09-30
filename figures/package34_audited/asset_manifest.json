@@ -1,0 +1,115 @@
+{
+  "schema": "genorefine.package34_manuscript_asset_manifest.v1",
+  "generated_at_utc": "2026-09-30T15:17:14.257203+00:00",
+  "builder": {
+    "path": "revision_pipeline/manuscript_figures/build_package34_assets.py",
+    "sha256": "7990e951d324d05778818396002e9f6bca9ee9f08a4b053d17fd91dcc147fcdd",
+    "size_bytes": 54518
+  },
+  "source_runs": [
+    {
+      "run_id": "20260929T192600Z-artifactv2fix2-full-panel",
+      "kind": "artifact_validation_v2_panel",
+      "source_tree_sha256": "4c61b60a8755122c8b5a13a49a61ca2dbbf4b1ab94d28d90b48c945de4c16304",
+      "run_manifest": "revision_pipeline/runs/20260929T192600Z-artifactv2fix2-full-panel/run.json",
+      "run_manifest_sha256": "1f54acd643a3e83f0091dd297637227b1f2ae7ff2322257300d4d9893dd6fa9a",
+      "recorded_artifacts_verified": 5
+    },
+    {
+      "run_id": "20260929-spatial-panel-v1-full-panel",
+      "kind": "spatial_multisection_panel",
+      "source_tree_sha256": "bb0f67f14ca3a460a9f708a920c2b64aa44f526994737d84b6e427b46f387b4f",
+      "run_manifest": "revision_pipeline/runs/20260929-spatial-panel-v1-full-panel/run.json",
+      "run_manifest_sha256": "9d83c5bd7ee40620fd95666e93c8676dc679a9a7349cac9c15657d525872abeb",
+      "recorded_artifacts_verified": 9
+    },
+    {
+      "run_id": "20260930-package4-spagcn-native-reporting-v1",
+      "kind": "spatial_multisection_native_spagcn_reporting",
+      "source_tree_sha256": null,
+      "run_manifest": "revision_pipeline/runs/20260930-package4-spagcn-native-reporting-v1/run.json",
+      "run_manifest_sha256": "052c7f295b0839ea66f8992da3e28384113fb8b91136b4543b37b951c886a3bf",
+      "recorded_artifacts_verified": 11
+    },
+    {
+      "run_id": "20260930-graphst4b-v5-full-panel",
+      "kind": "spatial_graphst_panel",
+      "source_tree_sha256": "4d24edecd74a6814c4e09fc13c14b47bd2798d39fcbcf93a3fe2d4c46a853c79",
+      "run_manifest": "revision_pipeline/runs/20260930-graphst4b-v5-full-panel/run.json",
+      "run_manifest_sha256": "a8d4d5fdff629ad209fc67e155de5513403ddd82c9eae68904b14e85bc73d5d4",
+      "recorded_artifacts_verified": 11
+    }
+  ],
+  "outputs": {
+    "package3_artifact_screen.pdf": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/package3_artifact_screen.pdf",
+      "sha256": "ea89a91a7f9c9a2d18c1d1c76e18bfa722f920c40e0f387a5a92f8212e596a21",
+      "size_bytes": 29743
+    },
+    "package3_artifact_screen.png": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/package3_artifact_screen.png",
+      "sha256": "45d9193a54980a63c0cc2507daf55094231734104522aa32e6b15f2819a7e223",
+      "size_bytes": 336926
+    },
+    "package3_artifact_screen_table.pdf": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/package3_artifact_screen_table.pdf",
+      "sha256": "2c675634a4796e4aec9258861ccf968d20b8464bfdab8c82f3c5c871e52a3f3e",
+      "size_bytes": 22645
+    },
+    "package3_artifact_screen_table.csv": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/package3_artifact_screen_table.csv",
+      "sha256": "bc0514ff9b804b733cedc7473fab9bec9593ca8247f7b77910873de7808c3fbe",
+      "size_bytes": 4779
+    },
+    "spatial_common_profiles.pdf": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/spatial_common_profiles.pdf",
+      "sha256": "2cf60bef62f20c30980868e332dd0fd6d681ed9e1b52df26def25ee777482fdc",
+      "size_bytes": 44125
+    },
+    "spatial_common_profiles.png": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/spatial_common_profiles.png",
+      "sha256": "0db6fe082c2efa1ac143b6e9dbdbff2dc6716073915953009458302092f5afd6",
+      "size_bytes": 368379
+    },
+    "spatial_native_partitions.pdf": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/spatial_native_partitions.pdf",
+      "sha256": "a26c535c92d539734f39ee76f65ff1926742cd027ff18d3a181074556022ff48",
+      "size_bytes": 24467
+    },
+    "spatial_native_partitions.png": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/spatial_native_partitions.png",
+      "sha256": "a50b6fab1e3e82b3a2aa3702e725925421ebbf3c9792e792b6732c97cbd842e2",
+      "size_bytes": 124146
+    },
+    "spatial_profiles_table.pdf": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/spatial_profiles_table.pdf",
+      "sha256": "144523f7c4a2f078337b61cf6d60e4f633de29cce10a269b7f82e5494142d057",
+      "size_bytes": 36837
+    },
+    "spatial_profiles_table.csv": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/spatial_profiles_table.csv",
+      "sha256": "77db3859fd9c1bf33fe59f8d5c8d3f21d1a8d2cead82d0145053c16186d26984",
+      "size_bytes": 2877
+    },
+    "number_provenance.json": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/number_provenance.json",
+      "sha256": "1c322eb0c9e8636ee65477a10b0137d51190d4006a508bf5804c5c53faff6305",
+      "size_bytes": 215365
+    },
+    "README.md": {
+      "path": "revision_pipeline/manuscript_figures/staging/package34_audited/README.md",
+      "sha256": "ee1d0accf523fadcc31a5294e9596310132f5925cb2ff0c60fc36b5866eef9d1",
+      "size_bytes": 4091
+    }
+  },
+  "audits": {
+    "all_recorded_source_artifacts_verified": true,
+    "package3_seed_rows_verified": 120,
+    "package3_conditions_verified": 24,
+    "package4_section_rows_verified": 72,
+    "package4b_section_rows_verified": 30,
+    "spatial_seed_section_donor_aggregates_recomputed": true,
+    "native_partition_aggregates_recomputed": true,
+    "displayed_value_provenance_entries": 244
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "protocol_id": "broader_validation_v1",
+  "authorization": "User requested autonomous completion through development-plan item 6",
+  "role": "post_step4_bounded_broader_validation",
+  "preregistered": false,
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "evaluation_config": "revision_pipeline/configs/evaluation_primary_v1.json",
+  "evaluation_sha256": "142e6c0b56d6c3f2bba6b604a81150a718ce13b034e0e38a564dcfa173d2e567",
+  "replicate_seeds": [0, 1, 2, 3, 4],
+  "stages": ["pretrain", "reconstruction", "joint"],
+  "heldout_hpcb": {
+    "dataset": "hpcb",
+    "embedding": "Scanorama",
+    "batch": "inDrop3",
+    "scope": "GenoRefine-only held-out transfer; upstream embedding remains transductive"
+  },
+  "spatial": {
+    "path": "revision_pipeline/data/external/squidpyvisium.h5ad",
+    "sha256": "c4caaa4b8708a46b0d4b4ae7390256034e78e02280da3ed16de1ca3a198cddf8",
+    "source_url": "https://figshare.com/ndownloader/files/30639279",
+    "source_doi": "10.6084/m9.figshare.16566057",
+    "task": "single-section representation refinement feasibility",
+    "not_claimed": "multi-section integration or superiority to spatially aware methods"
+  },
+  "training": "Same 36x36 map, 32D bottleneck, 100 shuffled pretraining epochs and two-pass reconstruction/joint branches as Step 4",
+  "K_rule": "Median fixed-resolution-0.5 cluster count over Leiden seeds 0,1,2 on the training baseline; no reference labels",
+  "stop_boundary": "Complete five-seed held-out and spatial feasibility panels, audit and report all negative/null outcomes; do not add new external methods without a task-matched implementation"
+}

@@ -1,0 +1,36 @@
+{
+  "protocol_id": "focused_ablation_v1",
+  "role": "post_step5_remaining_focused_ablation_panel",
+  "dataset": "hpcb",
+  "embedding": "Scanorama",
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "input_shape": [16382, 100],
+  "replicate_seeds": [0, 1, 2, 3, 4],
+  "n_clusters": 14,
+  "k_provenance": "Frozen Step 4A label-free median baseline partition count",
+  "variants": ["no_pretraining", "kernel5", "half_capacity", "map12_fixed36", "map24_fixed36"],
+  "reused_control": "Step 4A reconstruction branch is the zero-clustering-loss control because it starts from the identical pretrained boundary, uses the same schedule and updates only reconstruction loss.",
+  "training": {
+    "batch_size": 64,
+    "pretrain_epochs": 100,
+    "no_pretraining_epochs": 0,
+    "joint_updates": 512,
+    "target_update_interval": 50,
+    "latent_dim": 32,
+    "learning_rate": 0.001,
+    "clustering_weight": 0.1,
+    "cluster_shuffle": true,
+    "pretrain_shuffle": true
+  },
+  "variant_definitions": {
+    "no_pretraining": "Original 36x36 network and map; zero autoencoder pretraining epochs before K-means and joint updates.",
+    "kernel5": "Original 36x36 network and channel widths; first encoder kernel changed from 15x15 to 5x5.",
+    "half_capacity": "Original 36x36 map and kernel sizes; encoder channels changed from 32/64/128 to 16/32/64 with symmetric decoder.",
+    "map12_fixed36": "A 12x12 cartographic layout is amplitude-adjusted and centered in a 36x36 tensor; the original 36x36 network and parameter count are retained.",
+    "map24_fixed36": "A 24x24 cartographic layout is amplitude-adjusted and centered in a 36x36 tensor; the original 36x36 network and parameter count are retained."
+  },
+  "map_size_control": "Input coordinates, selected-feature count, network input size, network parameters, latent size, K, optimizer and budgets remain fixed; only fitted cartographic grid density/topology changes. Amplitude is multiplied by 36^2/source_side^2 to match the original projection convention.",
+  "evaluation_config": "revision_pipeline/configs/evaluation_primary_v1.json",
+  "preregistered": false,
+  "inference": "descriptive_five_algorithmic_seeds_no_variant_selection"
+}

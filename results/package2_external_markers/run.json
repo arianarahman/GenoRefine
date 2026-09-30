@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260929T094500Z-imarker-panel-v1",
+  "kind": "independent_marker_preservation_panel",
+  "status": "succeeded",
+  "created_at_utc": "2026-09-29T16:29:11.815433+00:00",
+  "config_sha256": "a40e0ffc85a1cf8761792d4630e54759f86dd6a24ef79db0c7856815fbe47dea",
+  "wall_seconds": 0.10278830002062023,
+  "peak_memory_bytes": null,
+  "peak_memory_status": "not_measured",
+  "scientific_experiment": true,
+  "started_at_utc": "2026-09-29T16:29:11.815953+00:00",
+  "experiment_role": "independent_external_marker_preservation_full_panel",
+  "source_tree_sha256": "60f7259dc12e65b31c97f2d8110cb96e051fca36132de12873a035b507bf8abb",
+  "finished_at_utc": "2026-09-29T16:29:11.918298+00:00",
+  "artifacts": {
+    "config.json": {
+      "sha256": "d959d042a172982ea07a3878cc98ea50ea3fc2e8db4a26b8f4bc3b394c039500",
+      "size_bytes": 2862
+    },
+    "report.md": {
+      "sha256": "9d5bdecd87a49071e0be7947d72ba6f5d75514f7563f7b2a12825e568ae6d9dc",
+      "size_bytes": 1879
+    },
+    "results.json": {
+      "sha256": "40467e50822833c374e48d672fb5b548ccea4ff6fd5f8cd32155a9ff6b39e4f4",
+      "size_bytes": 3705605
+    },
+    "summary.json": {
+      "sha256": "e8035493293e6a8623ab057bca5f0999a1aca5a3bf4f5e46e4799b526d204583",
+      "size_bytes": 16983
+    },
+    "unit_index.json": {
+      "sha256": "4eb67a3c73095921c4122562cb9d32f1d28338182059e9dc4cad31e1ad34a07d",
+      "size_bytes": 21779
+    }
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "mclust": {
+    "role": "secondary task-native GraphST partition",
+    "sections": {
+      "151507": {
+        "ARI": {
+          "mean": 0.40801197516697146,
+          "sd": 0.004290846847484234,
+          "minimum": 0.4011192287233044,
+          "maximum": 0.4129746827610396,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6108623474756802,
+          "sd": 0.002985213804025677,
+          "minimum": 0.606987125482442,
+          "maximum": 0.6148258484791169,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151508": {
+        "ARI": {
+          "mean": 0.45883095431368204,
+          "sd": 0.0038787717746169834,
+          "minimum": 0.4524457102048614,
+          "maximum": 0.4622817524597182,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6320852931054003,
+          "sd": 0.0014711015230620661,
+          "minimum": 0.6303750475586597,
+          "maximum": 0.6343552455572646,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151669": {
+        "ARI": {
+          "mean": 0.4122903710978801,
+          "sd": 0.010219227031039071,
+          "minimum": 0.3984008441133079,
+          "maximum": 0.4246024243386626,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.5873556518406048,
+          "sd": 0.007672608033308726,
+          "minimum": 0.5776943606765514,
+          "maximum": 0.5986135453771775,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 7.0,
+          "sd": 0.0,
+          "minimum": 7.0,
+          "maximum": 7.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151670": {
+        "ARI": {
+          "mean": 0.35991253374792886,
+          "sd": 0.008844302007328499,
+          "minimum": 0.3509412687155907,
+          "maximum": 0.3709390722834131,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.5424122685090925,
+          "sd": 0.004242996097541021,
+          "minimum": 0.5352617360435021,
+          "maximum": 0.5456840463427428,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 7.0,
+          "sd": 0.0,
+          "minimum": 7.0,
+          "maximum": 7.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151673": {
+        "ARI": {
+          "mean": 0.5429413724932631,
+          "sd": 0.07495934523010758,
+          "minimum": 0.4404454745690326,
+          "maximum": 0.6004477841241623,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6656576720658904,
+          "sd": 0.05000216619567269,
+          "minimum": 0.6008880500180768,
+          "maximum": 0.7055397473238134,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151674": {
+        "ARI": {
+          "mean": 0.5720061011959447,
+          "sd": 0.07519945474956166,
+          "minimum": 0.4647283255088997,
+          "maximum": 0.629898507144363,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6798986134833485,
+          "sd": 0.050530119424540304,
+          "minimum": 0.6137761031239872,
+          "maximum": 0.7189439717966563,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "donors": {
+      "Br5292": {
+        "ARI": {
+          "mean": 0.4334214647403268,
+          "sd": 0.004000726404523028,
+          "minimum": 0.42678246946408294,
+          "maximum": 0.43727030729225624,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6214738202905402,
+          "sd": 0.0019555220765865478,
+          "minimum": 0.6191816595383444,
+          "maximum": 0.623449758138482,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br5595": {
+        "ARI": {
+          "mean": 0.38610145242290445,
+          "sd": 0.009169559403420213,
+          "minimum": 0.3746710564144493,
+          "maximum": 0.3956550716737407,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.5648839601748487,
+          "sd": 0.005474105147367213,
+          "minimum": 0.5564780483600268,
+          "maximum": 0.5710575573825433,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 7.0,
+          "sd": 0.0,
+          "minimum": 7.0,
+          "maximum": 7.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br8100": {
+        "ARI": {
+          "mean": 0.5574737368446039,
+          "sd": 0.07494779837503002,
+          "minimum": 0.4525869000389662,
+          "maximum": 0.6135481378130678,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6727781427746194,
+          "sd": 0.05018857096920883,
+          "minimum": 0.6073320765710319,
+          "maximum": 0.7097182000277351,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "macro": {
+      "ARI": {
+        "mean": 0.4589988846692784,
+        "sd": 0.025501822983002784,
+        "minimum": 0.42677126567883433,
+        "maximum": 0.4809678823069317,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "two-section mean within donor, then equal three-donor macro, seed aligned"
+      },
+      "NMI": {
+        "mean": 0.6197119744133361,
+        "sd": 0.017471196577455005,
+        "minimum": 0.5974071760940999,
+        "maximum": 0.6347261899148342,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "two-section mean within donor, then equal three-donor macro, seed aligned"
+      },
+      "clusters": {
+        "mean": 6.333333333333333,
+        "sd": 0.0,
+        "minimum": 6.333333333333333,
+        "maximum": 6.333333333333333,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "two-section mean within donor, then equal three-donor macro, seed aligned"
+      }
+    }
+  },
+  "refined": {
+    "role": "secondary task-native GraphST partition",
+    "sections": {
+      "151507": {
+        "ARI": {
+          "mean": 0.4166823333415949,
+          "sd": 0.005952206411905766,
+          "minimum": 0.4063933824131427,
+          "maximum": 0.4214775325379485,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6360332696877019,
+          "sd": 0.0023391420656269967,
+          "minimum": 0.6320943233119417,
+          "maximum": 0.6382663010788208,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151508": {
+        "ARI": {
+          "mean": 0.4792111893312532,
+          "sd": 0.006271457889047014,
+          "minimum": 0.4684203632532442,
+          "maximum": 0.4833564502657649,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6660354799024121,
+          "sd": 0.0041311736891727555,
+          "minimum": 0.6591043004085941,
+          "maximum": 0.6697475113742096,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151669": {
+        "ARI": {
+          "mean": 0.4270133341216368,
+          "sd": 0.012114141919544881,
+          "minimum": 0.4125873228830516,
+          "maximum": 0.4362152437919109,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6324270167616626,
+          "sd": 0.006471189903785295,
+          "minimum": 0.6250735097473068,
+          "maximum": 0.6425929756967591,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 7.0,
+          "sd": 0.0,
+          "minimum": 7.0,
+          "maximum": 7.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151670": {
+        "ARI": {
+          "mean": 0.3685434002950529,
+          "sd": 0.007854537029892215,
+          "minimum": 0.3595611548585186,
+          "maximum": 0.376124564890738,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.5781730758735573,
+          "sd": 0.0017241047584549123,
+          "minimum": 0.5761274192779652,
+          "maximum": 0.580289711400229,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 7.0,
+          "sd": 0.0,
+          "minimum": 7.0,
+          "maximum": 7.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151673": {
+        "ARI": {
+          "mean": 0.5695747335808586,
+          "sd": 0.07762223208840721,
+          "minimum": 0.46282071663751345,
+          "maximum": 0.6279893774834371,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.7058209898892799,
+          "sd": 0.043858188894804785,
+          "minimum": 0.6508775042464457,
+          "maximum": 0.7414595111815158,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "151674": {
+        "ARI": {
+          "mean": 0.5961331317469835,
+          "sd": 0.07436320054598819,
+          "minimum": 0.48452560919602267,
+          "maximum": 0.6524210459716926,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.7199767732064426,
+          "sd": 0.0410576104302036,
+          "minimum": 0.6673961153227121,
+          "maximum": 0.7541362534125126,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "donors": {
+      "Br5292": {
+        "ARI": {
+          "mean": 0.447946761336424,
+          "sd": 0.0060746870700819945,
+          "minimum": 0.43740687283319346,
+          "maximum": 0.4524169914018567,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.651034374795057,
+          "sd": 0.0032328619703021607,
+          "minimum": 0.6455993118602679,
+          "maximum": 0.6540069062265152,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br5595": {
+        "ARI": {
+          "mean": 0.39777836720834486,
+          "sd": 0.009938656413747502,
+          "minimum": 0.38607423887078507,
+          "maximum": 0.4056437344351058,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.6053000463176099,
+          "sd": 0.0034948619010423884,
+          "minimum": 0.6008831329146211,
+          "maximum": 0.6106639252804253,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 7.0,
+          "sd": 0.0,
+          "minimum": 7.0,
+          "maximum": 7.0,
+          "n_algorithmic_seeds": 5
+        }
+      },
+      "Br8100": {
+        "ARI": {
+          "mean": 0.582853932663921,
+          "sd": 0.07572462076310324,
+          "minimum": 0.4736731629167681,
+          "maximum": 0.639818261370558,
+          "n_algorithmic_seeds": 5
+        },
+        "NMI": {
+          "mean": 0.7128988815478612,
+          "sd": 0.04234039705710767,
+          "minimum": 0.6591368097845789,
+          "maximum": 0.7442826834113057,
+          "n_algorithmic_seeds": 5
+        },
+        "clusters": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "minimum": 6.0,
+          "maximum": 6.0,
+          "n_algorithmic_seeds": 5
+        }
+      }
+    },
+    "macro": {
+      "ARI": {
+        "mean": 0.4761930204028966,
+        "sd": 0.026089376141609624,
+        "minimum": 0.44349838824942406,
+        "maximum": 0.49793211187777925,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "two-section mean within donor, then equal three-donor macro, seed aligned"
+      },
+      "NMI": {
+        "mean": 0.6564111008868427,
+        "sd": 0.014627558162029798,
+        "minimum": 0.6393549268136159,
+        "maximum": 0.6692376072542108,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "two-section mean within donor, then equal three-donor macro, seed aligned"
+      },
+      "clusters": {
+        "mean": 6.333333333333333,
+        "sd": 0.0,
+        "minimum": 6.333333333333333,
+        "maximum": 6.333333333333333,
+        "n_algorithmic_seeds": 5,
+        "aggregation": "two-section mean within donor, then equal three-donor macro, seed aligned"
+      }
+    }
+  }
+}

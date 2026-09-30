@@ -1,0 +1,13 @@
+{
+  "role": "post-completion reporting derivation",
+  "prefix": "20260929-spatial-panel-v1",
+  "full_panel": "revision_pipeline/runs/20260929-spatial-panel-v1-full-panel",
+  "frozen_panel_source_tree_sha256": "bb0f67f14ca3a460a9f708a920c2b64aa44f526994737d84b6e427b46f387b4f",
+  "reporting_sources_sha256": "769eb44aeade4f254be8c0d77eeb2e10c48aae5fc4869f4ebbe296995ee5a01f",
+  "aggregation": [
+    "retain algorithmic-seed values within each section",
+    "within each seed, equally average the two frozen sections for each donor",
+    "within each seed, equally macro-average the three donor means",
+    "report descriptive mean and sample SD across five algorithmic seeds"
+  ]
+}

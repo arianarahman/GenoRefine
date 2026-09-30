@@ -1,0 +1,75 @@
+{
+  "schema": "genorefine.independent_marker_panel.v1",
+  "source_tree_sha256": "60f7259dc12e65b31c97f2d8110cb96e051fca36132de12873a035b507bf8abb",
+  "protocol": {
+    "sha256": "05cdf255049c32d02a70b1cc5d03a3bf63860ff8bdebf38610ddc44c6af99919",
+    "size_bytes": 3128
+  },
+  "foundation": {
+    "run_manifest": {
+      "sha256": "92914c8c2f53e0f3931d0e0d9ea0d9e091051ffc70a127b5fd9de70ba6452ff2",
+      "size_bytes": 3338
+    },
+    "foundation": {
+      "sha256": "05748d6024789677b37b987682cb80c9d9bd316dc5f339891a424152c777a722",
+      "size_bytes": 1418
+    },
+    "datasets": {
+      "hpcb": {
+        "entry_sha256": "06c711f86405d29dc55945bef6256811bed8e31844afb95591341ef2b313f4fc",
+        "panel_content_sha256": "d5b492338feb8d539303c6228faf6a707b6fa7acd425d81d5a8083be50c9bf15",
+        "metadata": {
+          "sha256": "c826a0e9c8f4b6a07820bbd48cbd92aaf132356892d488bc3cf4850d3a2f4ba1",
+          "size_bytes": 2959
+        },
+        "marker_scores": {
+          "sha256": "795a0e866a2d50f574d24d6978748862dca0631ef3c90df7d6b17eacc6479581",
+          "size_bytes": 1572800
+        },
+        "cell_ids": {
+          "sha256": "5bb251c6cd227f57ddc3fa7692ee4759d29229e6c880caf5d1aa911e2c983d02",
+          "size_bytes": 411530
+        },
+        "reference_labels": {
+          "sha256": "d6662a1949e0fd580b551673bd486d0107425fdd3a73e9bc71eb0ac6821b392b",
+          "size_bytes": 184170
+        },
+        "class_names": {
+          "sha256": "de5b2384e11c700f6540b0947021696ed2d495547e6bc34fa6fdffa63fe45cfc",
+          "size_bytes": 152
+        }
+      },
+      "mouse_senis": {
+        "entry_sha256": "b640ba35ee5bd4180cd649c9e8f414fd1af0070d6af4390ba8a4496f1dfa88be",
+        "panel_content_sha256": "ec03a7405da5d6cb4208c9841871f77773532519bcfd34e93499af7bbf47f2c0",
+        "metadata": {
+          "sha256": "0f157f37d3b0eba4d90920b93306640dd3f6f5d729b0ed19980d830d42920c11",
+          "size_bytes": 4729
+        },
+        "marker_scores": {
+          "sha256": "06c7f364c94820ab50fc5c8b1d06e216f2269d879fb05b78d89d2e48cedcb956",
+          "size_bytes": 10400128
+        },
+        "cell_ids": {
+          "sha256": "b4f3a3eb014fb85a4f9072082148acd89d4b94fd23466d7fbe01aa90cc655fea",
+          "size_bytes": 1696756
+        },
+        "reference_labels": {
+          "sha256": "8c9fa80d77be2d7ac04cfcd193c46fb5e85aae5a6a10eb253ce5a2d02dd26897",
+          "size_bytes": 1212997
+        },
+        "class_names": {
+          "sha256": "22a1b1134454c22bea7faf4da37368bec1c2b2df024f3d86c6d8be8b7e5b66ed",
+          "size_bytes": 556
+        }
+      }
+    }
+  },
+  "main_benchmark_index": {
+    "sha256": "cc8bffa0f19cd5cdeeaee2f54055a4c9d224a741c43cf9a36440b37e1abce30c",
+    "size_bytes": 5218
+  },
+  "unit_index_sha256": "2ca7aa75b6437ab4e97ae993fabf7efb5fa7d31dc7b531c3929ab288f1922c71",
+  "expected_units": 88,
+  "working_memory_mb": 512
+}

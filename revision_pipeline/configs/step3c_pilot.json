@@ -1,0 +1,30 @@
+{
+  "protocol_id": "pre3c_exact_v1",
+  "purpose": "historical_settings_compatibility_and_compute_pilot_not_primary_biological_validation",
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "dataset": "hpcb",
+  "embedding": "Scanorama",
+  "training_order": "historical_source",
+  "replicate_seeds": [0, 1, 2, 3, 4],
+  "fresh_process_duplicate_seed": 0,
+  "stage_seed_policy": "numpy.random.SeedSequence(replicate_seed).spawn(4); uint32 state; init,pretrain,kmeans,cluster",
+  "layout": {"requested_side": 36, "scaling": "none", "transport_iterations": 200, "epsilon": 0.0},
+  "training": {
+    "n_clusters": 14, "cluster_count_source": "reference_labels_secondary",
+    "architecture_name": "convidec_preserved_v1", "latent_dim": 32,
+    "batch_size": 64, "pretrain_epochs": 100, "max_updates": 300,
+    "target_update_interval": 50, "tolerance": 0.001,
+    "clustering_weight": 0.1, "learning_rate": 0.001,
+    "pretrain_shuffle": true, "cluster_shuffle": false, "kmeans_n_init": 20
+  },
+  "primary_evaluation_config": "revision_pipeline/configs/evaluation_primary_v1.json",
+  "historical_profile": "hpcb_main_tuned",
+  "historical_neighbor_threads": 24,
+  "historical_refined_precision": "float32",
+  "historical_targets_ARI": [0.463, 0.580, 0.572],
+  "historical_range_rule": "Report separately whether each rounded target lies inside the observed min/max range; also report overlap with its rounding interval +/-0.0005. Neither is a pass condition or equivalence test.",
+  "concurrency": {"initial_training_processes": 1, "initial_evaluation_processes": 1,
+    "panel_max_training_processes": 2, "panel_start_condition": "Complete full-budget seed 0 and its fresh-process duplicate; require bitwise embeddings and <=8 GiB peak RSS per process before two-way training; otherwise remain serial."},
+  "no_tuning_to_targets": true,
+  "run_training_now": false
+}

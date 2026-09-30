@@ -1,0 +1,37 @@
+{
+  "schema": "genorefine.independent_marker_foundation.v1",
+  "selection_boundary": {
+    "result_independent": true,
+    "evaluated_embedding_or_score_used": false
+  },
+  "datasets": {
+    "hpcb": {
+      "marker_scores_path": "datasets/hpcb/marker_scores.npy",
+      "cell_ids_path": "datasets/hpcb/cell_ids.json",
+      "reference_labels_path": "datasets/hpcb/reference_labels.json",
+      "class_names_path": "datasets/hpcb/class_names.json",
+      "metadata_path": "datasets/hpcb/metadata.json",
+      "shape": [
+        16382,
+        12
+      ],
+      "dtype": "float64",
+      "marker_scores_sha256": "f9e22314bcd0fcdae9f0b5cc939af656822fe2e2e70c9bc1ffabec1d28ad19ed",
+      "cell_order_sha256": "8fab26b1eb83df039bbfef2a2af0c236f891dbab93961654fc11306a1ef2f508"
+    },
+    "mouse_senis": {
+      "marker_scores_path": "datasets/mouse_senis/marker_scores.npy",
+      "cell_ids_path": "datasets/mouse_senis/cell_ids.json",
+      "reference_labels_path": "datasets/mouse_senis/reference_labels.json",
+      "class_names_path": "datasets/mouse_senis/class_names.json",
+      "metadata_path": "datasets/mouse_senis/metadata.json",
+      "shape": [
+        50000,
+        26
+      ],
+      "dtype": "float64",
+      "marker_scores_sha256": "31037df59f3ceae767db7cc79e8e052a87894d82238d2c3d850be74ad8090287",
+      "cell_order_sha256": "756d5388a6360586460b2aa673ecef6de70418377df2579bfd93a2067f6d0175"
+    }
+  }
+}

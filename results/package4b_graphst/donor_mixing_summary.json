@@ -1,0 +1,70 @@
+{
+  "donors": {
+    "Br5292": {
+      "iLISI": {
+        "mean": 0.8318745851516723,
+        "sd": 0.002336274221377228,
+        "minimum": 0.8292275667190552,
+        "maximum": 0.8338958024978638,
+        "n_algorithmic_seeds": 5
+      },
+      "D_batch": {
+        "mean": 1.9871594217474327,
+        "sd": 0.00041328181324423025,
+        "minimum": 1.9865770143279282,
+        "maximum": 1.9877083267468902,
+        "n_algorithmic_seeds": 5
+      }
+    },
+    "Br5595": {
+      "iLISI": {
+        "mean": 0.8398638486862182,
+        "sd": 0.0022531773607449065,
+        "minimum": 0.8384232521057129,
+        "maximum": 0.8438339233398438,
+        "n_algorithmic_seeds": 5
+      },
+      "D_batch": {
+        "mean": 1.986640983517366,
+        "sd": 0.0008984087977729656,
+        "minimum": 1.98528025797801,
+        "maximum": 1.9875319235636533,
+        "n_algorithmic_seeds": 5
+      }
+    },
+    "Br8100": {
+      "iLISI": {
+        "mean": 0.8350074291229248,
+        "sd": 0.002752858148628643,
+        "minimum": 0.8326456546783447,
+        "maximum": 0.8395036458969116,
+        "n_algorithmic_seeds": 5
+      },
+      "D_batch": {
+        "mean": 1.9894296243801006,
+        "sd": 0.0002964332418527675,
+        "minimum": 1.9890578223648656,
+        "maximum": 1.9898650198173238,
+        "n_algorithmic_seeds": 5
+      }
+    }
+  },
+  "macro": {
+    "iLISI": {
+      "mean": 0.8355819543202718,
+      "sd": 0.0008499385950795353,
+      "minimum": 0.8344527085622152,
+      "maximum": 0.8366151650746664,
+      "n_algorithmic_seeds": 5,
+      "aggregation": "equal macro-average over three donors"
+    },
+    "D_batch": {
+      "mean": 1.9877433432149665,
+      "sd": 0.0003462807583635059,
+      "minimum": 1.9872410253263482,
+      "maximum": 1.988192082361372,
+      "n_algorithmic_seeds": 5,
+      "aggregation": "equal macro-average over three donors"
+    }
+  }
+}

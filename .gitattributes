@@ -1,0 +1,24 @@
+* text=auto eol=lf
+
+*.py text eol=lf
+*.R text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+*.cff text eol=lf
+*.sha256 text eol=lf
+
+# Aggregate results and audited publication assets carry internal byte-level
+# fingerprints. Preserve their exact bytes, including historical line endings.
+results/** -text
+figures/** -text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary

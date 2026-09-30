@@ -1,0 +1,23 @@
+{
+  "protocol_id": "step4a_hpcb_scanorama_v1",
+  "authorization": "User requested starting Step 4 on 2026-09-17",
+  "role": "post_pilot_exploratory_matched_objective_training_panel",
+  "preregistered": false,
+  "policy": "revision_pipeline/configs/step4_decisions_v1.json",
+  "store": "revision_pipeline/runs/20260916T221434Z-a0884ffbd933",
+  "dataset": "hpcb",
+  "embedding": "Scanorama",
+  "input_shape": [16382, 100],
+  "replicate_seeds": [0, 1, 2, 3, 4],
+  "duplicate_seed": 0,
+  "initial_workers": 2,
+  "remaining_workers": 4,
+  "max_peak_bytes_per_worker": 4294967296,
+  "min_available_bytes_before_four_workers": 21474836480,
+  "layout": {"requested_side": 36, "scaling": "none", "transport_iterations": 200, "epsilon": 0.0},
+  "branches": ["pretrain", "reconstruction", "joint"],
+  "training_labels": "No reference labels used for K or gradients; historical upstream provenance remains unresolved",
+  "controls": ["unmodified_full_input", "first32", "pca32_centered_unscaled_unwhitened"],
+  "stop_boundary": "Publish five paired training runs, seed-0 repeatability gate and dimension controls; refined-output scoring and scientific interpretation require the next stage",
+  "no_automatic_expansion": ["other_backbones", "other_datasets", "new_architectures", "manuscript_claims", "annotation_corrections"]
+}

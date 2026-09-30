@@ -1,0 +1,24 @@
+{
+  "six_sections_complete": true,
+  "three_donors_complete": true,
+  "section_scores": 72,
+  "expected_section_scores": 72,
+  "donor_scores": 21,
+  "expected_donor_scores": 21,
+  "genorefine_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "spagcn_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "algorithmic_seeds_not_biological_replicates": true,
+  "p_values_reported": false
+}

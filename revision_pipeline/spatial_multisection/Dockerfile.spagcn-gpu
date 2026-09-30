@@ -1,0 +1,11 @@
+FROM nvcr.io/nvidia/pytorch:25.02-py3
+
+COPY revision_pipeline/spatial_multisection/requirements-spagcn-gpu.txt /tmp/requirements-spagcn-gpu.txt
+RUN PIP_CONFIG_FILE=/dev/null PIP_EXTRA_INDEX_URL= \
+    python -m pip install --no-cache-dir --index-url https://pypi.org/simple \
+    -r /tmp/requirements-spagcn-gpu.txt
+
+ENV PYTHONPATH=/workspace
+ENV CUBLAS_WORKSPACE_CONFIG=:4096:8
+ENV GENOREFINE_SPAGCN_RUNTIME_LOCK=spagcn-1.2.7-panel-v1
+WORKDIR /workspace

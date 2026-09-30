@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "protocol_id": "spatial_multisection_panel_v1",
+  "status": "implementation_complete_execution_not_started",
+  "foundation": {
+    "path": "revision_pipeline/runs/20260929T102000Z-spatial-multisection-foundation-v1",
+    "kind": "spatial_multisection_foundation",
+    "run_manifest_sha256": "2cbf706000d7f954a54f15dcc5f3a9300aa9b725d4548dcad2afc54302472e00",
+    "native_stop_role": "sensitivity_only"
+  },
+  "sections": ["151507", "151508", "151669", "151670", "151673", "151674"],
+  "donors": {
+    "Br5292": ["151507", "151508"],
+    "Br5595": ["151669", "151670"],
+    "Br8100": ["151673", "151674"]
+  },
+  "harmony_primary": {
+    "input": "foundation pca50.npy",
+    "batch_key": "section",
+    "max_iter_harmony": 10,
+    "epsilon_harmony_runtime": "negative_infinity",
+    "epsilon_harmony_reason": "harmonypy 0.2.0 stops after any objective increase because its native inequality is signed; negative infinity disables that premature outer stop",
+    "random_state": 0,
+    "thread_limit": 1,
+    "required_completed_outer_iterations": 10,
+    "runtime": {
+      "python_executable": "<PYTHON_ENV>",
+      "packages": {
+        "python": "3.12.10",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pandas": "3.0.1",
+        "scikit-learn": "1.8.0",
+        "harmonypy": "0.2.0",
+        "threadpoolctl": "3.6.0"
+      }
+    }
+  },
+  "evaluation": {
+    "config": "revision_pipeline/configs/evaluation_primary_v1.json",
+    "sha256": "142e6c0b56d6c3f2bba6b604a81150a718ce13b034e0e38a564dcfa173d2e567",
+    "fixed_resolution": 0.5,
+    "leiden_seeds": [0, 1, 2],
+    "section_metrics": [
+      "ARI",
+      "NMI",
+      "predicted_cluster_silhouette",
+      "reference_label_silhouette",
+      "label_neighbor_purity",
+      "spatial_latent_knn_jaccard",
+      "physical_distance_among_latent_neighbors"
+    ],
+    "donor_pair_metrics": ["iLISI", "D_batch"],
+    "spatial_neighbor_k": 6,
+    "spatial_neighbor_convention": "six non-self neighbors for the Visium hex-grid continuity endpoint",
+    "label_neighbor_purity_k": 30,
+    "label_neighbor_purity_convention": "primary evaluator geometry k; distinct from the spatial continuity endpoint",
+    "physical_coordinates": ["pxl_col_in_fullres", "pxl_row_in_fullres"],
+    "runtime": {
+      "wsl_distribution": "Ubuntu-24.04",
+      "python_executable": "<PYTHON_ENV>",
+      "python": "3.12.3",
+      "packages": {
+        "numpy": "1.26.4",
+        "scipy": "1.13.1",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.5.2",
+        "scanpy": "1.9.8",
+        "leidenalg": "0.11.0",
+        "igraph": "1.0.0",
+        "numba": "0.65.1",
+        "scib-metrics": "0.5.8",
+        "anndata": "0.10.9",
+        "threadpoolctl": "3.6.0"
+      }
+    }
+  },
+  "cluster_count_selection": {
+    "resolution": 0.5,
+    "leiden_seeds": [0, 1, 2],
+    "rule": "median fixed-resolution cluster count",
+    "pooled_use": "GenoRefine K",
+    "per_section_use": "SpaGCN K",
+    "reference_labels_used": false
+  },
+  "genorefine": {
+    "input": "fixed-10 pooled Harmony",
+    "seeds": [0, 1, 2, 3, 4],
+    "layout_side": 36,
+    "layout_scaling": "none",
+    "transport_iterations": 200,
+    "transport_epsilon": 0.0,
+    "training_policy": "step4_decisions_v1 planned_training_config",
+    "reported_stage": "joint",
+    "runtime": {
+      "image_tag": "genorefine-gpu:tf25.02",
+      "image_id": "sha256:9f215e1ad258685d300d5162b70464363915020beca6d2584a799f60a51f2c8b",
+      "python": "3.12.3",
+      "tensorflow_runtime": "2.17.0",
+      "packages": {
+        "tensorflow": "2.17.0+nv25.2",
+        "keras": "3.3.2",
+        "numpy": "1.26.4"
+      },
+      "cuda_required": true
+    }
+  },
+  "spagcn": {
+    "official_repository": "https://github.com/jianhuupenn/SpaGCN",
+    "vendored_path": "revision_pipeline/external/SpaGCN",
+    "commit": "dc7a1c26ea0fdf4dfe7064adc7699be141b4871f",
+    "version": "1.2.7",
+    "runtime": {
+      "image_tag": "genorefine-spagcn:1.2.7-panel-v1",
+      "image_id": "sha256:6eb8c07971d19ad54839f5cbb6fa7990ad15cec839d04e361797ee44778e79c6",
+      "base_image": "nvcr.io/nvidia/pytorch:25.02-py3@sha256:50e2ea138815ed088a60e6d642c9d0298b98a42b90666f7f19924640ccc519eb",
+      "runtime_lock_env": "spagcn-1.2.7-panel-v1",
+      "dockerfile_sha256": "684ba47f3ce5394437416200e12552e91cadc58683ec654a6dc3c92f6973fd48",
+      "requirements_sha256": "a8eda13f2c28f36ecff0201eea1d569953b4f6b1f4589460dd955358ad755788",
+      "python": "3.12.3",
+      "cuda": "12.8",
+      "torch_runtime": "2.7.0a0+ecf3bae40a.nv25.02",
+      "cuda_required": true,
+      "packages": {
+        "torch": "2.7.0a0+ecf3bae40a.nv25.2",
+        "numpy": "1.26.4",
+        "scipy": "1.12.0",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.5.2",
+        "anndata": "0.11.4",
+        "scanpy": "1.11.4",
+        "Pillow": "11.1.0",
+        "numba": "0.59.1",
+        "threadpoolctl": "3.5.0",
+        "packaging": "24.2",
+        "six": "1.16.0"
+      },
+      "official_cpu_vs_gpu_fixture": {
+        "same_seed": 19,
+        "gpu_repeat_must_be_bitwise_identical": true,
+        "predicted_clusters_must_match_exactly": true,
+        "latent_max_absolute_difference_at_most": 0.003,
+        "latent_relative_frobenius_difference_at_most": 0.001,
+        "probability_max_absolute_difference_at_most": 0.001,
+        "probability_relative_frobenius_difference_at_most": 0.001
+      }
+    },
+    "source_files": {
+      "SpaGCN_package/SpaGCN/__init__.py": "b476abe6a2a9facc2afdb0975cc24263fa35a5ca6287bfcba4d0eb57ba6ab4d5",
+      "SpaGCN_package/SpaGCN/SpaGCN.py": "15d89b7d9d962bdd53f0ee11e46348d2a73b51285d4cd55440f8c33dc68d50f6",
+      "SpaGCN_package/SpaGCN/models.py": "54b54fd62566481877c9a7b5b9409ac76e0f634d240150bad2cc60aa48a1cb8c",
+      "SpaGCN_package/SpaGCN/layers.py": "d2989d7e7d7edb4c33eb2a6276293ce753395403db1c27a1aed03e26aeb928ff",
+      "SpaGCN_package/SpaGCN/calculate_adj.py": "ad19f31a9ab5b443eb4c9322fad651be1e82745dc7a32e4fa8762b924f13638f",
+      "SpaGCN_package/SpaGCN/calculate_moran_I.py": "04b810f40e54b948bd21937eed9046b394e72090e67a649beaa305fe8607940b",
+      "SpaGCN_package/SpaGCN/ez_mode.py": "da3c9d047be09436c13fbe81ee15a96e90e28a3e9a3248cb090b8a3042938a81",
+      "SpaGCN_package/SpaGCN/util.py": "5770c8269830dee3f8fe2ef900b6274b4b078a7dd528258e28257dd6ea25ca8b"
+    },
+    "seeds": [0, 1, 2, 3, 4],
+    "scope": "one independent model per section and seed",
+    "preprocessing": {
+      "min_cells": 3,
+      "excluded_gene_prefixes": ["ERCC", "MT-"],
+      "normalize_total": 10000.0,
+      "log1p": true
+    },
+    "histology": {
+      "enabled": true,
+      "image": "locked section-specific high-resolution PNG",
+      "spatial_geometry_coordinates": ["array_row", "array_col"],
+      "histology_sampling_coordinates": ["hires_pxl_row", "hires_pxl_col"],
+      "beta": 49,
+      "alpha": 1.0
+    },
+    "p": 0.5,
+    "length_scale_search": {"start": 0.01, "end": 1000.0, "tolerance": 0.01, "max_runs": 100},
+    "num_pcs": 50,
+    "pca_solver": "auto",
+    "pca_call_sequence": "fit_then_transform",
+    "learning_rate": 0.005,
+    "max_epochs": 2000,
+    "optimizer": "Adam",
+    "weight_decay": 0.0,
+    "update_interval": 3,
+    "kmeans_n_init": 20,
+    "model_alpha": 0.2,
+    "initialization": "kmeans",
+    "init_spatial": true,
+    "tolerance": 0.001,
+    "refinement": "official hexagon label refinement retained as a secondary native endpoint"
+  },
+  "aggregation": {
+    "order": ["algorithmic seeds within section", "two sections within donor", "three donor macro-average"],
+    "seed_role": "descriptive algorithmic repeats, not biological replicates",
+    "p_values": false,
+    "section_weighting": "equal within donor",
+    "donor_weighting": "equal"
+  },
+  "label_policy": "Manual cortical-layer labels are used only after all fitting and graph construction for evaluation metrics. They are never used to choose K, resolution, Harmony, GenoRefine, or SpaGCN settings."
+}

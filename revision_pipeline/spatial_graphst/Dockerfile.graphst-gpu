@@ -1,0 +1,30 @@
+FROM nvcr.io/nvidia/pytorch:25.02-py3@sha256:50e2ea138815ed088a60e6d642c9d0298b98a42b90666f7f19924640ccc519eb
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1 \
+    OMP_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 \
+    OPENBLAS_NUM_THREADS=1 \
+    NUMEXPR_NUM_THREADS=1 \
+    CUBLAS_WORKSPACE_CONFIG=:4096:8 \
+    RPY2_CFFI_MODE=ABI
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends r-base-core r-base-dev gfortran curl ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY revision_pipeline/spatial_graphst/requirements-graphst-gpu.txt /opt/locks/requirements.txt
+RUN python -m pip install --no-cache-dir -r /opt/locks/requirements.txt
+
+COPY revision_pipeline/external/GraphST-1.1.1 /opt/GraphST-1.1.1
+COPY revision_pipeline/external/PASTE-1.4.0 /opt/PASTE-1.4.0
+ENV PYTHONPATH=/opt/GraphST-1.1.1:/opt/PASTE-1.4.0/src:/workspace
+
+RUN curl -fsSL -o /tmp/mclust.tar.gz \
+      https://cran.r-project.org/src/contrib/Archive/mclust/mclust_6.1.1.tar.gz \
+    && echo "ddd7018e5e6ea7f92c7fc9872b391491b7e91c2cd89ef1dcaf4408afb5116775  /tmp/mclust.tar.gz" | sha256sum -c - \
+    && R CMD INSTALL /tmp/mclust.tar.gz \
+    && rm /tmp/mclust.tar.gz
+
+WORKDIR /workspace

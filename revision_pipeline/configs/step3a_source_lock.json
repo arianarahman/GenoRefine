@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "scope": "Exact input bytes inspected for Step 3A; hashes do not establish biological provenance.",
+  "files": {
+    "PancreasDataset/Dataset/dataBaronX.mat": {
+      "sha256": "0adea336db32fc2cba092bcafa79c362d559d0dbab93ab4a2234268d829e011a",
+      "size_bytes": 6458944
+    },
+    "PancreasDataset/Dataset/dataMuraroX.mat": {
+      "sha256": "29e44db4d22583158b80139b5d0a0787a4f5c4e231293e19660c08435a2f9bc6",
+      "size_bytes": 4441632
+    },
+    "PancreasDataset/Dataset/dataScapleX.mat": {
+      "sha256": "850c32c43bded9f09e65eccc9b17891294509e20c9557aae8e27f833ac0ac113",
+      "size_bytes": 5365775
+    },
+    "PancreasDataset/Dataset/dataWangX.mat": {
+      "sha256": "b5d24289cfcad4596fb4f75325ba10ce0326e4b11a275cb554808a88f6a3f941",
+      "size_bytes": 6576846
+    },
+    "PancreasDataset/Dataset/dataXinX.mat": {
+      "sha256": "519b419eccb56b278e53a113fd21c476951aae04bfb5d7862dd02f28c8e70dda",
+      "size_bytes": 11162536
+    },
+    "PancreasDataset/Dataset/classLabel.mat": {
+      "sha256": "af05885cad75afe2bce08bbae0a69f7b476f30c6a2aed5feba128fd72013b051",
+      "size_bytes": 5470
+    },
+    "HPCBDataset/Dataset/human_pancreas_norm_complexBatch.h5ad": {
+      "sha256": "97e6dfd65553e4d10aa3ef5d904362970a75c677c31d70fabc9234191a09db8c",
+      "size_bytes": 315955785
+    },
+    "MouseDataset/Dataset/tabula-muris_sub50k_combined.h5ad": {
+      "sha256": "c84702d2de72a46d4514dc0a3e407c3568a74aafb44008e5a4f86c9440ccb9f4",
+      "size_bytes": 1903299960
+    },
+    "PBMCSingeBatchDataset/Dataset/pbmcs_ctrl_labeled.h5ad": {
+      "sha256": "9f257bf7750e533758c01576a12af9c335fc51501c2bbf259471861cc45d2fac",
+      "size_bytes": 186103060
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_BBKNN.csv": {
+      "sha256": "d322cca0c602bb724f63e3bb383c19cb35f193c36ee20a1012485d03d4bee27b",
+      "size_bytes": 9124636
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_DiffusionMap.csv": {
+      "sha256": "0715d31ad41fd66def46d5efb139774325a2c703ce643a74383b8587f3b24f33",
+      "size_bytes": 6945864
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_DiffusionMap.csv": {
+      "sha256": "17b748a5f3a4bfc90dd774d743584b63a84dae30bcd835959f1058aa8ce27a33",
+      "size_bytes": 6230427
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_Harmony.csv": {
+      "sha256": "43789d20d06f3cc79a2fd70db68ded553260c9b93c10e55e33e61ec472c29866",
+      "size_bytes": 5665132
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_Online_iNMF.csv": {
+      "sha256": "3c1a9a4fdc9805c9f5a570dc4c09ff17b535f819e7adf37ebb6223d32fa16713",
+      "size_bytes": 5660538
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_PHATE.csv": {
+      "sha256": "e04e7568a0770d07d7e27fdcfb5f5f46aece8016508191cd14e8beadff23ad70",
+      "size_bytes": 6293655
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_Scanorama.csv": {
+      "sha256": "15f040e15dbfdb6e28a57b2a79060c44d3c6a9eccfd2a3e28d1eb3a59148808d",
+      "size_bytes": 6184412
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_GenoDR_Seurat.csv": {
+      "sha256": "ad629ff8633afd5457be0b7478cabfacb4ad0fdd22a88b66ccb4ba350a084abb",
+      "size_bytes": 5664741
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_Harmony.csv": {
+      "sha256": "e0d099e7efbf227f24e5c48d808c7f1d9862c5c34df6a883adc6661f1aca6019",
+      "size_bytes": 9186931
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_Online_iNMF.csv": {
+      "sha256": "c4ae03b352fb9aa121d4a85f99983036a5f3be80bf15ec1b2d09ffd38c23529b",
+      "size_bytes": 5023432
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_PHATE.csv": {
+      "sha256": "1c099f2636200ea7df99c245210dfecd61cdf449fccb79ba343c8350feff2890",
+      "size_bytes": 11440323
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_Scanorama.csv": {
+      "sha256": "946fc89d363a0dace959ddb294b5450092d7d4a05584703b276240ea9a8ac61c",
+      "size_bytes": 34798451
+    },
+    "HPCBDataset/Benchmark_Hie_Out/Embeddings/X_Seurat.csv": {
+      "sha256": "6cffd2fcf7bc8e6979428d2fea08e55df921364db919e86e75e10dc0101db288",
+      "size_bytes": 15114730
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_BBKNN.csv": {
+      "sha256": "326ce5ac955968418960b3ee89b61ae1a8a9e082ebbae4dc93e952a8ed730e08",
+      "size_bytes": 28209898
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_DiffusionMap.csv": {
+      "sha256": "8f5d5a9c7d09282ecbb6dd472658e17df0c077de734c760fea0b847eb3848cc9",
+      "size_bytes": 21905801
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_DiffusionMap.csv": {
+      "sha256": "a6ba9193c84fe3651fc18de432c02ca628840950dc89ad5aee2fcd8fc2cf40d1",
+      "size_bytes": 19304134
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_Harmony.csv": {
+      "sha256": "4fa7f58f2e52d37ad5ef0ada2109134af2bb36dad4c7c8a2e5eba4a606ddfd7f",
+      "size_bytes": 17733637
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_Online_iNMF.csv": {
+      "sha256": "f35bc77265c901217fec0c6bdb409bb5688d213f6c69bd2c2bcab1410ebacaf5",
+      "size_bytes": 17821194
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_PHATE.csv": {
+      "sha256": "efb98fe1b1d34b52908dad978d77117c3af96253afc6549c73dbcdace8898c36",
+      "size_bytes": 19315837
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_Scanorama.csv": {
+      "sha256": "a18140e4ef163ff85384f1dfbfeea8fabcf20752ca37d6c6f831417f598248dc",
+      "size_bytes": 19133258
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_GenoDR_Seurat.csv": {
+      "sha256": "27678d30a5bff21a869cdc14778f05dbbb1c03eaedfdcd336652c20dce5a2310",
+      "size_bytes": 17719433
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_Harmony.csv": {
+      "sha256": "00f408e5098276a69140dc94288759cf5ffd185a3df5ae6bf9445682492b059d",
+      "size_bytes": 28269303
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_Online_iNMF.csv": {
+      "sha256": "c321d0cac76b0c47ee1b94c83992049993e00180f14021b4d5c677f96a479394",
+      "size_bytes": 15660353
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_PHATE.csv": {
+      "sha256": "4a22a037eb1d2f299edeb48db70de6e4e5a76046335648ace2be86c1bf62558d",
+      "size_bytes": 35225259
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_Scanorama.csv": {
+      "sha256": "57aa893815aa76fa7c9187ee89a952b4dfbae85c3bc1f6ddfd3268966cfdef96",
+      "size_bytes": 107036505
+    },
+    "MouseDataset/Benchmark_Mouse_Out/Embeddings/X_Seurat.csv": {
+      "sha256": "76056d62489b468e42908d8a5a688d0e5719332a212c061c24379bfe0bd61313",
+      "size_bytes": 46278804
+    },
+    "PancreasDataset/Benchmark_Out/X_seurat_pancreas.csv": {
+      "sha256": "0b6c89aa0c356519149ead3afaaa9e87ba6511201e66503330d3207e91804d02",
+      "size_bytes": 13541343
+    },
+    "PancreasDataset/Benchmark_Out/X_online_inmf_pancreas.csv": {
+      "sha256": "0abd58fdd6696efc8c9d0fae62b22664b4031ebddbffe65d4e68aa28280999d6",
+      "size_bytes": 4707124
+    },
+    "MouseDataset/Benchmark_Mouse_Out/X_online_inmf_mouse_removed_cells.txt": {
+      "sha256": "15eb0551e73f6449ccf4395ac70026d7e8829dac9922d57749453b0bdd9c9796",
+      "size_bytes": 1496753
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "protocol_id": "independent_marker_preservation_v1",
+  "role": "external_marker_preservation_across_primary_embedding_backbones",
+  "scope": "HP-CB and Mouse only; pancreas is excluded because retained feature identities are unverified",
+  "datasets": [
+    {
+      "id": "hpcb",
+      "display": "HP-CB",
+      "expression": "HPCBDataset/Dataset/human_pancreas_norm_complexBatch.h5ad",
+      "expression_layer": "counts",
+      "label_key": "celltype",
+      "panel": "panglaodb_human_canonical",
+      "label_policy": {
+        "pool": {
+          "activated_stellate": "stellate",
+          "quiescent_stellate": "stellate"
+        },
+        "rename": {
+          "t_cell": "T cell"
+        },
+        "retained_as_nonendpoint": [
+          "schwann"
+        ]
+      }
+    },
+    {
+      "id": "mouse_senis",
+      "display": "Mouse",
+      "expression": "MouseDataset/Dataset/tabula-muris_sub50k_combined.h5ad",
+      "expression_layer": "raw.X",
+      "label_key": "cell_ontology_class",
+      "panel": "cellmarker_mouse_normal_pre2017",
+      "official_sources": {
+        "droplet": "MouseDataset/Dataset/tabula-muris-droplet.h5ad",
+        "facs": "MouseDataset/Dataset/tabula-muris-facs.h5ad"
+      },
+      "official_join_keys": [
+        "cell",
+        "method",
+        "tissue"
+      ],
+      "local_cell_ontology_id_policy": "reject_as_authoritative"
+    }
+  ],
+  "backbones": [
+    "Scanorama",
+    "Harmony",
+    "Seurat",
+    "Online iNMF"
+  ],
+  "representations_per_case": {
+    "upstream": 1,
+    "GenoRefine": 5,
+    "IDEC": 5
+  },
+  "replicate_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "main_benchmark_index": "revision_pipeline/runs/20260921T003801Z-c055558a1a7c/run_index.json",
+  "independent_idec_prefix": "20260929T004000Z-idec2",
+  "normalization": "library_size_10000_log1p",
+  "gene_matching": "exact_official_symbol_case_sensitive_after_source_normalization",
+  "minimum_matched_marker_genes": 5,
+  "minimum_class_cells_for_macro_metrics": 10,
+  "neighbor_count_nonself": 30,
+  "neighbor_search": {
+    "distance": "euclidean",
+    "distance_precision": "float64",
+    "tie_break": "distance_then_canonical_cell_index",
+    "self_exclusion": "by_canonical_cell_identity",
+    "row_permutation_invariance_required": true
+  },
+  "primary_endpoints": [
+    "neighbor_marker_auroc_macro",
+    "neighbor_marker_average_precision_macro",
+    "neighbor_marker_contrast_macro"
+  ],
+  "secondary_endpoints": [
+    "per_class_neighbor_marker_auroc",
+    "per_class_neighbor_marker_average_precision",
+    "per_class_neighbor_marker_contrast",
+    "cluster_marker_summary"
+  ],
+  "panel_selection": "external_sources_only; no evaluated embedding or result may select markers, classes, genes, or thresholds",
+  "annotation_use": "reference class names define the prespecified external-source crosswalk and post hoc evaluation strata; cell-level assignments do not select genes, embeddings, scores, or thresholds",
+  "inference": "descriptive_five_algorithmic_seeds; no seed-level biological p-values",
+  "success_policy": "Report every eligible case, representation, seed, class, and endpoint; interpret preservation jointly with ARI, purity, and iLISI, without favorable selection.",
+  "expected_representation_evaluations": 88
+}

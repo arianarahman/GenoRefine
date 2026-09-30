@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "run_id": "20260930-graphst4b-v5-full-panel",
+  "kind": "spatial_graphst_panel",
+  "status": "succeeded",
+  "created_at_utc": "2026-09-30T13:24:17.856158+00:00",
+  "config_sha256": "fdf57d0c33faee5273ae9326ddc4ba4cb07544c258a978b120669ef56165cb4f",
+  "wall_seconds": 1.083828781000193,
+  "peak_memory_bytes": null,
+  "peak_memory_status": "not_measured",
+  "scientific_experiment": true,
+  "started_at_utc": "2026-09-30T13:24:17.858420+00:00",
+  "source_tree_sha256": "4d24edecd74a6814c4e09fc13c14b47bd2798d39fcbcf93a3fe2d4c46a853c79",
+  "experiment_role": "complete_graphst_package4b_panel",
+  "training_performed": false,
+  "scoring_performed": false,
+  "finished_at_utc": "2026-09-30T13:24:18.942222+00:00",
+  "artifacts": {
+    "completion.json": {
+      "sha256": "ecd2c5b94429fcca2da1491803770b566847160f96a162c9e2f4dce885a723ce",
+      "size_bytes": 421
+    },
+    "config.json": {
+      "sha256": "59b26b76483628653b82ad4a3c34257842d099e8cea4dcd1bc70716aa11f8df6",
+      "size_bytes": 11736
+    },
+    "donor_mixing_summary.json": {
+      "sha256": "6347fd83fcbd83e0f9aff6cb30367205efe1298ec8d2952438edfc3e8c696fbd",
+      "size_bytes": 1883
+    },
+    "donor_seed_rows.json": {
+      "sha256": "d4a0efce404f4cf7a2e7c5d0f8d99ee7e6fc6e08e4f36633f17de91809da4cdb",
+      "size_bytes": 8910
+    },
+    "native_partition_summary.json": {
+      "sha256": "bcaa3628d63864281b3efcf47bf112ae74648af4e4b6026caee30747a6606c5e",
+      "size_bytes": 13475
+    },
+    "native_section_seed_rows.csv": {
+      "sha256": "ce9a4faeb17c843429064995c7eaacce9bf628c31a59774d4186fd2325fa6e18",
+      "size_bytes": 4417
+    },
+    "report.md": {
+      "sha256": "3ee22decf80bba3cbe343201f0cfd0cb2fed20cd37ef6d3c76decf67deff3324",
+      "size_bytes": 1538
+    },
+    "section_seed_rows.csv": {
+      "sha256": "2825eb372b874f25072839e976753e1eca49e44805dd18a9953eedfac318697a",
+      "size_bytes": 5633
+    },
+    "section_seed_rows.json": {
+      "sha256": "dec937de094b90ea2167405efab34bae0383bd2b2b5d1d4499fb22954f67fe1f",
+      "size_bytes": 70898
+    },
+    "section_summary.json": {
+      "sha256": "1cefc1765e130d74d825ce0cbeeba03ce1ddb8fc31a775ce82106ff23c1183d8",
+      "size_bytes": 19448
+    },
+    "source_manifest.json": {
+      "sha256": "f9f947a4914a0183387cd1218f3ae738bcaf21081496b936b7d6a9bd40e44e98",
+      "size_bytes": 8002
+    }
+  }
+}

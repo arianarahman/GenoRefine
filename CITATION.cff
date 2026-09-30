@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use GenoRefine or these release artifacts, please cite the software and the associated manuscript."
+type: software
+title: "GenoRefine: A Post-Integration Refinement Framework for Single-Cell RNA-Sequencing Embedding Geometry"
+authors:
+  - family-names: "Rahman"
+    given-names: "Ariana"
+  - family-names: "Mostafa"
+    given-names: "Sakib"
+  - family-names: "Xing"
+    given-names: "Lei"
+  - family-names: "Islam"
+    given-names: "Md. Tauhidul"
+repository-code: "https://github.com/arianarahman/GenoRefine"
+url: "https://github.com/arianarahman/GenoRefine"
+abstract: >-
+  GenoRefine is a post-integration refinement framework for single-cell
+  RNA-sequencing embedding geometry. This research-artifact release contains
+  frozen analysis code, aggregate results, provenance records, and derived
+  figures; it does not distribute raw or cell-level data.
+keywords:
+  - single-cell RNA sequencing
+  - data integration
+  - representation learning
+  - spatial transcriptomics

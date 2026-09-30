@@ -1,0 +1,34 @@
+{
+  "source": "supplied venv_pancreas; genomap 1.3.6",
+  "modifications": "none; byte-for-byte copies",
+  "files": {
+    "genomap/__init__.py": {
+      "sha256": "05f9b39ea32d2b95a2ae0889e1527c711e49448aac2043c989674664e2517796",
+      "size_bytes": 63
+    },
+    "genomap/genomap.py": {
+      "sha256": "569b854dc82566911d29183abe12488b3ea803ddf680732aa5423d9b9b2e9477",
+      "size_bytes": 6124
+    },
+    "genomap/genomapOPT/__init__.py": {
+      "sha256": "8bb6669675084140d8824423f1cedbfafc2d6ad91c67f5471df0d3e2a0f5b307",
+      "size_bytes": 25
+    },
+    "genomap/genomapOPT/genomapOPT.py": {
+      "sha256": "cd34180874e09ad82cf9763868a78da0a16a4eab97a6ba864d890960d806ebcd",
+      "size_bytes": 7338
+    },
+    "genomap/bregman_genomap/__init__.py": {
+      "sha256": "181f1a1be409dbc19b0f7d9e5183855d61c3cfc1a6b8c44b07fcbda3abbda182",
+      "size_bytes": 30
+    },
+    "genomap/bregman_genomap/bregman_genomap.py": {
+      "sha256": "9acb013cc077057e2832b69221253806965a91772e694f04128781c6cdf4f083",
+      "size_bytes": 125058
+    },
+    "genomap-1.3.6.dist-info/LICENSE.txt": {
+      "sha256": "a2f17dc1ff568703161054535575c4ee813e6112f4706958efd446525c007197",
+      "size_bytes": 12711
+    }
+  }
+}

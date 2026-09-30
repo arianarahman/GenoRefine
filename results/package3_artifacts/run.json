@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run_id": "20260929T192600Z-artifactv2fix2-full-panel",
+  "kind": "artifact_validation_v2_panel",
+  "status": "succeeded",
+  "created_at_utc": "2026-09-30T08:07:39.040727+00:00",
+  "config_sha256": "8ca466292f313579fbe59985678209165f86a4863fab3827ea10f09b26587ea8",
+  "wall_seconds": 2.986508789999789,
+  "peak_memory_bytes": null,
+  "peak_memory_status": "not_measured",
+  "scientific_experiment": true,
+  "started_at_utc": "2026-09-30T08:07:39.042891+00:00",
+  "source_tree_sha256": "4c61b60a8755122c8b5a13a49a61ca2dbbf4b1ab94d28d90b48c945de4c16304",
+  "experiment_role": "post_review_exploratory_real_embedding_artifact_correction_benchmark",
+  "claim_boundary": "controlled_artifact_correction_on_existing_real_embeddings_not_external_cohort_or_general_biological_validation",
+  "finished_at_utc": "2026-09-30T08:07:42.029384+00:00",
+  "artifacts": {
+    "config.json": {
+      "sha256": "cff975b599c71d571d3ab6c99bcbfa3616a75b4f077b82397f11ea36b9ad5438",
+      "size_bytes": 44217
+    },
+    "report.md": {
+      "sha256": "fb8e9e44760a07d084facc503222480345682c1e828797fe0e1e33ef735c39f3",
+      "size_bytes": 641
+    },
+    "seed_level.csv": {
+      "sha256": "cf21da30dee27c23e3f62ec7e6dfb26513d6979b69f6a01f7382acce4f3241d3",
+      "size_bytes": 24020
+    },
+    "source_manifest.json": {
+      "sha256": "6da2434b46e380e5d587028cf3b231be657a17599458c32fca99a4d07e992314",
+      "size_bytes": 79998
+    },
+    "summary.json": {
+      "sha256": "cf33f003a845e918d95d8c37398e04e15e74e8c204f037ad8761c77fdeaf2860",
+      "size_bytes": 701051
+    }
+  }
+}

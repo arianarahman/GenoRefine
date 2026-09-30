@@ -1,0 +1,107 @@
+{
+  "schema": "genorefine.manuscript_asset_manifest.v1",
+  "builder_sha256": "04e3eabb39820dedc415c882e93054dd2c3fcc2d597019b93c6a804eb45e3db5",
+  "sources": [
+    {
+      "package": "Package 1",
+      "run_id": "20260929T004000Z-idec2-full-panel",
+      "kind": "independent_idec_full_panel_consolidation",
+      "run_manifest": "revision_pipeline/runs/20260929T004000Z-idec2-full-panel/run.json",
+      "run_manifest_sha256": "9db4fd8f95f43135bef5c027e59a2d2d44a6dbbab607632f16029f23e58d9fd9",
+      "summary": "revision_pipeline/runs/20260929T004000Z-idec2-full-panel/summary.json",
+      "summary_sha256": "a7d00a9ef3c74af2f7124809dfd4de61261cb334bd4e0b49e5d7d8c8cd103ddf",
+      "protocol": "revision_pipeline/configs/independent_idec_panel_v2.json",
+      "protocol_sha256": "8388079655708ed9650182bcd200a69e1848bf24d9666d5bfe6af277ead8f57b",
+      "primary_table": "revision_pipeline/runs/20260921T003801Z-c055558a1a7c/table_data.json",
+      "primary_table_sha256": "5f754b4c4ec92bd71c1234faea3d3719311e47234a569b999fc13a99511b4d28",
+      "coverage": {
+        "cases": 12,
+        "seeds_per_case": 5,
+        "scored_IDEC_embeddings": 60,
+        "datasets": 3,
+        "backbones": 4
+      }
+    },
+    {
+      "package": "Package 2",
+      "run_id": "20260929T094500Z-imarker-panel-v1",
+      "kind": "independent_marker_preservation_panel",
+      "run_manifest": "revision_pipeline/runs/20260929T094500Z-imarker-panel-v1/run.json",
+      "run_manifest_sha256": "967139cbe2630598899ede9436f3383d9d97c837ea35e7e94d91757c3eb4a1c2",
+      "summary": "revision_pipeline/runs/20260929T094500Z-imarker-panel-v1/summary.json",
+      "summary_sha256": "e8035493293e6a8623ab057bca5f0999a1aca5a3bf4f5e46e4799b526d204583",
+      "results": "revision_pipeline/runs/20260929T094500Z-imarker-panel-v1/results.json",
+      "results_sha256": "40467e50822833c374e48d672fb5b548ccea4ff6fd5f8cd32155a9ff6b39e4f4",
+      "unit_index": "revision_pipeline/runs/20260929T094500Z-imarker-panel-v1/unit_index.json",
+      "unit_index_sha256": "4eb67a3c73095921c4122562cb9d32f1d28338182059e9dc4cad31e1ad34a07d",
+      "foundation_run_id": "20260929T093000Z-imarker-foundation-v1",
+      "foundation_manifest_sha256": "92914c8c2f53e0f3931d0e0d9ea0d9e091051ffc70a127b5fd9de70ba6452ff2",
+      "coverage": {
+        "units": 88,
+        "cases": 8,
+        "datasets": 2,
+        "backbones": 4,
+        "methods": {
+          "upstream": 8,
+          "GenoRefine": 40,
+          "IDEC": 40
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "main_independent_comparator_12case.pdf": {
+      "sha256": "154f4c3e4d29a1bc80da0c4c0a89acbb11ede9bf25a0df8a4d20cc1631cc7298",
+      "size_bytes": 37863,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/main_independent_comparator_12case.pdf"
+    },
+    "main_independent_comparator_12case.png": {
+      "sha256": "e89363b1efb23d098f31d9a48e9b6d647bb95ff2e7bb1c967e7a41830f144afd",
+      "size_bytes": 240490,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/main_independent_comparator_12case.png"
+    },
+    "main_independent_comparator_12case_table.pdf": {
+      "sha256": "f93dd3f49fc805c425e7b6424930cfcfdb432b81bac10333ff9a3ca470e88d04",
+      "size_bytes": 32267,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/main_independent_comparator_12case_table.pdf"
+    },
+    "main_independent_comparator_12case_table.csv": {
+      "sha256": "47890f6f12b70df138963b97efb690f4c6f661ed246cbb054d60d244d0909256",
+      "size_bytes": 9604,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/main_independent_comparator_12case_table.csv"
+    },
+    "supp_external_marker_8case.pdf": {
+      "sha256": "f8f3a9f4121cb12f4732330a28fce41eb560f850420b5bdbae6890db312c2243",
+      "size_bytes": 32280,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/supp_external_marker_8case.pdf"
+    },
+    "supp_external_marker_8case.png": {
+      "sha256": "bbd5cc6b399ca13006272906e15e7b2c497cdd8e19621bb606c3a1f0e133792b",
+      "size_bytes": 197414,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/supp_external_marker_8case.png"
+    },
+    "supp_external_marker_8case_table.pdf": {
+      "sha256": "1c4bcf4a046231b54c4894404bc4bd4bec120c2bd03aeba8e0c747c656709402",
+      "size_bytes": 27437,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/supp_external_marker_8case_table.pdf"
+    },
+    "supp_external_marker_8case_table.csv": {
+      "sha256": "2e90d32798a8196e07ce9eae8c938979798fe40fb89910568dc0ae7ce2084bca",
+      "size_bytes": 4257,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/supp_external_marker_8case_table.csv"
+    },
+    "number_provenance.json": {
+      "sha256": "9711aed8d1a6a353540a093779e54b1610e237bb091d0a56b76fa777c415c5f2",
+      "size_bytes": 599512,
+      "relative_path": "revision_pipeline/manuscript_figures/staging/package12_audited/number_provenance.json"
+    }
+  },
+  "audits": {
+    "package1_values": 144,
+    "package2_values": 72,
+    "package1_expected": 144,
+    "package2_expected": 72,
+    "source_artifact_fingerprints_verified": true,
+    "seed_level_aggregates_recomputed": true
+  }
+}

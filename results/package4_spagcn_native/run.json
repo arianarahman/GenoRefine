@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "run_id": "20260930-package4-spagcn-native-reporting-v1",
+  "kind": "spatial_multisection_native_spagcn_reporting",
+  "status": "succeeded",
+  "created_at_utc": "2026-09-30T10:38:49.916434+00:00",
+  "config_sha256": "a9f4b2ab46525fb80aa261efad56cdf51616bbc90523fc91f20758700f9a4776",
+  "wall_seconds": 0.04579200001899153,
+  "peak_memory_bytes": null,
+  "peak_memory_status": "not_measured",
+  "scientific_experiment": false,
+  "started_at_utc": "2026-09-30T10:38:49.917434+00:00",
+  "derivation_only": true,
+  "training_performed": false,
+  "scoring_performed": false,
+  "source_scientific_run_id": "20260929-spatial-panel-v1-full-panel",
+  "source_scientific_run_unchanged": true,
+  "frozen_panel_source_tree_sha256": "bb0f67f14ca3a460a9f708a920c2b64aa44f526994737d84b6e427b46f387b4f",
+  "reporting_sources_sha256": "769eb44aeade4f254be8c0d77eeb2e10c48aae5fc4869f4ebbe296995ee5a01f",
+  "finished_at_utc": "2026-09-30T10:38:49.963203+00:00",
+  "artifacts": {
+    "config.json": {
+      "sha256": "166491900811e055db6c13ac743bd3938b2a04eeb7898fbdf9fbad738745ca1d",
+      "size_bytes": 681
+    },
+    "evidence_boundaries.json": {
+      "sha256": "3e44a128dd5c42a108f4890530d7bef3bdd7ede9ecd183ad1cd8bb31ebd76c45",
+      "size_bytes": 1565
+    },
+    "native_spagcn_donor_seed_rows.csv": {
+      "sha256": "7bc1d4385a7f2e57d20870effe523686605356410504247c20d4e7efb437a692",
+      "size_bytes": 1852
+    },
+    "native_spagcn_donor_seed_rows.json": {
+      "sha256": "3adac10e8bfd82c3ef99305c51902a908df3eddca48da6dbb5ec76021507fc09",
+      "size_bytes": 5103
+    },
+    "native_spagcn_macro_seed_rows.csv": {
+      "sha256": "c8b530d685b246f80b04ee8ccf63eb535e85149b0458d69f94fd964a6137e33e",
+      "size_bytes": 574
+    },
+    "native_spagcn_macro_seed_rows.json": {
+      "sha256": "32df006384119628e9f3cc4eaf81735ce3c4e4b0f3f00ac6d2a2f2b98a49e6d8",
+      "size_bytes": 1453
+    },
+    "native_spagcn_section_seed_rows.csv": {
+      "sha256": "e057f5f05771fd1b14c9defb3b1070a7bde4730b501dbb2b44e089ad74e6a9a6",
+      "size_bytes": 6423
+    },
+    "native_spagcn_section_seed_rows.json": {
+      "sha256": "97bd5cb316cd880ef307bac53c3a462ccb4e18c4810abf27d875403b4e038ff8",
+      "size_bytes": 14823
+    },
+    "native_spagcn_summary.json": {
+      "sha256": "b5c8e24be7d72521db9dfb3fa228382e8d4c3098332630c10818c5fa0b11b292",
+      "size_bytes": 41630
+    },
+    "provenance.json": {
+      "sha256": "8790f07db15577f7a5e6dc88c544e16236e98f02551f5129ca239e25709a3d03",
+      "size_bytes": 14448
+    },
+    "report.md": {
+      "sha256": "0e1b90c6721c13f28c7def90f989cb1f83433e5095fd2727b166289807075ab7",
+      "size_bytes": 855
+    }
+  }
+}
