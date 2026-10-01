@@ -1,3 +1,7 @@
+# Purpose: Validate external panels behavior and invariants for the biological preservation
+#          workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import hashlib
 import gzip
 from pathlib import Path

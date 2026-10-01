@@ -1,3 +1,6 @@
+# Purpose: Fresh frozen baseline evaluation, before outcome-independent K binding.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fresh frozen baseline evaluation, before outcome-independent K binding."""
 
 from ..evaluate.config import EvaluationConfig

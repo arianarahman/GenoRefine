@@ -1,3 +1,6 @@
+# Purpose: Audit and summarize all completed Step 5 held-out/spatial results.
+# Author: Ariana Rahman (Arizona State University)
+
 """Audit and summarize all completed Step 5 held-out/spatial results."""
 
 import argparse

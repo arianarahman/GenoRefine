@@ -1,8 +1,9 @@
+# Purpose: Biological validation (single-batch PBMC control) for GenoRefine.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 =============================================================================
 Script Name:    bench_pbmc_biological_validation_genorefine.py
-Author:         Ariana Rahman
-Affiliation:    Arizona State University / Stanford University
 Date:           February 2026
 Description:
     Biological validation (single-batch PBMC control) for GenoRefine.

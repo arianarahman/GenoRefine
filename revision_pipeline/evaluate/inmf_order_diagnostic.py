@@ -1,3 +1,6 @@
+# Purpose: Four-cell file-by-row-order crossover of SAVED Online iNMF coordinates.
+# Author: Ariana Rahman (Arizona State University)
+
 """Four-cell file-by-row-order crossover of SAVED Online iNMF coordinates.
 
 No integration or GenoDR training. Matching historical targets is evidence to

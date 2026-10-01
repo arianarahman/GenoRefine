@@ -1,3 +1,6 @@
+# Purpose: Read-only contracts for the main benchmark; no scientific setting overrides.
+# Author: Ariana Rahman (Arizona State University)
+
 """Read-only contracts for the main benchmark; no scientific setting overrides."""
 import os
 from pathlib import Path

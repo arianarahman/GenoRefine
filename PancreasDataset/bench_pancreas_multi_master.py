@@ -1,8 +1,9 @@
+# Purpose: Canonical end-to-end benchmark for the 5-dataset Pancreas integration suite.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: bench_pancreas_multi_master_v13.py
 -------------------------------------------------------------------------------
-Author: Ariana Rahman
-Affiliation: Arizona State University / Stanford University
 Date: April 2026 (v13)
 -------------------------------------------------------------------------------
 

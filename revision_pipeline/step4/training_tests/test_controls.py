@@ -1,3 +1,6 @@
+# Purpose: Validate controls behavior and invariants for the step4 workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from dataclasses import replace
 from pathlib import Path
 import sys

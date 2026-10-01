@@ -1,3 +1,6 @@
+# Purpose: Persist Step 3A tests, a real-source import, and fresh-process store verification.
+# Author: Ariana Rahman (Arizona State University)
+
 """Persist Step 3A tests, a real-source import, and fresh-process store verification.
 
 Does not compute metrics, run integrations or train on biological data.

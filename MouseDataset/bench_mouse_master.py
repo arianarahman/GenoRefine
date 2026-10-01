@@ -1,7 +1,10 @@
+# Purpose: Canonical end-to-end benchmark for a single mouse atlas AnnData (.h5ad), specifically
+#          Tabula Muris Senis droplet+facs processed annotations.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: bench_mouse_master_v7.py
 -------------------------------------------------------------------------------
-Author: Ariana Rahman (template adapted for Mouse Tabula Muris Senis)
 Date: April 2026 (v8)
 
 PURPOSE

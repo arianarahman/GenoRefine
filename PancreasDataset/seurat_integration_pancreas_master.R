@@ -1,4 +1,6 @@
 # ============================================================
+# Purpose: Generate the Seurat comparison embedding for the five-study pancreas benchmark.
+# Author: Ariana Rahman (Arizona State University)
 # FILE: seurat_integration_pancreas_v5.R
 # PURPOSE:
 #   Run Seurat integration on the 5-pancreas .mat benchmark,

@@ -1,3 +1,6 @@
+# Purpose: Small 30D/50D fresh-process adapter acceptance, not a scientific experiment.
+# Author: Ariana Rahman (Arizona State University)
+
 """Small 30D/50D fresh-process adapter acceptance, not a scientific experiment."""
 import argparse
 from pathlib import Path

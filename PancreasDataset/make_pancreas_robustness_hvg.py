@@ -1,3 +1,6 @@
+# Purpose: Generate exact cell manifests for strict pancreas robustness experiments.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: make_pancreas_robustness_manifests_canonical_v1.py
 -------------------------------------------------------------------------------

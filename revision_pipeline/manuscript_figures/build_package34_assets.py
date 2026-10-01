@@ -1,3 +1,6 @@
+# Purpose: Build provenance-linked manuscript assets from frozen Packages 3, 4, and 4b.
+# Author: Ariana Rahman (Arizona State University)
+
 """Build provenance-linked manuscript assets from frozen Packages 3, 4, and 4b.
 
 The builder is deliberately downstream-only.  It validates every artifact recorded by
@@ -206,6 +209,7 @@ def setup_style() -> None:
 
 
 def audit_package3() -> tuple[list[dict[str, Any]], dict[str, Any], list[dict[str, Any]]]:
+    """Audit the controlled-artifact panel and return display rows, criteria, and provenance."""
     config = read_json(PACKAGE3 / "config.json")
     summary = read_json(PACKAGE3 / "summary.json")
     rows = read_csv(PACKAGE3 / "seed_level.csv")
@@ -420,6 +424,7 @@ def audit_spatial() -> tuple[
     dict[str, dict[str, dict[str, Any]]],
     list[dict[str, Any]],
 ]:
+    """Validate donor-balanced common, mixing, and native spatial summaries."""
     p4_section_rows = read_json(PACKAGE4 / "section_seed_rows.json")
     p4_section_summary = read_json(PACKAGE4 / "section_summary.json")
     p4_donor_rows = read_json(PACKAGE4 / "donor_seed_rows.json")
@@ -896,6 +901,7 @@ Regenerate with `python revision_pipeline/manuscript_figures/build_package34_ass
 
 
 def main() -> None:
+    """Audit Packages 3, 4, and 4b and render provenance-linked manuscript assets."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUT)
     args = parser.parse_args()

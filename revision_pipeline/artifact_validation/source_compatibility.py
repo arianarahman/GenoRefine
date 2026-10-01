@@ -1,3 +1,6 @@
+# Purpose: Narrow provenance bridge for the artifact scorer-only recovery.
+# Author: Ariana Rahman (Arizona State University)
+
 """Narrow provenance bridge for the artifact scorer-only recovery.
 
 The artifact panel completed all model fits under one frozen source tree before

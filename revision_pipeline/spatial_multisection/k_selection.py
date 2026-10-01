@@ -1,3 +1,6 @@
+# Purpose: Select pooled GenoRefine K and per-section SpaGCN K without annotations.
+# Author: Ariana Rahman (Arizona State University)
+
 """Select pooled GenoRefine K and per-section SpaGCN K without annotations."""
 
 from __future__ import annotations

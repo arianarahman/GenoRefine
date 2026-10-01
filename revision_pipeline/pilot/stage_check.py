@@ -1,3 +1,6 @@
+# Purpose: Post-pilot diagnosis from saved embeddings only; never imports training code.
+# Author: Ariana Rahman (Arizona State University)
+
 """Post-pilot diagnosis from saved embeddings only; never imports training code.
 
 Regenerates a baseline under unchanged primary scoring, requires exact recovery

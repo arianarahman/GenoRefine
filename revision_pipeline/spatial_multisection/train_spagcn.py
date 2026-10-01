@@ -1,3 +1,6 @@
+# Purpose: Train one histology-aware SpaGCN replicate for one locked DLPFC section.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train one histology-aware SpaGCN replicate for one locked DLPFC section."""
 
 from __future__ import annotations
@@ -130,6 +133,7 @@ def _histology_adjacency(
 
 
 def execute(section: str, seed: int, harmony: Path, k_selection: Path, run_id: str, device: str) -> Path:
+    """Train one histology-aware SpaGCN seed and persist latent and native partitions."""
     spec = specification()
     settings = spec["spagcn"]
     if seed not in settings["seeds"]:

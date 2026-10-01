@@ -1,3 +1,6 @@
+# Purpose: Provide shared helpers and invariants for the inductive validation workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from __future__ import annotations
 
 import json

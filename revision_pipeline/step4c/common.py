@@ -1,3 +1,6 @@
+# Purpose: Provide shared helpers and invariants for the step4c workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from pathlib import Path
 from ..integrity import canonical_hash, file_fingerprint
 from ..pilot.common import completed, read, snapshot

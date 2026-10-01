@@ -1,3 +1,6 @@
+# Purpose: Validate evaluation behavior and invariants for the evaluate workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from dataclasses import replace
 import json
 from pathlib import Path

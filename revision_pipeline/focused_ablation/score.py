@@ -1,3 +1,6 @@
+# Purpose: Score one focused-ablation joint embedding with the frozen evaluator.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score one focused-ablation joint embedding with the frozen evaluator."""
 
 from __future__ import annotations

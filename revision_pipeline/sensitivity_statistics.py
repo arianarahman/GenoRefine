@@ -1,3 +1,6 @@
+# Purpose: Audit the recorded PBMC parameter-sensitivity table.
+# Author: Ariana Rahman (Arizona State University)
+
 """Audit the recorded PBMC parameter-sensitivity table.
 
 The output is descriptive.  Ordinary one-way ANOVA is reproduced only as an
@@ -48,6 +51,7 @@ def omnibus(groups: list[np.ndarray]) -> dict:
 
 
 def main() -> int:
+    """Summarize PBMC parameter sweeps and write descriptive statistics, plots, and provenance."""
     project = Path(__file__).resolve().parents[1]
     source = (
         project / "PBMCSingeBatchDataset" / "Sensitivity_Results"

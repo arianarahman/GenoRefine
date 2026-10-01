@@ -1,3 +1,6 @@
+# Purpose: Exact-parent, explicit-ID contract for future Python or R refined outputs.
+# Author: Ariana Rahman (Arizona State University)
+
 """Exact-parent, explicit-ID contract for future Python or R refined outputs."""
 
 import numpy as np

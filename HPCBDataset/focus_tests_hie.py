@@ -1,8 +1,10 @@
+# Purpose: Mechanistic / focus tests for the HIE benchmark using the same frozen canonical-HVG
+#          preprocessing adopted by bench_hie_master_canonical_v7.py.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: focus_tests_hie_canonical_v6.py
 -------------------------------------------------------------------------------
-Author: Ariana Rahman
-Affiliation: Arizona State University / Stanford University
 Date: April 2026 (canonical v6)
 -------------------------------------------------------------------------------
 

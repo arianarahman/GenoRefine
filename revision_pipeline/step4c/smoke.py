@@ -1,3 +1,6 @@
+# Purpose: Small fresh-process training/counterfactual repeatability; not scientific data.
+# Author: Ariana Rahman (Arizona State University)
+
 """Small fresh-process training/counterfactual repeatability; not scientific data."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor

@@ -1,3 +1,6 @@
+# Purpose: Persistent acceptance evidence, including two fresh-process deterministic runs.
+# Author: Ariana Rahman (Arizona State University)
+
 """Persistent acceptance evidence, including two fresh-process deterministic runs.
 
 Run inside the staged-refiner WSL environment. Does not run biological datasets.

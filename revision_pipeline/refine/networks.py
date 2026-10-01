@@ -1,3 +1,6 @@
+# Purpose: Functional ConvIDEC with the supplied architecture and explicit loss reductions.
+# Author: Ariana Rahman (Arizona State University)
+
 """Functional ConvIDEC with the supplied architecture and explicit loss reductions.
 
 Architecture attribution: GenoMap/GenoDR (Md Tauhidul Islam) and the ConvIDEC/DCEC
@@ -10,6 +13,7 @@ import tensorflow as tf
 
 @tf.keras.utils.register_keras_serializable(package="GenoRefine")
 class ClusteringLayer(tf.keras.layers.Layer):
+    """Implement the DEC Student-t clustering layer with trainable cluster centers."""
     def __init__(self, n_clusters, alpha=1.0, **kwargs):
         super().__init__(**kwargs)
         self.n_clusters, self.alpha = n_clusters, alpha
@@ -29,6 +33,7 @@ class ClusteringLayer(tf.keras.layers.Layer):
 
 
 def build_models(side, latent_dim, n_clusters):
+    """Construct the encoder, decoder, autoencoder, and joint clustering model."""
     if side < 8 or side % 4:
         raise ValueError("The preserved square ConvIDEC architecture requires side >=8 and divisible by 4")
     layers = tf.keras.layers
@@ -56,6 +61,7 @@ def build_models(side, latent_dim, n_clusters):
 def loss_components(inputs, reconstruction, targets=None, probabilities=None,
                     clustering_weight=0.1, reconstruction_weight=1.0):
     # Exactly mean squared error over cells, spatial entries and channels.
+    """Resolve reconstruction and clustering losses from the frozen configuration."""
     reconstruction_loss = tf.reduce_mean(tf.square(inputs - reconstruction))
     if targets is None:
         return reconstruction_loss, tf.constant(0.0, tf.float32), reconstruction_loss
@@ -66,6 +72,7 @@ def loss_components(inputs, reconstruction, targets=None, probabilities=None,
 
 
 def adam(learning_rate):
+    """Create an Adam optimizer from explicit learning-rate and clip-norm settings."""
     return tf.keras.optimizers.Adam(learning_rate=learning_rate, beta_1=0.9, beta_2=0.999,
                                     epsilon=1e-7, amsgrad=False)
 

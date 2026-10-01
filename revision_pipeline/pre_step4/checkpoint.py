@@ -1,3 +1,6 @@
+# Purpose: Verified pretraining-boundary restore; not general optimizer-state resume.
+# Author: Ariana Rahman (Arizona State University)
+
 """Verified pretraining-boundary restore; not general optimizer-state resume."""
 
 from copy import deepcopy

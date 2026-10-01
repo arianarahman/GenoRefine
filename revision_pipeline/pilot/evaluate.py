@@ -1,3 +1,6 @@
+# Purpose: Score a fixed pilot output in one specified environment/profile.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score a fixed pilot output in one specified environment/profile."""
 
 import argparse

@@ -1,3 +1,6 @@
+# Purpose: Finalize the completed fast-GPU Mouse Harmony representation panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Finalize the completed fast-GPU Mouse Harmony representation panel.
 
 This is a provenance/audit step only. It does not train, score, retry, replace,

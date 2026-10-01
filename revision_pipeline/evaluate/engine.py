@@ -1,3 +1,6 @@
+# Purpose: Graph/grid engine and metric records.
+# Author: Ariana Rahman (Arizona State University)
+
 """Graph/grid engine and metric records. All coordinates remain ID aligned."""
 
 from importlib.metadata import version
@@ -66,6 +69,7 @@ def graph_representation(values, config):
 
 
 def graph_and_grid(values, reference, cell_ids, config, *, run=None, prefix="evaluation", training_label_use="unknown"):
+    """Build the exact neighbor graph and evaluate the declared Leiden resolution grid."""
     import anndata as ad
     import scanpy as sc
     import leidenalg

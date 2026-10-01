@@ -1,3 +1,6 @@
+# Purpose: Rare-cell queries against the FULL population; isolation defined before sampling.
+# Author: Ariana Rahman (Arizona State University)
+
 """Rare-cell queries against the FULL population; isolation defined before sampling."""
 
 import numpy as np

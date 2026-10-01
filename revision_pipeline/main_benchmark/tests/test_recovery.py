@@ -1,3 +1,6 @@
+# Purpose: Validate recovery behavior and invariants for the main benchmark workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import unittest
 import numpy as np
 from revision_pipeline.data.store import EmbeddingView, Store

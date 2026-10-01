@@ -1,3 +1,6 @@
+# Purpose: Persist synthetic smoke-test evidence and probe GPU capability separately.
+# Author: Ariana Rahman (Arizona State University)
+
 """Persist synthetic smoke-test evidence and probe GPU capability separately."""
 
 import json

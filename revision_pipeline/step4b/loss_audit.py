@@ -1,3 +1,6 @@
+# Purpose: Read-only loss accounting for the already completed Step 4A branches.
+# Author: Ariana Rahman (Arizona State University)
+
 """Read-only loss accounting for the already completed Step 4A branches."""
 import json
 from pathlib import Path

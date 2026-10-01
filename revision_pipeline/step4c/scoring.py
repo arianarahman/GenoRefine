@@ -1,3 +1,6 @@
+# Purpose: Complete synthetic-panel summaries with separate correction and harm checks.
+# Author: Ariana Rahman (Arizona State University)
+
 """Complete synthetic-panel summaries with separate correction and harm checks."""
 from pathlib import Path
 import statistics

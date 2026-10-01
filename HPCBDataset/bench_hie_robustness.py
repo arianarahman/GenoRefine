@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Purpose: Strict canonical, core-method HIE robustness benchmark.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 bench_hie_robustness_genorefine_core_mirror.py
 -------------------------------------------------------------------------------
@@ -1210,6 +1213,7 @@ def run_method_and_score(
     cfg: HieMultiRobustConfig,
     condition: RobustCondition,
 ) -> Tuple[Dict[str, Any], ad.AnnData, pd.DataFrame]:
+    """Run one method, apply shared clustering, and return scores and cluster-purity details."""
     t0 = time.time()
 
     if method == "Scanorama":
@@ -1437,6 +1441,7 @@ def write_hie_pancreas_style_outputs(
 
 
 def run_benchmark(cfg: HieMultiRobustConfig) -> None:
+    """Run all available methods across manifest-defined HIE perturbations and write audit outputs."""
     set_all_seeds(cfg.seed)
     ensure_dir(cfg.out_folder)
 

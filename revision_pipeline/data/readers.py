@@ -1,3 +1,6 @@
+# Purpose: Bounded readers for the registered H5AD and MAT sources, without preprocessing.
+# Author: Ariana Rahman (Arizona State University)
+
 """Bounded readers for the registered H5AD and MAT sources, without preprocessing.
 
 Only the observed H5AD encodings are supported. Unknown encodings fail closed;
@@ -16,6 +19,7 @@ from ..integrity import canonical_hash, project_path, validate_cell_ids
 
 
 def scalar(value):
+    """Convert NumPy and MATLAB scalar containers into ordinary Python values."""
     if isinstance(value, (bytes, np.bytes_)):
         return bytes(value).decode("utf-8")
     if isinstance(value, np.generic):
@@ -30,6 +34,7 @@ def scalar(value):
 
 
 def categorical(codes, categories):
+    """Normalize categorical labels while preserving missing-value semantics."""
     codes = np.asarray(codes)
     if codes.ndim != 1 or codes.dtype.kind not in "iu":
         raise ValueError("Categorical codes must be a one-dimensional integer array")
@@ -42,6 +47,7 @@ def categorical(codes, categories):
 
 
 def read_column(frame, name):
+    """Read one column-like HDF5 object without silently changing its orientation."""
     obj = frame[name]
     if isinstance(obj, h5py.Group):
         if scalar(obj.attrs.get("encoding-type")) != "categorical":
@@ -60,6 +66,7 @@ def read_column(frame, name):
 
 
 def read_frame(frame):
+    """Read the selected columns of an HDF5-backed annotation table."""
     if scalar(frame.attrs.get("encoding-type")) != "dataframe":
         raise ValueError(f"Unsupported dataframe encoding: {frame.name}")
     index = scalar(frame.attrs.get("_index"))
@@ -76,6 +83,7 @@ def read_frame(frame):
 
 
 def matrix_shape(obj):
+    """Return the logical observation-by-feature shape of a stored matrix."""
     if isinstance(obj, h5py.Dataset):
         shape = obj.shape
     elif scalar(obj.attrs.get("encoding-type")) == "csr_matrix":
@@ -91,6 +99,7 @@ def matrix_shape(obj):
 
 
 def h5_blocks(path, rows_per_block=1024):
+    """Stream HDF5 matrix blocks in canonical observation order."""
     if type(rows_per_block) is not int or rows_per_block < 1:
         raise ValueError("rows_per_block must be positive")
     with h5py.File(path, "r") as stream:
@@ -123,6 +132,7 @@ def h5_blocks(path, rows_per_block=1024):
 
 
 def mat_array(path, key):
+    """Load a named MATLAB array and validate that it is present."""
     values = loadmat(path, variable_names=[key])
     if key not in values:
         raise ValueError(f"Missing explicit MAT variable {key!r}")
@@ -150,6 +160,7 @@ def expression_blocks(root, spec, rows_per_block=1024):
 
 
 def scan_expression(blocks, shape):
+    """Compute finite-value and sparsity diagnostics without materializing all blocks."""
     n, d = shape
     seen = nonzero = negative = zero_rows = unsorted_blocks = 0
     minimum, maximum = float("inf"), float("-inf")
@@ -185,6 +196,7 @@ def scan_expression(blocks, shape):
 
 
 def load_dataset(root, registered, spec):
+    """Load a registered dataset with explicit cell, feature, batch, and label alignment."""
     if spec["format"] == "h5ad":
         with h5py.File(project_path(root, spec["path"]), "r") as stream:
             ids, obs = read_frame(stream["obs"])
@@ -253,6 +265,7 @@ def load_dataset(root, registered, spec):
 
 
 def array_hash(values):
+    """Hash array metadata and contiguous bytes using a stable SHA-256 representation."""
     values = np.ascontiguousarray(values)
     digest = hashlib.sha256()
     digest.update(canonical_hash({"shape": list(values.shape), "dtype": values.dtype.str}).encode())

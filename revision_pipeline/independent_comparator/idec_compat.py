@@ -1,3 +1,6 @@
+# Purpose: Current-Keras compatibility implementation of the official IDEC equations.
+# Author: Ariana Rahman (Arizona State University)
+
 """Current-Keras compatibility implementation of the official IDEC equations.
 
 The scientific design is pinned in ``configs/independent_idec_v1.json``.  This

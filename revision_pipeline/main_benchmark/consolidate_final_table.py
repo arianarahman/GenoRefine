@@ -1,3 +1,6 @@
+# Purpose: Assemble the audited Figure-1-aligned main benchmark tables.
+# Author: Ariana Rahman (Arizona State University)
+
 """Assemble the audited Figure-1-aligned main benchmark tables.
 
 This is reporting and provenance work only. It does not train, score, retry,
@@ -219,6 +222,7 @@ def csv_text(rows, full=False):
 
 
 def main():
+    """Verify completed benchmark cases and assemble the final table with provenance receipts."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--consolidate-final-table", action="store_true")
     parser.add_argument("--pancreas-harmony-case", type=Path)

@@ -1,3 +1,6 @@
+# Purpose: Train a pinned unsupervised scVI backbone on HP-CB counts.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train a pinned unsupervised scVI backbone on HP-CB counts."""
 
 from __future__ import annotations

@@ -1,3 +1,6 @@
+# Purpose: Baseline-only acceptance: separate runtimes, real inputs, two fresh processes.
+# Author: Ariana Rahman (Arizona State University)
+
 """Baseline-only acceptance: separate runtimes, real inputs, two fresh processes.
 
 The first successful build is prespecified as primary, regardless of output.

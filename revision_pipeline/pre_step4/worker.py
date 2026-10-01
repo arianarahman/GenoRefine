@@ -1,3 +1,6 @@
+# Purpose: Fresh-process workers for the bounded post-pilot preparation protocol.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fresh-process workers for the bounded post-pilot preparation protocol."""
 
 import argparse
@@ -25,6 +28,7 @@ def build_controls(x):
 
 
 def main():
+    """Run one isolated controls, evaluation, rare-cell, or checkpoint-replay diagnostic."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("job", choices=("controls", "evaluate", "rare", "replay"))
     parser.add_argument("--profile", choices=PROFILES)

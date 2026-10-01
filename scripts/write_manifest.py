@@ -1,3 +1,6 @@
+# Purpose: Create or verify the SHA-256 manifest for the public release tree.
+# Author: Ariana Rahman (Arizona State University)
+
 """Create or verify the SHA-256 manifest for the public release tree."""
 
 from __future__ import annotations

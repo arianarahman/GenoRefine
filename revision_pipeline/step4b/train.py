@@ -1,3 +1,6 @@
+# Purpose: Control orchestration with original pretrain/joint/reconstruction update loops.
+# Author: Ariana Rahman (Arizona State University)
+
 """Control orchestration with original pretrain/joint/reconstruction update loops."""
 import argparse
 import json

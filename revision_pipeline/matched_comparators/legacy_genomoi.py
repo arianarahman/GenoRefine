@@ -1,3 +1,6 @@
+# Purpose: Run the installed genoMOI core on the exact frozen HP-CB Scanorama input.
+# Author: Ariana Rahman (Arizona State University)
+
 """Run the installed genoMOI core on the exact frozen HP-CB Scanorama input.
 
 This deliberately invokes genoMOI.extract_genoVis_features rather than copying or

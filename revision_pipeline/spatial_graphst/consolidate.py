@@ -1,3 +1,6 @@
+# Purpose: Consolidate the complete preregistered GraphST Package 4b panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the complete preregistered GraphST Package 4b panel."""
 
 from __future__ import annotations
@@ -31,6 +34,7 @@ def _path(prefix: str, suffix: str) -> Path:
 
 
 def expected_runs(prefix: str) -> dict:
+    """Enumerate all required GraphST section, donor, and seed outputs."""
     spec = specification()
     result = {
         "alignments": {donor: _path(prefix, f"align-{donor}") for donor in spec["donors"]},
@@ -60,6 +64,7 @@ def _stats(values: list[float]) -> dict:
 
 
 def _expected_runtime() -> dict:
+    """Load the pinned GraphST runtime identity expected by every child run."""
     runtime = specification()["evaluation"]["runtime"]
     return {
         "python_executable": runtime["python_executable"], "python": runtime["python"],
@@ -77,6 +82,7 @@ def _flatten_paths(expected: dict) -> list[Path]:
 
 
 def _load_all(prefix: str) -> tuple[list[dict], list[dict], dict]:
+    """Load the complete result set and enforce source and runtime consistency."""
     spec = specification()
     expected = expected_runs(prefix)
     alignments = {
@@ -145,6 +151,7 @@ def _load_all(prefix: str) -> tuple[list[dict], list[dict], dict]:
 
 
 def aggregate_sections(rows: list[dict]) -> dict:
+    """Aggregate common-evaluator section metrics across algorithmic seeds."""
     spec = specification()
     section_summary, donor_summary = {}, {}
     for section in spec["sections"]:
@@ -159,6 +166,8 @@ def aggregate_sections(rows: list[dict]) -> dict:
         donor_summary[donor] = {}
         for metric in SECTION_METRICS:
             values = []
+            # Align seeds before averaging the two sections within a donor; only
+            # then give each donor equal weight in the panel-level macro summary.
             for seed in spec["graphst"]["seeds"]:
                 per_section = [float(next(
                     row for row in rows
@@ -179,6 +188,7 @@ def aggregate_sections(rows: list[dict]) -> dict:
 
 
 def aggregate_native(rows: list[dict]) -> dict:
+    """Aggregate task-native GraphST partition metrics across seeds."""
     spec = specification()
     result = {}
     for partition in NATIVE_PARTITIONS:
@@ -205,6 +215,8 @@ def aggregate_native(rows: list[dict]) -> dict:
             by_seed = []
             for seed in spec["graphst"]["seeds"]:
                 donor_values = []
+                # Preserve the same section -> donor -> panel hierarchy used for
+                # common-evaluator metrics so native summaries remain comparable.
                 for donor, sections in spec["donors"].items():
                     donor_values.append(statistics.mean(float(next(
                         row for row in rows
@@ -224,6 +236,7 @@ def aggregate_native(rows: list[dict]) -> dict:
 
 
 def aggregate_donors(rows: list[dict]) -> dict:
+    """Aggregate donor-pair metrics across algorithmic seeds."""
     spec = specification()
     per_donor = {}
     for donor in spec["donors"]:
@@ -243,6 +256,7 @@ def aggregate_donors(rows: list[dict]) -> dict:
 
 
 def execute(prefix: str, run_id: str) -> Path:
+    """Validate and consolidate the complete GraphST comparison panel."""
     spec = specification()
     runtime = validate_evaluation_runtime()
     rows, donor_rows, expected = _load_all(prefix)
@@ -333,6 +347,7 @@ def execute(prefix: str, run_id: str) -> Path:
 
 
 def main() -> None:
+    """Parse panel inputs and write the consolidated GraphST report."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prefix", required=True)
     parser.add_argument("--run-id", required=True)

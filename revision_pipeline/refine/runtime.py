@@ -1,3 +1,6 @@
+# Purpose: Configure an explicit deterministic CPU profile before TensorFlow is imported.
+# Author: Ariana Rahman (Arizona State University)
+
 """Configure an explicit deterministic CPU profile before TensorFlow is imported."""
 
 from importlib import metadata

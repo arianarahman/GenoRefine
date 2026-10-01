@@ -1,4 +1,6 @@
 # ============================================================
+# Purpose: Generate the Online iNMF comparison embedding for the HP-CB benchmark.
+# Author: Ariana Rahman (Arizona State University)
 # FILE: rliger_online_inmf_hie_canonical_v8.R
 # PURPOSE:
 #   Run Online iNMF (rliger) on the HIE .h5ad benchmark using the

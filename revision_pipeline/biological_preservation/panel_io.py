@@ -1,3 +1,6 @@
+# Purpose: Compact deterministic I/O for versioned external marker panels.
+# Author: Ariana Rahman (Arizona State University)
+
 """Compact deterministic I/O for versioned external marker panels."""
 
 from __future__ import annotations

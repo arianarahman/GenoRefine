@@ -1,3 +1,6 @@
+# Purpose: Execute the declared Step 3C panel with isolated processes and fail-closed gates.
+# Author: Ariana Rahman (Arizona State University)
+
 """Execute the declared Step 3C panel with isolated processes and fail-closed gates.
 
 Only generated runs/logs are written. A failed run is retained, never selected

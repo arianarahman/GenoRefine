@@ -1,3 +1,6 @@
+# Purpose: Score one objective-ablation embedding with the frozen primary evaluator.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score one objective-ablation embedding with the frozen primary evaluator."""
 
 from __future__ import annotations

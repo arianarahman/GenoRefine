@@ -1,3 +1,6 @@
+# Purpose: Step 4A training phase; stop on technical failure, never on an unfavorable score.
+# Author: Ariana Rahman (Arizona State University)
+
 """Step 4A training phase; stop on technical failure, never on an unfavorable score."""
 
 import argparse

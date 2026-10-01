@@ -1,3 +1,6 @@
+# Purpose: Consolidate the complete six-section spatial panel with donor-first aggregation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the complete six-section spatial panel with donor-first aggregation."""
 
 from __future__ import annotations
@@ -28,6 +31,7 @@ def _path(prefix: str, suffix: str) -> Path:
 
 
 def validate_child_source_hashes(paths: list[Path], current_source_sha256: str) -> None:
+    """Require all child runs to share the current frozen source tree."""
     for path in paths:
         manifest = read_json(path / "run.json")
         if not manifest.get("source_tree_sha256") or manifest["source_tree_sha256"] != current_source_sha256:
@@ -35,6 +39,7 @@ def validate_child_source_hashes(paths: list[Path], current_source_sha256: str) 
 
 
 def expected_runs(prefix: str) -> dict:
+    """Enumerate every required section, donor, method, and seed result."""
     spec = specification()
     result = {
         "harmony": _path(prefix, "harmony-fixed10"),
@@ -61,6 +66,7 @@ def expected_runs(prefix: str) -> dict:
 
 
 def _load_all(prefix: str) -> tuple[list[dict], list[dict], dict]:
+    """Load completed child results and reject missing or inconsistent coverage."""
     expected = expected_runs(prefix)
     runtime_lock = specification()["evaluation"]["runtime"]
     expected_runtime = {
@@ -102,6 +108,7 @@ def _stats(values: list[float]) -> dict:
 
 
 def aggregate_sections(rows: list[dict]) -> dict:
+    """Aggregate section-level metrics across algorithmic seeds."""
     spec = specification()
     primary_methods = ("harmony_fixed", "genorefine", "spagcn")
     summary = {}
@@ -196,6 +203,7 @@ def aggregate_sections(rows: list[dict]) -> dict:
 
 
 def aggregate_donors(rows: list[dict]) -> dict:
+    """Aggregate donor-pair metrics across algorithmic seeds."""
     spec = specification()
     summary = {}
     for method in ("harmony_fixed", "genorefine", "harmony_native_sensitivity"):
@@ -251,6 +259,7 @@ def aggregate_donors(rows: list[dict]) -> dict:
 
 
 def execute(prefix: str, run_id: str) -> Path:
+    """Validate and consolidate the complete spatial multisection panel."""
     runtime = validate_evaluation_runtime()
     section_rows, donor_rows, expected = _load_all(prefix)
     section_summary = aggregate_sections(section_rows)
@@ -308,6 +317,7 @@ def execute(prefix: str, run_id: str) -> Path:
 
 
 def main() -> None:
+    """Parse panel inputs and write the consolidated spatial report."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prefix", required=True)
     parser.add_argument("--run-id", required=True)

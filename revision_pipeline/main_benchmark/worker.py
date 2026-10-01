@@ -1,3 +1,6 @@
+# Purpose: Fresh-process input preparation, unchanged training, and unchanged scoring.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fresh-process input preparation, unchanged training, and unchanged scoring."""
 import argparse
 from contextlib import nullcontext

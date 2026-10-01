@@ -1,3 +1,6 @@
+# Purpose: Resumable, fail-closed orchestration for the complete artifact panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Resumable, fail-closed orchestration for the complete artifact panel.
 
 The execution JSON supplies an argv prefix, worker bound and optional
@@ -45,6 +48,7 @@ MODULES = {
 
 @dataclass(frozen=True)
 class Job:
+    """Describe one immutable command in the staged artifact-validation execution plan."""
     stage: str
     run_id: str
     kind: str
@@ -173,6 +177,7 @@ def build_plan(prefix, panel_run_id=None):
 
 
 def load_execution_config(path):
+    """Load execution-only settings without modifying the scientific protocol."""
     path = Path(path).resolve()
     config = read(path)
     if set(config) != {"schema_version", "stages"} or config["schema_version"] != 1:
@@ -243,6 +248,7 @@ def _write_receipt(control, job, item):
 
 
 def _execute_job(job, execution, control):
+    """Run one planned subprocess and capture its command, status, and logs."""
     if job.final_path.exists():
         manifest = completed(job.final_path, job.kind)
         receipt = {
@@ -296,6 +302,7 @@ def _execute_job(job, execution, control):
 
 
 def _run_stage(stage, jobs, execution, control):
+    """Execute one dependency stage, stopping the panel on the first failed job."""
     workers = execution[stage]["workers"]
     iterator = iter(jobs)
     failures = []
@@ -331,6 +338,7 @@ def _run_stage(stage, jobs, execution, control):
 
 
 def run_panel(prefix, execution_config, panel_run_id=None):
+    """Plan or execute the complete staged artifact-validation panel."""
     plan = build_plan(prefix, panel_run_id)
     execution, config_receipt = load_execution_config(execution_config)
     control = RUNS / (".orchestration-" + prefix)
@@ -380,6 +388,7 @@ def run_panel(prefix, execution_config, panel_run_id=None):
 
 
 def main():
+    """Parse panel orchestration options and dispatch planning or execution."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prefix", required=True)
     parser.add_argument("--execution-config", type=Path, required=True)

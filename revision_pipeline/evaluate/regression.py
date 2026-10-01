@@ -1,3 +1,6 @@
+# Purpose: Saved-output regressions only; NEVER fit GenoDR or change historical files.
+# Author: Ariana Rahman (Arizona State University)
+
 """Saved-output regressions only; NEVER fit GenoDR or change historical files."""
 
 import argparse

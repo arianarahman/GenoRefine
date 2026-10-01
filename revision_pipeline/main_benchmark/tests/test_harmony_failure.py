@@ -1,3 +1,6 @@
+# Purpose: Validate harmony failure behavior and invariants for the main benchmark workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import copy
 import unittest
 from revision_pipeline.main_benchmark.harmony_failure import (

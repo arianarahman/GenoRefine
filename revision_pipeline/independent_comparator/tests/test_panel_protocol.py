@@ -1,3 +1,7 @@
+# Purpose: Validate panel protocol behavior and invariants for the independent comparator
+#          workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import json
 import math
 from pathlib import Path

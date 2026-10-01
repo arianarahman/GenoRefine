@@ -1,3 +1,6 @@
+# Purpose: Consolidate the five-seed genoMOI-core diagnostic with frozen Step 4A results.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the five-seed genoMOI-core diagnostic with frozen Step 4A results."""
 
 import csv
@@ -58,6 +61,7 @@ def aggregate(rows):
 
 
 def main():
+    """Consolidate five genoMOI-core scores with frozen Step 4A GenoRefine metrics."""
     spec, _, protocol_fp, _ = protocol()
     completed(STEP4A, "step4a_scoring_completion_verification")
     step4a_fp = file_fingerprint(STEP4A / "run.json")

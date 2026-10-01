@@ -1,3 +1,6 @@
+# Purpose: Bounded main benchmark: sequential cases, gated training, serial evaluation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Bounded main benchmark: sequential cases, gated training, serial evaluation."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor,as_completed

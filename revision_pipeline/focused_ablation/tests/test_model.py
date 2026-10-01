@@ -1,3 +1,6 @@
+# Purpose: Validate model behavior and invariants for the focused ablation workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import unittest
 
 import numpy as np

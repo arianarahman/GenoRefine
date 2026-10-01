@@ -1,3 +1,6 @@
+# Purpose: Independent external-marker validation for saved embeddings.
+# Author: Ariana Rahman (Arizona State University)
+
 """Independent external-marker validation for saved embeddings.
 
 The marker panel is an input to this module.  Reference labels are used only

@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# Purpose: Generate one frozen canonical HVG list for the pancreas benchmark using a true
+#          separate-batch-first workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 make_pancreas_canonical_hvg_v2.py
 
@@ -528,6 +532,7 @@ def write_manifest_json(path: str, payload: Dict[str, Any]) -> None:
 # MAIN
 # ============================================================
 def main() -> None:
+    """Build canonical pancreas HVGs from per-batch ranks and write feature and audit artifacts."""
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s | %(levelname)s | %(message)s",

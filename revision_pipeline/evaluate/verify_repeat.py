@@ -1,3 +1,6 @@
+# Purpose: Compare two completed fresh-process evaluations without ignoring failures.
+# Author: Ariana Rahman (Arizona State University)
+
 """Compare two completed fresh-process evaluations without ignoring failures."""
 
 import argparse

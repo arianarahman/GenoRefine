@@ -1,3 +1,6 @@
+# Purpose: Consolidate the completed standalone scVI panels and existing main-table baselines.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the completed standalone scVI panels and existing main-table baselines."""
 
 from __future__ import annotations
@@ -38,6 +41,7 @@ def summarize(rows: list[dict]) -> dict:
 
 
 def main():
+    """Aggregate five-seed scVI panels and compare them with frozen main-table baselines."""
     datasets = ("pancreas_five_study", "mouse_senis")
     all_rows = []
     summaries = {}

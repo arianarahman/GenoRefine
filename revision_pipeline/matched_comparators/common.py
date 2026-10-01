@@ -1,3 +1,6 @@
+# Purpose: Frozen inputs and provenance checks for the genoMOI core diagnostic.
+# Author: Ariana Rahman (Arizona State University)
+
 """Frozen inputs and provenance checks for the genoMOI core diagnostic."""
 
 from pathlib import Path

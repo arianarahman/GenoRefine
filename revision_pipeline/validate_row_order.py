@@ -1,3 +1,6 @@
+# Purpose: Verify row-order safeguards against completed stores without recomputation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Verify row-order safeguards against completed stores without recomputation."""
 
 import argparse

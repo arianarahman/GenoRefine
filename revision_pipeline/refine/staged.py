@@ -1,3 +1,6 @@
+# Purpose: Public staged interface and hash-checked, inference-only model bundles.
+# Author: Ariana Rahman (Arizona State University)
+
 """Public staged interface and hash-checked, inference-only model bundles."""
 
 import json

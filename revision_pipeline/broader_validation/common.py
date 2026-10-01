@@ -1,3 +1,6 @@
+# Purpose: Shared contracts for the Step 5 broader-validation endpoints.
+# Author: Ariana Rahman (Arizona State University)
+
 """Shared contracts for the Step 5 broader-validation endpoints."""
 
 from dataclasses import dataclass

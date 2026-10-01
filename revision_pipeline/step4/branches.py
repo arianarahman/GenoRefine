@@ -1,3 +1,6 @@
+# Purpose: Independent, fresh-Adam continuations at a verified pretraining boundary.
+# Author: Ariana Rahman (Arizona State University)
+
 """Independent, fresh-Adam continuations at a verified pretraining boundary."""
 
 from copy import deepcopy

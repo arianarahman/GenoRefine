@@ -1,3 +1,6 @@
+# Purpose: Registered focused-ablation architectures using the frozen training loops.
+# Author: Ariana Rahman (Arizona State University)
+
 """Registered focused-ablation architectures using the frozen training loops."""
 
 from __future__ import annotations

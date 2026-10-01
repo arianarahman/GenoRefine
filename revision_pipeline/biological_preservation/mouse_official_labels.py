@@ -1,3 +1,6 @@
+# Purpose: Recover official Tabula Muris Senis labels without trusting local CL IDs.
+# Author: Ariana Rahman (Arizona State University)
+
 """Recover official Tabula Muris Senis labels without trusting local CL IDs."""
 
 from __future__ import annotations

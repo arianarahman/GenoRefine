@@ -1,3 +1,6 @@
+# Purpose: Current-source regression suites, input checks, and adapter repeatability.
+# Author: Ariana Rahman (Arizona State University)
+
 """Current-source regression suites, input checks, and adapter repeatability."""
 import re
 import subprocess

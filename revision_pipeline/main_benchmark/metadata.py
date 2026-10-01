@@ -1,3 +1,6 @@
+# Purpose: Metadata-only adapter for coordinate matrices, never an expression transform.
+# Author: Ariana Rahman (Arizona State University)
+
 """Metadata-only adapter for coordinate matrices, never an expression transform."""
 from ..data.store import EmbeddingView
 from ..integrity import canonical_hash

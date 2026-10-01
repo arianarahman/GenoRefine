@@ -1,3 +1,6 @@
+# Purpose: Immutable acquisition of externally curated biological-reference files.
+# Author: Ariana Rahman (Arizona State University)
+
 """Immutable acquisition of externally curated biological-reference files.
 
 Every source is identified by a URL, exact byte count, SHA-256 digest, and a

@@ -1,3 +1,6 @@
+# Purpose: All applicable contrasts, no favorable-seed selection or historical substitution.
+# Author: Ariana Rahman (Arizona State University)
+
 """All applicable contrasts, no favorable-seed selection or historical substitution."""
 from pathlib import Path
 import statistics

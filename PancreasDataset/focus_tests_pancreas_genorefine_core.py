@@ -1,8 +1,10 @@
+# Purpose: Focus tests to support the paper narrative that GenoRefine functions as a
+#          post-integration manifold stabilizer rather than a label-maximizer.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: focus_tests_pancreas_canonical_v7.py
 -------------------------------------------------------------------------------
-Author: Ariana Rahman
-Affiliation: Arizona State University / Stanford University
 Date: February 2026
 -------------------------------------------------------------------------------
 
@@ -1364,6 +1366,7 @@ def silhouette_per_cell(
     cfg: FocusConfig,
     obs_names: Optional[List[str]] = None,
 ) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    """Compute deterministic, optionally capped per-cell silhouettes and aggregate summaries."""
     labels = labels.astype(str)
     n = X.shape[0]
 

@@ -1,3 +1,6 @@
+# Purpose: Deterministic geometric artifacts for paired real-embedding experiments.
+# Author: Ariana Rahman (Arizona State University)
+
 """Deterministic geometric artifacts for paired real-embedding experiments.
 
 Both constructors align every input to an explicit canonical cell-ID order

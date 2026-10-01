@@ -1,3 +1,6 @@
+# Purpose: Prepare and label-free-calibrate the two bounded Step 5 endpoints.
+# Author: Ariana Rahman (Arizona State University)
+
 """Prepare and label-free-calibrate the two bounded Step 5 endpoints."""
 
 import argparse

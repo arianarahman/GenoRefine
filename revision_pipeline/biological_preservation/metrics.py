@@ -1,3 +1,6 @@
+# Purpose: Dimension- and scale-aware preservation metrics.
+# Author: Ariana Rahman (Arizona State University)
+
 """Dimension- and scale-aware preservation metrics.
 
 The functions in this module do not fit models and do not use reference labels

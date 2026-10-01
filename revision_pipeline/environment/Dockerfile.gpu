@@ -1,3 +1,6 @@
+# Purpose: Build the pinned GPU runtime used by GenoRefine training workflows.
+# Author: Ariana Rahman (Arizona State University)
+
 FROM nvcr.io/nvidia/tensorflow:25.02-tf2-py3
 
 # NVIDIA's image supplies the CUDA 12.8/cuDNN/TensorFlow stack needed by the

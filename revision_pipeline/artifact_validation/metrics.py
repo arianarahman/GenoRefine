@@ -1,3 +1,6 @@
+# Purpose: Outcome-independent artifact correction and preservation metrics.
+# Author: Ariana Rahman (Arizona State University)
+
 """Outcome-independent artifact correction and preservation metrics."""
 
 from __future__ import annotations
@@ -19,6 +22,7 @@ def _canonical_matrix(
     cell_ids: Sequence[str],
     canonical_ids: Sequence[str],
 ) -> tuple[np.ndarray, tuple[str, ...], np.ndarray]:
+    """Reorder a matrix to canonical cell identifiers before metric computation."""
     observed = validate_cell_ids(cell_ids)
     canonical = tuple(validate_cell_ids(canonical_ids))
     take = np.asarray(alignment_indices(canonical, observed), dtype=np.int64)
@@ -34,6 +38,7 @@ def _canonical_matrix(
 def _canonical_labels(
     labels: Sequence[Any], take: np.ndarray, expected_rows: int, *, name: str
 ) -> np.ndarray:
+    """Reorder labels to canonical cell identifiers before metric computation."""
     raw = np.asarray(labels)
     if raw.ndim != 1 or len(raw) != expected_rows:
         raise ValueError(f"{name} must align one-to-one with cells")
@@ -52,6 +57,7 @@ def _tokens(values: np.ndarray) -> np.ndarray:
 
 
 def _validate_neighbors(neighbors: np.ndarray, n_cells: int, k: int | None = None) -> np.ndarray:
+    """Validate neighbor-index shape, range, and requested neighborhood size."""
     result = np.asarray(neighbors)
     if (
         result.ndim != 2
@@ -149,6 +155,8 @@ def counterfactual_batch_sensitivity(
     ):
         raise ValueError("Counterfactual outputs do not reproduce observed output")
 
+    # Normalize hypothetical within-cell batch variation by genuine between-cell
+    # geometry. This keeps the ratio comparable across differently scaled outputs.
     clean_centered = clean - clean.mean(axis=0, dtype=np.float64)
     denominator = float(np.mean(np.sum(clean_centered**2, axis=1)))
     counterfactual_centered = counterfactual - counterfactual.mean(
@@ -158,6 +166,8 @@ def counterfactual_batch_sensitivity(
         np.mean(np.sum(counterfactual_centered**2, axis=2), dtype=np.float64)
     )
     scale = float(np.mean(np.sum(clean**2, axis=1), dtype=np.float64))
+    # A scale-aware machine-precision bound distinguishes a collapsed embedding
+    # from a merely small-valued one before division.
     collapse_threshold = (
         np.finfo(np.float64).eps
         * max(scale, np.finfo(np.float64).tiny)
@@ -270,6 +280,7 @@ def clean_neighbor_recovery_from_reference(
 
 
 def neighbor_purity(neighbors: np.ndarray, labels: Sequence[Any]) -> dict[str, Any]:
+    """Measure the fraction of neighbors sharing each query cell's class label."""
     labels_array = np.asarray(labels)
     table = _validate_neighbors(neighbors, len(labels_array))
     if labels_array.ndim != 1:
@@ -288,6 +299,7 @@ def rare_group_recall_at_k(
     labels: Sequence[Any],
     rare_groups: Sequence[Any],
 ) -> dict[str, Any]:
+    """Measure recovery of same-group neighbors for prespecified rare groups."""
     labels_array = np.asarray(labels)
     table = _validate_neighbors(neighbors, len(labels_array))
     if labels_array.ndim != 1:
@@ -326,6 +338,7 @@ def rare_group_recall_at_k(
 def target_same_class_fraction_at_k(
     neighbors: np.ndarray, labels: Sequence[Any], target_label: Any
 ) -> dict[str, Any]:
+    """Measure target-label preservation within fixed neighborhoods."""
     labels_array = np.asarray(labels)
     table = _validate_neighbors(neighbors, len(labels_array))
     if labels_array.ndim != 1:

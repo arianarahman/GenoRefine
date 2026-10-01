@@ -1,3 +1,6 @@
+# Purpose: Validate that each public GenoRefine revision is data-free, reproducible, and syntactically sound.
+# Author: Ariana Rahman (Arizona State University)
+
 name: Data-free release guard
 
 on:

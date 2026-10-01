@@ -1,3 +1,6 @@
+# Purpose: Deterministic real-embedding artifact construction and validation metrics.
+# Author: Ariana Rahman (Arizona State University)
+
 """Deterministic real-embedding artifact construction and validation metrics.
 
 This package contains pure numerical primitives.  It does not select datasets,

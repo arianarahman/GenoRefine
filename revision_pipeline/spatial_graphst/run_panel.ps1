@@ -1,3 +1,6 @@
+# Purpose: Plan, launch, and resume the pinned GraphST donor-pair spatial panel.
+# Author: Ariana Rahman (Arizona State University)
+
 param(
     [Parameter(Mandatory = $true)][ValidatePattern('^[A-Za-z0-9][A-Za-z0-9_-]{0,39}$')][string]$Prefix,
     [string]$Distro = $env:GENOREFINE_WSL_DISTRO,
@@ -9,6 +12,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+# Resolve the frozen runtime contract and the donor/section execution plan.
 if (-not $Distro) { $Distro = 'Ubuntu-24.04' }
 if (-not $EvaluationPython) { $EvaluationPython = 'python3' }
 if ((@($PlanOnly, $PreflightOnly, $ExecutePanel) | Where-Object { $_ }).Count -ne 1) {
@@ -40,6 +44,7 @@ if ($Distro -ne $Spec.evaluation.runtime.wsl_distribution) {
     throw 'Evaluation WSL distribution must match the frozen protocol'
 }
 
+# Plan mode exposes the complete job count without creating scientific runs.
 if ($PlanOnly) {
     [pscustomobject]@{
         Prefix = $Prefix
@@ -61,6 +66,7 @@ if ($PlanOnly) {
     return
 }
 
+# A prefix-scoped lock and transcript make interrupted executions safely resumable.
 $LockPath = Join-Path $Runs ".orchestrator-$Prefix-graphst4b.lock"
 try {
     $LockStream = [IO.File]::Open($LockPath, [IO.FileMode]::OpenOrCreate,
@@ -84,6 +90,7 @@ $TranscriptPath = Join-Path $Orchestration 'console-transcript.log'
 Start-Transcript -LiteralPath $TranscriptPath -Append | Out-Null
 $TranscriptStarted = $true
 
+# Persist machine-readable progress and retire only verified stale incomplete runs.
 function Write-State([string]$Stage, [string]$Status) {
     $script:CurrentStage = $Stage
     [pscustomobject]@{
@@ -162,6 +169,7 @@ function Test-Completed([string]$Id, [string]$Kind) {
     return $true
 }
 
+# Verify source archives, the pinned container identity, and CUDA before training.
 Write-State 'runtime_validation' 'running'
 & python -m revision_pipeline.spatial_graphst.source_acquisition --all --execute
 if ($LASTEXITCODE -ne 0) { throw 'Official-source lock verification failed' }
@@ -188,6 +196,7 @@ if ($PreflightOnly) {
     return
 }
 
+# Execute the scientific stages in dependency order; each stage reuses only deeply verified runs.
 Write-State 'alignments' 'running'
 foreach ($donor in $Donors) {
     $id = "$Prefix-align-$donor"

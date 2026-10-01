@@ -1,3 +1,6 @@
+# Purpose: Pinned reuse contracts, bounded controls and duplicate integrity gates.
+# Author: Ariana Rahman (Arizona State University)
+
 """Pinned reuse contracts, bounded controls and duplicate integrity gates."""
 from pathlib import Path
 import numpy as np

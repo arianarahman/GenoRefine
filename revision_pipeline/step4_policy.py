@@ -1,3 +1,6 @@
+# Purpose: Pure Step 4 planning/screening contracts.
+# Author: Ariana Rahman (Arizona State University)
+
 """Pure Step 4 planning/screening contracts. No experiment runner or label repair."""
 
 import json

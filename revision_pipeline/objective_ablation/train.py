@@ -1,3 +1,6 @@
+# Purpose: Continue a saved Step 4A pretrained checkpoint under one frozen loss variant.
+# Author: Ariana Rahman (Arizona State University)
+
 """Continue a saved Step 4A pretrained checkpoint under one frozen loss variant."""
 
 from __future__ import annotations

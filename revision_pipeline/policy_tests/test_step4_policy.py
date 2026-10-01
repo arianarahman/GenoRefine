@@ -1,3 +1,6 @@
+# Purpose: Validate the frozen Step 4 decision policy, planning rules, and claim boundaries.
+# Author: Ariana Rahman (Arizona State University)
+
 import json
 from pathlib import Path
 import unittest

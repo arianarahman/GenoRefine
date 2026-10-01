@@ -1,3 +1,6 @@
+# Purpose: Provide shared helpers and invariants for the pre step4 workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from dataclasses import replace
 import math
 from pathlib import Path

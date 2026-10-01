@@ -1,3 +1,6 @@
+# Purpose: Gated complete Step4C panel; no score-dependent tuning, retry or omission.
+# Author: Ariana Rahman (Arizona State University)
+
 """Gated complete Step4C panel; no score-dependent tuning, retry or omission."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor,as_completed
@@ -32,6 +35,7 @@ def check_preconditions(acceptance,smoke,simulation,sources):
 
 
 def main():
+    """Run the gated controlled-simulation panel from controls through final scoring."""
     p=argparse.ArgumentParser();p.add_argument('--acceptance',type=Path,required=True)
     p.add_argument('--smoke',type=Path,required=True);p.add_argument('--simulation',type=Path,required=True)
     p.add_argument('--execute-step4c',action='store_true');a=p.parse_args()

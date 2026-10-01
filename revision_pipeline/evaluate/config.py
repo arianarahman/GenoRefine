@@ -1,3 +1,6 @@
+# Purpose: No implicit scientific primary settings: callers must choose a named profile.
+# Author: Ariana Rahman (Arizona State University)
+
 """No implicit scientific primary settings: callers must choose a named profile."""
 
 from dataclasses import asdict, dataclass

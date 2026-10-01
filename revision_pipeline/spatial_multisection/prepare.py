@@ -1,3 +1,6 @@
+# Purpose: Prepare the locked six-section LIBD DLPFC Harmony foundation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Prepare the locked six-section LIBD DLPFC Harmony foundation.
 
 This module stops at source-aligned counts, metadata, PCA and Harmony.  It does
@@ -46,6 +49,7 @@ _POSITION_COLUMNS = [
 
 @dataclass
 class SpatialBundle:
+    """Hold aligned counts, metadata, image, and coordinate inputs for all sections."""
     counts: sparse.csr_matrix
     gene_ids: np.ndarray
     gene_symbols: np.ndarray
@@ -56,6 +60,7 @@ class SpatialBundle:
 
 @dataclass
 class PreparedFoundation:
+    """Describe the persisted, verified foundation shared by spatial methods."""
     counts: sparse.csr_matrix
     gene_metadata: pd.DataFrame
     cell_metadata: pd.DataFrame
@@ -77,6 +82,7 @@ def _package_version(name: str) -> str:
 
 
 def dependency_versions() -> dict:
+    """Capture dependency versions that can affect spatial preprocessing."""
     return {
         "python": platform.python_version(),
         "numpy": _package_version("numpy"),
@@ -92,6 +98,7 @@ def dependency_versions() -> dict:
 
 
 def csr_hash(matrix: sparse.spmatrix) -> str:
+    """Hash a sparse CSR matrix including shape, dtype, indices, and values."""
     matrix = sparse.csr_matrix(matrix)
     matrix.sort_indices()
     digest = hashlib.sha256()
@@ -135,6 +142,7 @@ def verify_manifest_urls(spec: dict, root: Path) -> dict:
 
 
 def read_labels(path: Path, spec: dict) -> pd.DataFrame:
+    """Read and validate manual layer labels keyed by barcode."""
     labels = pd.read_csv(
         path, sep="\t", header=None, names=["barcode", "section", "label"], dtype=str,
     )
@@ -149,6 +157,7 @@ def read_labels(path: Path, spec: dict) -> pd.DataFrame:
 
 
 def read_positions(path: Path) -> pd.DataFrame:
+    """Read tissue positions and align coordinates to canonical barcodes."""
     positions = pd.read_csv(path, header=None, names=_POSITION_COLUMNS)
     if positions["barcode"].isna().any() or positions["barcode"].duplicated().any():
         raise ValueError("Position file has a missing or duplicate barcode")
@@ -164,6 +173,7 @@ def read_positions(path: Path) -> pd.DataFrame:
 
 
 def read_scalefactors(path: Path) -> dict:
+    """Read and validate the Visium image scale factors."""
     with path.open(encoding="utf-8") as stream:
         values = json.load(stream)
     required = {
@@ -182,6 +192,7 @@ def read_scalefactors(path: Path) -> dict:
 
 
 def read_hires_image(path: Path) -> dict:
+    """Load the high-resolution histology image as a validated RGB array."""
     with Image.open(path) as image:
         width, height = image.size
         image_format = image.format
@@ -192,6 +203,7 @@ def read_hires_image(path: Path) -> dict:
 
 
 def _read_counts(path: Path) -> tuple[sparse.csr_matrix, np.ndarray, np.ndarray, np.ndarray]:
+    """Read one section count matrix and align its genes and barcodes."""
     data = sc.read_10x_h5(path, gex_only=True)
     barcodes = _text(data.obs_names)
     symbols = _text(data.var_names)
@@ -217,6 +229,7 @@ def load_section(
     index: dict[tuple[str, str | None], dict],
     labels: pd.DataFrame,
 ) -> SpatialBundle:
+    """Load and validate every source component for one spatial section."""
     section_id = section["id"]
     counts, barcodes, gene_ids, gene_symbols = _read_counts(
         root / index[("counts", section_id)]["relative_path"]
@@ -304,6 +317,7 @@ def load_section(
 
 
 def load_spatial_bundle(spec: dict, root: Path) -> SpatialBundle:
+    """Combine sections into a shared gene space with stable row provenance."""
     index = source_index(spec)
     labels = read_labels(root / index[("labels", None)]["relative_path"], spec)
     pieces = [load_section(section, root, index, labels) for section in spec["dataset"]["sections"]]
@@ -332,6 +346,7 @@ def _harmony_result(
     config: dict,
     runner: Callable | None,
 ) -> tuple[np.ndarray, dict]:
+    """Normalize Harmony outputs across supported library orientations."""
     runner = harmonypy.run_harmony if runner is None else runner
     frame = pd.DataFrame({config["batch_key"]: metadata[config["batch_key"]].astype(str).to_numpy()})
     with threadpool_limits(limits=config["thread_limit"]):
@@ -392,6 +407,7 @@ def preprocess_bundle(
     *,
     harmony_runner: Callable | None = None,
 ) -> PreparedFoundation:
+    """Create the pooled expression and Harmony foundation without using labels."""
     counts = sparse.csr_matrix(bundle.counts)
     detected = np.asarray((counts > 0).sum(axis=0)).ravel()
     gene_keep = detected >= preprocessing["pooled_gene_min_cells"]
@@ -407,6 +423,8 @@ def preprocess_bundle(
     row_sums = np.asarray(data.X.sum(axis=1)).ravel()
     if np.any(row_sums <= 0):
         raise ValueError("A retained spot has zero pooled counts")
+    # Fit the representation on the pooled cohort so every section shares one
+    # feature space; layer values remain available only for later evaluation.
     sc.pp.normalize_total(data, target_sum=preprocessing["normalize_total_target_sum"])
     if not preprocessing["log1p"]:
         raise ValueError("The frozen protocol requires log1p")
@@ -438,6 +456,8 @@ def preprocess_bundle(
     hvg_dispersion = data.var["dispersions_norm"].to_numpy(dtype=np.float64)
     hvg_rank = np.full(len(gene_ids), np.nan, dtype=np.float64)
     selected = np.flatnonzero(hvg_mask)
+    # Break equal batch-frequency/dispersion ranks by stable gene ID so the
+    # published feature order is reproducible across dataframe implementations.
     ranked = selected[np.lexsort((gene_ids[selected], -hvg_dispersion[selected], -hvg_nbatches[selected]))]
     hvg_rank[ranked] = np.arange(1, len(ranked) + 1, dtype=np.float64)
     gene_metadata = pd.DataFrame({
@@ -489,6 +509,7 @@ def prepare_foundation(
     run_id: str | None = None,
     harmony_runner: Callable | None = None,
 ) -> Path:
+    """Verify sources and persist the reusable six-section spatial foundation."""
     project_root = Path(project_root).resolve()
     root = source_root(spec, project_root)
     inventory = verify_sources(spec, project_root)
@@ -564,6 +585,7 @@ def prepare_foundation(
 
 
 def main() -> None:
+    """Parse source locations and build the verified spatial foundation."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--project-root", type=Path, default=ROOT)

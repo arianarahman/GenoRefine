@@ -1,3 +1,6 @@
+# Purpose: Identity-safe local geometry; distinct, versioned metric definitions.
+# Author: Ariana Rahman (Arizona State University)
+
 """Identity-safe local geometry; distinct, versioned metric definitions."""
 
 import numpy as np

@@ -1,3 +1,6 @@
+# Purpose: Strict contracts shared by the six-section spatial panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Strict contracts shared by the six-section spatial panel."""
 
 from __future__ import annotations
@@ -41,10 +44,12 @@ def source_snapshot() -> dict:
 
 
 def read_json(path: Path) -> dict:
+    """Read a UTF-8 JSON document used by the multisection workflow."""
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
 def specification() -> dict:
+    """Load and validate the frozen multisection protocol and source pins."""
     if file_fingerprint(SPEC_PATH)["sha256"] != SPEC_SHA256:
         raise ValueError("Spatial multi-section protocol changed; mint and audit a new protocol")
     spec = read_json(SPEC_PATH)
@@ -72,19 +77,23 @@ def specification() -> dict:
 
 
 def foundation_path() -> Path:
+    """Resolve and validate the configured prepared-foundation location."""
     return ROOT / specification()["foundation"]["path"]
 
 
 def evaluation_config() -> EvaluationConfig:
+    """Build the common fixed-resolution evaluation configuration."""
     return EvaluationConfig.from_dict(evaluation_dict())
 
 
 def evaluation_dict() -> dict:
+    """Return the serializable evaluation configuration for run manifests."""
     spec = specification()
     return read_json(ROOT / spec["evaluation"]["config"])
 
 
 def validate_evaluation_runtime() -> dict:
+    """Verify runtime behavior that could change clustering endpoints."""
     locked = specification()["evaluation"]["runtime"]
     observed = {
         "python_executable": "<PYTHON_ENV>",
@@ -106,6 +115,7 @@ def validate_evaluation_runtime() -> dict:
 
 
 def load_metadata() -> pd.DataFrame:
+    """Load canonical section, donor, barcode, and layer metadata."""
     foundation = foundation_path()
     frame = pd.read_csv(foundation / "cell_metadata.tsv", sep="\t", dtype={"section": str})
     if tuple(frame.columns) != FOUNDATION_COLUMNS:
@@ -125,6 +135,7 @@ def load_metadata() -> pd.DataFrame:
 
 
 def load_foundation_embedding(name: str) -> tuple[np.ndarray, pd.DataFrame]:
+    """Load a foundation embedding with canonical row identifiers."""
     if name not in {"pca50", "harmony50"}:
         raise ValueError("Unknown foundation embedding")
     metadata = load_metadata()
@@ -139,6 +150,7 @@ def require_run(path: Path, kind: str) -> dict:
 
 
 def load_fixed_harmony(path: Path) -> tuple[np.ndarray, pd.DataFrame, dict]:
+    """Load the frozen pooled Harmony representation and its receipt."""
     require_run(path, "spatial_multisection_harmony_fixed")
     metadata = load_metadata()
     spec = specification()
@@ -170,6 +182,7 @@ def load_fixed_harmony(path: Path) -> tuple[np.ndarray, pd.DataFrame, dict]:
 
 
 def load_k_selection(path: Path, harmony_path: Path) -> dict:
+    """Load and verify the label-free cluster-count selection artifact."""
     require_run(path, "spatial_multisection_k_selection")
     spec = specification()
     eval_dict = evaluation_dict()
@@ -234,6 +247,7 @@ def load_k_selection(path: Path, harmony_path: Path) -> dict:
 
 @dataclass(frozen=True)
 class SectionDataset:
+    """Present one spatial section through the shared evaluation interface."""
     cell_ids: tuple[str, ...]
     reference: np.ndarray
     labels_named: tuple[str, ...]
@@ -256,6 +270,7 @@ class SectionDataset:
 
 
 def section_dataset(frame: pd.DataFrame) -> SectionDataset:
+    """Construct a validated section view from the prepared foundation."""
     labels = frame["label"].astype(str)
     categories = sorted(labels.unique())
     lookup = {name: code for code, name in enumerate(categories)}

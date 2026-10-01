@@ -1,3 +1,6 @@
+# Purpose: Score section geometry/spatial preservation or donor-pair mixing.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score section geometry/spatial preservation or donor-pair mixing."""
 
 from __future__ import annotations
@@ -37,6 +40,7 @@ def validate_training_binding(
     decisions: dict,
     section: str | None = None,
 ) -> None:
+    """Verify that a training run is bound to the expected foundation and seed."""
     expected_k = decisions["pooled"] if method == "genorefine" else decisions["sections"][section]
     if (config.get("harmony_manifest") != harmony_manifest
             or config.get("k_selection_manifest") != k_selection_manifest
@@ -53,6 +57,7 @@ def _load_representation(
     training: Path | None,
     section: str | None = None,
 ) -> tuple[np.ndarray, object, dict, dict | None]:
+    """Load one representation with canonical identifiers and provenance checks."""
     spec = specification()
     metadata = load_metadata()
     decisions = load_k_selection(k_selection, harmony)
@@ -121,9 +126,12 @@ def _load_representation(
 
 
 def spatial_metrics(values: np.ndarray, coordinates: np.ndarray, k: int, working_memory_mb: int) -> tuple[dict, dict]:
+    """Compute label, mixing, and local-spatial endpoints for one representation."""
     latent_idx, latent_distance = neighbors(values, k, working_memory_mb=working_memory_mb)
     spatial_idx, spatial_distance = neighbors(coordinates, k, working_memory_mb=working_memory_mb)
     jaccard = overlap(spatial_idx, latent_idx)
+    # Compare latent-neighbor physical distance with each spot's own spatial
+    # neighborhood scale, avoiding dependence on absolute image resolution.
     physical = np.linalg.norm(coordinates[latent_idx] - coordinates[:, None, :], axis=2)
     per_query_physical = physical.mean(axis=1)
     local_scale = spatial_distance.mean(axis=1)
@@ -146,6 +154,7 @@ def spatial_metrics(values: np.ndarray, coordinates: np.ndarray, k: int, working
 
 
 def score_section(method: str, section: str, harmony: Path, k_selection: Path, training: Path | None, run_id: str) -> Path:
+    """Score all declared representations for one tissue section."""
     spec = specification()
     if section not in spec["sections"]:
         raise ValueError("Unplanned DLPFC section")
@@ -176,6 +185,8 @@ def score_section(method: str, section: str, harmony: Path, k_selection: Path, t
         selected = grid["selected"]
         if len(selected) != 3 or {row["leiden_seed"] for row in selected} != {0, 1, 2}:
             raise ValueError("Incomplete fixed-resolution section partitions")
+        # Keep the three declared Leiden seeds separate until the final summary;
+        # they describe algorithmic stability, not biological replication.
         nmi = [float(normalized_mutual_info_score(dataset.reference, grid["partitions"][row["partition_index"]]))
                for row in selected]
         ari = [float(row["ARI"]) for row in selected]
@@ -230,6 +241,7 @@ def score_section(method: str, section: str, harmony: Path, k_selection: Path, t
 
 
 def score_donor(method: str, donor: str, harmony: Path, k_selection: Path, training: Path | None, run_id: str) -> Path:
+    """Score pooled representations for one prespecified donor pair."""
     spec = specification()
     if donor not in spec["donors"] or method not in {"harmony_fixed", "harmony_native_sensitivity", "genorefine"}:
         raise ValueError("Unplanned donor-pair score")
@@ -277,6 +289,7 @@ def score_donor(method: str, donor: str, harmony: Path, k_selection: Path, train
 
 
 def main() -> None:
+    """Parse a section or donor scoring request and dispatch it safely."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=["section", "donor"])
     parser.add_argument("--method", choices=["harmony_fixed", "harmony_native_sensitivity", "genorefine", "spagcn"], required=True)

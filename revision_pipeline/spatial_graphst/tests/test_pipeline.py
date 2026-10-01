@@ -1,3 +1,6 @@
+# Purpose: Validate the GraphST spatial workflow, frozen inputs, and completion contracts.
+# Author: Ariana Rahman (Arizona State University)
+
 from __future__ import annotations
 
 import json

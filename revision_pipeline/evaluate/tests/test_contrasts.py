@@ -1,3 +1,6 @@
+# Purpose: Validate contrasts behavior and invariants for the evaluate workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from copy import deepcopy
 from dataclasses import replace
 from pathlib import Path

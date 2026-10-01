@@ -1,4 +1,6 @@
 # seurat_integration_pancreas_robustness_canonical_v1.R
+# Purpose: Generate Seurat comparison embeddings for pancreas robustness conditions.
+# Author: Ariana Rahman (Arizona State University)
 # -----------------------------------------------------------------------------
 # Strict Seurat reruns for pancreas robustness perturbations.
 # Reads manifests created by make_pancreas_robustness_manifests_canonical_v1.py

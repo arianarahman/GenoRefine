@@ -1,3 +1,6 @@
+# Purpose: Convergence-gated primary Harmony in a new store, never an old-file rewrite.
+# Author: Ariana Rahman (Arizona State University)
+
 """Convergence-gated primary Harmony in a new store, never an old-file rewrite."""
 import argparse
 import copy

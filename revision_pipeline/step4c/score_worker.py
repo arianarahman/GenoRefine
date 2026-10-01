@@ -1,3 +1,6 @@
+# Purpose: Evaluate fixed simulation outputs; oracle information is evaluation-only.
+# Author: Ariana Rahman (Arizona State University)
+
 """Evaluate fixed simulation outputs; oracle information is evaluation-only."""
 import argparse
 from pathlib import Path

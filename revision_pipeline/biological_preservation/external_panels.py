@@ -1,3 +1,6 @@
+# Purpose: Deterministic external marker-panel parsing and construction.
+# Author: Ariana Rahman (Arizona State University)
+
 """Deterministic external marker-panel parsing and construction."""
 
 from __future__ import annotations

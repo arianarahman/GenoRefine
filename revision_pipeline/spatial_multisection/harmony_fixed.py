@@ -1,3 +1,6 @@
+# Purpose: Recompute the pooled spatial Harmony baseline for exactly ten outer iterations.
+# Author: Ariana Rahman (Arizona State University)
+
 """Recompute the pooled spatial Harmony baseline for exactly ten outer iterations."""
 
 from __future__ import annotations

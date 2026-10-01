@@ -1,3 +1,7 @@
+# Purpose: Validate genomoi protocol behavior and invariants for the matched comparators
+#          workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import unittest
 
 from revision_pipeline.matched_comparators.common import implementation_record, protocol

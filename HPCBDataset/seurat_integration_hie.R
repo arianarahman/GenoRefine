@@ -1,4 +1,6 @@
 # ============================================================
+# Purpose: Generate the Seurat comparison embedding for the HP-CB benchmark.
+# Author: Ariana Rahman (Arizona State University)
 # FILE: seurat_integration_hie_canonical_v5.R
 # PURPOSE:
 #   Run Seurat integration on the HIE (.h5ad) benchmark using the

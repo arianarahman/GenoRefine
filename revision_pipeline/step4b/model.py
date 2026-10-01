@@ -1,3 +1,6 @@
+# Purpose: Input/network adapters sharing all original pretraining and clustering loops.
+# Author: Ariana Rahman (Arizona State University)
+
 """Input/network adapters sharing all original pretraining and clustering loops."""
 from copy import deepcopy
 from dataclasses import asdict

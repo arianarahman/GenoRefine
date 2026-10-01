@@ -1,8 +1,10 @@
+# Purpose: Analyze parameter sensitivity for the GenoRefine PBMC workflow using the single-batch
+#          control benchmark.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 =============================================================================
 Script Name:    bench_pbmc_sensitivity.py
-Author:         Ariana Rahman
-Affiliation:    Arizona State University / Stanford University
 Date:           February 2026
 
 Description:

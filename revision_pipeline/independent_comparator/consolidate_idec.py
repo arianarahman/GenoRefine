@@ -1,3 +1,6 @@
+# Purpose: Consolidate the complete independent IDEC panel without seed selection.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the complete independent IDEC panel without seed selection."""
 
 from __future__ import annotations

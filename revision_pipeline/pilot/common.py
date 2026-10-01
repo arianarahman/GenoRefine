@@ -1,3 +1,6 @@
+# Purpose: Pilot contracts and outcome-independent checks; no TensorFlow import.
+# Author: Ariana Rahman (Arizona State University)
+
 """Pilot contracts and outcome-independent checks; no TensorFlow import."""
 
 import json

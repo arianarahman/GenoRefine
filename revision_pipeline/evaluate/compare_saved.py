@@ -1,3 +1,6 @@
+# Purpose: Add descriptive paired safeguards to a VERIFIED saved evaluation, without refitting.
+# Author: Ariana Rahman (Arizona State University)
+
 """Add descriptive paired safeguards to a VERIFIED saved evaluation, without refitting."""
 
 import argparse

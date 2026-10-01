@@ -1,3 +1,6 @@
+# Purpose: Audit and aggregate a post-failure Pancreas Harmony extension panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Audit and aggregate a post-failure Pancreas Harmony extension panel."""
 import argparse
 from pathlib import Path
@@ -26,6 +29,7 @@ def score_mapping(items):
 
 
 def main():
+    """Verify the Pancreas Harmony extension inputs and consolidate its five-seed case report."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--finalize-pancreas-harmony-v2", action="store_true")
     parser.add_argument("--inputs", type=Path, required=True)

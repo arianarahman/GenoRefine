@@ -1,3 +1,6 @@
+# Purpose: Plan, launch, and resume the pinned multi-section GenoRefine and SpaGCN spatial panel.
+# Author: Ariana Rahman (Arizona State University)
+
 param(
     [Parameter(Mandatory = $true)][ValidatePattern('^[A-Za-z0-9][A-Za-z0-9_-]{0,39}$')][string]$Prefix,
     [string]$Distro = $env:GENOREFINE_WSL_DISTRO,
@@ -9,6 +12,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+# Resolve the frozen runtime contract and the six-section execution plan.
 if (-not $Distro) { $Distro = 'Ubuntu-24.04' }
 if (-not $EvaluationPython) { $EvaluationPython = 'python3' }
 if (-not $HarmonyPython) { $HarmonyPython = 'python' }
@@ -40,6 +44,7 @@ if ($Distro -ne $Spec.evaluation.runtime.wsl_distribution) {
     throw 'Evaluation WSL distribution must match the frozen protocol'
 }
 
+# Plan mode reports the complete run graph without creating scientific outputs.
 if ($PlanOnly) {
     [pscustomobject]@{
         Prefix = $Prefix
@@ -61,6 +66,7 @@ if ($PlanOnly) {
     return
 }
 
+# A prefix-scoped lock prevents concurrent writers from sharing an output namespace.
 $LockPath = Join-Path $Runs ".orchestrator-$Prefix.lock"
 try {
     $LockStream = [IO.File]::Open($LockPath, [IO.FileMode]::OpenOrCreate,
@@ -74,6 +80,7 @@ try {
 Push-Location -LiteralPath $Project
 $LocationPushed = $true
 
+# Resume helpers preserve stale attempts and deeply verify every reusable completed run.
 function Move-StaleIncompleteRun([string]$Id) {
     $candidate = Join-Path $Runs ".incomplete-$Id"
     if (-not (Test-Path -LiteralPath $candidate)) { return }
@@ -130,6 +137,7 @@ function Invoke-DockerPython([string]$Image, [string[]]$Arguments) {
     if ($LASTEXITCODE -ne 0) { throw "Docker command failed in $Image" }
 }
 
+# Validate both pinned GPU images and the evaluation interpreter before execution.
 if (-not (Get-Command $HarmonyPython -ErrorAction SilentlyContinue)) {
     throw "Harmony interpreter was not found: $HarmonyPython"
 }
@@ -140,6 +148,7 @@ if ($LASTEXITCODE -ne 0 -or $GenoRefineImageId -ne $ExpectedGenoRefineImageId) {
     throw "GenoRefine image ID mismatch: expected $ExpectedGenoRefineImageId; observed $GenoRefineImageId"
 }
 
+# Build the shared Harmony foundation, choose label-free K, and train both candidate methods.
 if (-not (Test-Completed $HarmonyId 'spatial_multisection_harmony_fixed')) {
     & $HarmonyPython -m revision_pipeline.spatial_multisection.harmony_fixed --run-id $HarmonyId --execute
     if ($LASTEXITCODE -ne 0) { throw 'Fixed-10 Harmony failed' }
@@ -170,6 +179,7 @@ if ($LASTEXITCODE -ne 0 -or $SpaGCNImageId -ne $ExpectedSpaGCNImageId) {
 }
 Invoke-DockerPython $SpaGCNImage @('revision_pipeline.spatial_multisection.spagcn_runtime')
 
+# Train one histology-aware SpaGCN model for every section and algorithmic seed.
 foreach ($section in $Sections) {
     foreach ($seed in 0..4) {
         $id = "$Prefix-spagcn-$section-s$seed"
@@ -181,6 +191,7 @@ foreach ($section in $Sections) {
     }
 }
 
+# Score section-level representation and task-native endpoints.
 foreach ($section in $Sections) {
     foreach ($pair in @(@('harmony_fixed', 'harmony-fixed'), @('harmony_native_sensitivity', 'harmony-native'))) {
         $id = "$Prefix-score-section-$section-$($pair[1])"
@@ -206,6 +217,7 @@ foreach ($section in $Sections) {
     }
 }
 
+# Aggregate cross-section mixing within each donor before final consolidation.
 foreach ($donor in $Donors) {
     foreach ($pair in @(@('harmony_fixed', 'harmony-fixed'), @('harmony_native_sensitivity', 'harmony-native'))) {
         $id = "$Prefix-score-donor-$donor-$($pair[1])"

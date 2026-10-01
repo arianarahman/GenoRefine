@@ -1,3 +1,6 @@
+# Purpose: Immutable saved-output inputs and pure descriptive Step 4A comparisons.
+# Author: Ariana Rahman (Arizona State University)
+
 """Immutable saved-output inputs and pure descriptive Step 4A comparisons."""
 
 import math

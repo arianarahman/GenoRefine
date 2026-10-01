@@ -1,3 +1,6 @@
+# Purpose: Frozen occupied-slot permutation or unmodified vector; never shuffle cells.
+# Author: Ariana Rahman (Arizona State University)
+
 """Frozen occupied-slot permutation or unmodified vector; never shuffle cells."""
 from pathlib import Path
 import numpy as np

@@ -1,3 +1,6 @@
+# Purpose: Evaluate a validated store; all scientific settings come from explicit JSON.
+# Author: Ariana Rahman (Arizona State University)
+
 """Evaluate a validated store; all scientific settings come from explicit JSON."""
 
 import argparse

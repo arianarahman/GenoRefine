@@ -1,3 +1,6 @@
+# Purpose: Resume the three unfinished mouse coordinate cases with optimized CPU use.
+# Author: Ariana Rahman (Arizona State University)
+
 """Resume the three unfinished mouse coordinate cases with optimized CPU use.
 
 This is a user-authorized continuation after stopping the single-thread,
@@ -81,6 +84,7 @@ def _child(parent, sources, name, role, action, arguments, kind, *, fast_trainin
 
 
 def main():
+    """Orchestrate the unfinished mouse cases across five seeds using the approved CPU profile."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--execute-fast-mouse", action="store_true")
     args = parser.parse_args()

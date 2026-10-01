@@ -1,3 +1,6 @@
+# Purpose: Fail closed when a proposed public release contains data or local secrets.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fail closed when a proposed public release contains data or local secrets."""
 
 from __future__ import annotations

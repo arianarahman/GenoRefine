@@ -1,3 +1,6 @@
+# Purpose: Validate data store behavior and invariants for the data workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import copy
 import csv
 import json

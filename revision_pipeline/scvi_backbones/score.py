@@ -1,3 +1,6 @@
+# Purpose: Score a standalone scVI embedding with the frozen primary evaluator.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score a standalone scVI embedding with the frozen primary evaluator."""
 
 from __future__ import annotations

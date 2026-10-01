@@ -1,3 +1,6 @@
+# Purpose: Build the pinned scVI comparator runtime used by GenoRefine analyses.
+# Author: Ariana Rahman (Arizona State University)
+
 FROM nvcr.io/nvidia/pytorch:25.02-py3
 
 ENV PIP_CONFIG_FILE=/dev/null

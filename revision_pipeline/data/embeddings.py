@@ -1,3 +1,6 @@
+# Purpose: Strict CSV import and canonical selection.
+# Author: Ariana Rahman (Arizona State University)
+
 """Strict CSV import and canonical selection. Never infer alignment from position."""
 
 import csv

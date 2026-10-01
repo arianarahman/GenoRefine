@@ -1,3 +1,6 @@
+# Purpose: Score one immutable representation with the existing, frozen primary evaluator.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score one immutable representation with the existing, frozen primary evaluator."""
 
 import argparse

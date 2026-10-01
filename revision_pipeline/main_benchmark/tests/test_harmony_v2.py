@@ -1,3 +1,6 @@
+# Purpose: Validate harmony v2 behavior and invariants for the main benchmark workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import unittest
 
 from revision_pipeline.main_benchmark.harmony_v2 import objective_gate

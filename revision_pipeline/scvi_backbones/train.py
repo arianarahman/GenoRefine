@@ -1,3 +1,6 @@
+# Purpose: Train standalone scVI backbones for mouse or five-study pancreas.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train standalone scVI backbones for mouse or five-study pancreas."""
 
 from __future__ import annotations
@@ -84,6 +87,7 @@ def _audit(values: sp.csr_matrix, batches: np.ndarray, status: str):
 
 
 def main():
+    """Audit the input, train one label-free scVI backbone, and persist its latent model."""
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--dataset", choices=["mouse_senis", "pancreas_five_study"], required=True)
     p.add_argument("--seed", type=int, choices=range(5), required=True)

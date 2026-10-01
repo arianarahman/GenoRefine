@@ -1,3 +1,6 @@
+# Purpose: Create one immutable simulation; do not fit a model or choose on outcomes.
+# Author: Ariana Rahman (Arizona State University)
+
 """Create one immutable simulation; do not fit a model or choose on outcomes."""
 import numpy as np
 from sklearn.decomposition import PCA

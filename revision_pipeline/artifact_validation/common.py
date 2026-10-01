@@ -1,3 +1,6 @@
+# Purpose: Frozen contracts and loaders for the real-embedding artifact panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Frozen contracts and loaders for the real-embedding artifact panel."""
 
 from __future__ import annotations

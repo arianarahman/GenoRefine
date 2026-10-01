@@ -1,3 +1,6 @@
+# Purpose: Bounded pre-Step-4 preparation. Does not launch the Step 4 efficacy panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Bounded pre-Step-4 preparation. Does not launch the Step 4 efficacy panel."""
 
 import argparse

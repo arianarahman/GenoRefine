@@ -1,3 +1,6 @@
+# Purpose: Train-only cartographic fitting and frozen transforms, including the last cell.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train-only cartographic fitting and frozen transforms, including the last cell."""
 
 from dataclasses import asdict
@@ -41,6 +44,7 @@ def cartography_backend():
 
 
 def numeric_matrix(values):
+    """Validate and normalize a finite two-dimensional numeric input matrix."""
     matrix = np.asarray(values)
     if matrix.ndim != 2 or min(matrix.shape) < 1 or matrix.dtype.kind != "f":
         raise ValueError("Expected a nonempty cells-by-features floating-point matrix")
@@ -50,6 +54,7 @@ def numeric_matrix(values):
 
 
 def array_fingerprint(array):
+    """Return a stable content fingerprint that includes array shape and dtype."""
     import hashlib
     array = np.ascontiguousarray(array)
     digest = hashlib.sha256(memoryview(array).cast("B")).hexdigest()
@@ -57,6 +62,7 @@ def array_fingerprint(array):
 
 
 class GenomapLayout:
+    """Fit, validate, save, and restore the deterministic feature-to-grid mapping."""
     def __init__(self, config=None):
         self.config = config or LayoutConfig()
         self.fitted = False

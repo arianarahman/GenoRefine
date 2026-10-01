@@ -1,3 +1,6 @@
+# Purpose: Score one representation only on the genuinely held-out HP-CB cells.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score one representation only on the genuinely held-out HP-CB cells."""
 
 from __future__ import annotations

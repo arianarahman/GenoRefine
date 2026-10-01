@@ -1,4 +1,6 @@
 # ============================================================
+# Purpose: Generate the Online iNMF comparison embedding for the mouse atlas benchmark.
+# Author: Ariana Rahman (Arizona State University)
 # FILE: rliger_online_inmf_mouse_v16_fixed.R
 # PURPOSE:
 #   Run Online iNMF (rliger) on mouse Tabula Muris Senis (.h5ad),

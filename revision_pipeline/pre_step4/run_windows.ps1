@@ -1,3 +1,6 @@
+# Purpose: Execute the pre-step-4 GenoRefine preparation and validation workflow on Windows.
+# Author: Ariana Rahman (Arizona State University)
+
 param(
     [string]$Distro = $env:GENOREFINE_WSL_DISTRO,
     [string]$Python = $env:GENOREFINE_PRIMARY_PYTHON

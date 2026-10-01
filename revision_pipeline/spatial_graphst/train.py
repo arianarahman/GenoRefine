@@ -1,3 +1,6 @@
+# Purpose: Train one official GraphST donor-pair model and its native partitions.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train one official GraphST donor-pair model and its native partitions."""
 
 from __future__ import annotations

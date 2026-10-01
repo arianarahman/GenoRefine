@@ -1,3 +1,6 @@
+# Purpose: Score paired scVI and scVI+GenoRefine embeddings with the frozen evaluator.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score paired scVI and scVI+GenoRefine embeddings with the frozen evaluator."""
 
 import argparse

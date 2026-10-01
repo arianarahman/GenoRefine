@@ -1,3 +1,6 @@
+# Purpose: Select GraphST donor-pair K from frozen Harmony without annotations.
+# Author: Ariana Rahman (Arizona State University)
+
 """Select GraphST donor-pair K from frozen Harmony without annotations."""
 
 from __future__ import annotations

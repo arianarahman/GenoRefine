@@ -1,3 +1,6 @@
+# Purpose: Deep semantic validation for resumable GraphST Package 4b runs.
+# Author: Ariana Rahman (Arizona State University)
+
 """Deep semantic validation for resumable GraphST Package 4b runs."""
 
 from __future__ import annotations

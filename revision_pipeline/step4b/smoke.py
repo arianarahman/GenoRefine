@@ -1,3 +1,6 @@
+# Purpose: Small independent-process control smoke, never a scientific replicate.
+# Author: Ariana Rahman (Arizona State University)
+
 """Small independent-process control smoke, never a scientific replicate."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor

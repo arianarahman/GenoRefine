@@ -1,3 +1,7 @@
+# Purpose: Current-source old full acceptance plus Step4C contracts, without scientific
+#          training.
+# Author: Ariana Rahman (Arizona State University)
+
 """Current-source old full acceptance plus Step4C contracts, without scientific training."""
 from pathlib import Path
 import re

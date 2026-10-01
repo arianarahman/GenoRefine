@@ -1,3 +1,6 @@
+# Purpose: Time and fingerprint a real-data exact graph WITHOUT model training or scoring.
+# Author: Ariana Rahman (Arizona State University)
+
 """Time and fingerprint a real-data exact graph WITHOUT model training or scoring."""
 
 import argparse

@@ -1,3 +1,6 @@
+# Purpose: Explicit choices for the staged refiner; not a frozen scientific protocol.
+# Author: Ariana Rahman (Arizona State University)
+
 """Explicit choices for the staged refiner; not a frozen scientific protocol."""
 
 from dataclasses import asdict, dataclass, field

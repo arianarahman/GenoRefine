@@ -1,3 +1,6 @@
+# Purpose: Validate scoring behavior and invariants for the step4 workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from copy import deepcopy
 from pathlib import Path
 import tempfile

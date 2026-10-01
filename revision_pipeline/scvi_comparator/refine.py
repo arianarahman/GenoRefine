@@ -1,3 +1,6 @@
+# Purpose: Apply the frozen GenoRefine protocol to one scVI backbone seed.
+# Author: Ariana Rahman (Arizona State University)
+
 """Apply the frozen GenoRefine protocol to one scVI backbone seed."""
 
 import argparse

@@ -1,3 +1,6 @@
+# Purpose: User-approved continuation past one pinned upstream convergence failure.
+# Author: Ariana Rahman (Arizona State University)
+
 """User-approved continuation past one pinned upstream convergence failure.
 
 No retry, tolerance change, baseline substitution, or numerical-code amendment.

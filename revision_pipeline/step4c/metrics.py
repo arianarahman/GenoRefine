@@ -1,3 +1,6 @@
+# Purpose: Scale-free counterfactual sensitivity and outcome-independent audit contracts.
+# Author: Ariana Rahman (Arizona State University)
+
 """Scale-free counterfactual sensitivity and outcome-independent audit contracts."""
 import numpy as np
 from ..evaluate.metrics import overlap

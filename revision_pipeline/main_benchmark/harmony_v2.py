@@ -1,3 +1,6 @@
+# Purpose: Objective-corrected, convergence-gated Pancreas Harmony extension.
+# Author: Ariana Rahman (Arizona State University)
+
 """Objective-corrected, convergence-gated Pancreas Harmony extension.
 
 This is a post-failure extension.  It preserves the two v1 failures and uses
@@ -79,6 +82,7 @@ def install_objective_only_gate(policy):
 
 
 def main():
+    """Run the pinned objective-gated Pancreas Harmony extension and persist its audited store."""
     import anndata as ad
     import pandas as pd
     from threadpoolctl import threadpool_limits

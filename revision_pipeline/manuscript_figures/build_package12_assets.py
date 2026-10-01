@@ -1,3 +1,6 @@
+# Purpose: Build audited manuscript assets from completed Package 1 and Package 2 runs.
+# Author: Ariana Rahman (Arizona State University)
+
 """Build audited manuscript assets from completed Package 1 and Package 2 runs.
 
 This module is deliberately read-only with respect to scientific run directories.  It
@@ -158,6 +161,7 @@ def reduce_values(values: list[float]) -> dict[str, Any]:
 
 
 def audit_package1() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
+    """Audit the 12-case IDEC panel and trace displayed values to frozen sources."""
     panel_manifest = validate_run(
         PACKAGE1,
         "independent_idec_full_panel_consolidation",
@@ -290,6 +294,7 @@ def audit_package1() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[s
 
 
 def audit_package2() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
+    """Audit the 88-unit marker panel and trace aggregates to immutable unit results."""
     foundation_manifest = validate_run(
         PACKAGE2_FOUNDATION,
         "independent_marker_foundation",
@@ -693,6 +698,7 @@ def write_marker_csv(records: list[dict[str, Any]], path: Path) -> None:
 
 
 def main() -> None:
+    """Audit Packages 1 and 2, render their assets, and write value-level provenance."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUT)
     args = parser.parse_args()

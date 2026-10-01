@@ -1,3 +1,6 @@
+# Purpose: Consolidate the complete fully held-out validation panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the complete fully held-out validation panel."""
 
 import csv

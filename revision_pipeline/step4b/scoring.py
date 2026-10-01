@@ -1,3 +1,6 @@
+# Purpose: Fixed 48-representation/30-contrast comparison; no score-driven selection.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fixed 48-representation/30-contrast comparison; no score-driven selection."""
 from pathlib import Path
 import statistics

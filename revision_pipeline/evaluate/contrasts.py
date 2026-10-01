@@ -1,3 +1,6 @@
+# Purpose: Paired clustering sensitivity without reference-informed resolution selection.
+# Author: Ariana Rahman (Arizona State University)
+
 """Paired clustering sensitivity without reference-informed resolution selection.
 
 These are descriptive diagnostics, not independent observations for inference.

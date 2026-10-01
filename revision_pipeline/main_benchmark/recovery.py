@@ -1,3 +1,6 @@
+# Purpose: Explicit one-off recovery of the pinned metadata failure; no generic retry.
+# Author: Ariana Rahman (Arizona State University)
+
 """Explicit one-off recovery of the pinned metadata failure; no generic retry."""
 from pathlib import Path
 from ..integrity import canonical_hash, file_fingerprint

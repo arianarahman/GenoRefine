@@ -1,3 +1,6 @@
+# Purpose: Run the independent external-marker preservation panel on saved embeddings.
+# Author: Ariana Rahman (Arizona State University)
+
 """Run the independent external-marker preservation panel on saved embeddings.
 
 The command has two deliberately separate phases.  ``--preflight`` resolves

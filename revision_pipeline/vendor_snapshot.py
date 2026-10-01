@@ -1,3 +1,6 @@
+# Purpose: Preserve the small, unmodified cartography dependency from the supplied source.
+# Author: Ariana Rahman (Arizona State University)
+
 """Preserve the small, unmodified cartography dependency from the supplied source.
 
 No copied environment is activated and no scientific package is imported here.

@@ -1,3 +1,6 @@
+# Purpose: Train one prespecified pooled Harmony+GenoRefine replicate.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train one prespecified pooled Harmony+GenoRefine replicate."""
 
 from __future__ import annotations
@@ -18,6 +21,7 @@ from .common import RUNS, load_fixed_harmony, load_k_selection, source_snapshot,
 
 
 def execute(harmony: Path, k_selection: Path, seed: int, run_id: str, runtime_profile: str) -> Path:
+    """Train one pooled Harmony+GenoRefine seed under the locked spatial runtime."""
     spec = specification()
     if seed not in spec["genorefine"]["seeds"]:
         raise ValueError("Unplanned GenoRefine seed")

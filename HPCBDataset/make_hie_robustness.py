@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Purpose: Generate exact cell manifests for STRICT HIE robustness experiments.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: make_hie_robustness_hvg.py
 -------------------------------------------------------------------------------
@@ -484,6 +487,7 @@ def config_from_args(args: argparse.Namespace) -> HIERobustnessManifestConfig:
 
 
 def main() -> None:
+    """Validate frozen HIE HVGs and create deterministic imbalance and non-overlap manifests."""
     parser = build_arg_parser()
     args = parser.parse_args()
     cfg = config_from_args(args)

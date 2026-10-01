@@ -1,3 +1,6 @@
+# Purpose: Cross-fitted expression signatures for embedding-neighborhood validation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Cross-fitted expression signatures for embedding-neighborhood validation.
 
 Signatures are learned from one deterministic half of the cells and assigned to

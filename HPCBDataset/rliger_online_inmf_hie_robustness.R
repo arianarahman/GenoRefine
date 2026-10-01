@@ -1,4 +1,6 @@
 # ============================================================
+# Purpose: Generate Online iNMF comparison embeddings for HP-CB robustness conditions.
+# Author: Ariana Rahman (Arizona State University)
 # FILE: rliger_online_inmf_hie_robustness.R
 # PURPOSE:
 #   Strict Online iNMF (rliger) reruns for HIE robustness perturbations.

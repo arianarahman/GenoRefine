@@ -1,8 +1,15 @@
+# Purpose: Device-compatible port of SpaGCN 1.2.7 ``simple_GC_DEC.fit``.
+# Author: Ariana Rahman (Arizona State University)
+# Upstream basis: SpaGCN 1.2.7, Copyright (c) 2020 JianHu, MIT License.
+# Required notice: THIRD_PARTY_NOTICES.md
+
 """Device-compatible port of SpaGCN 1.2.7 ``simple_GC_DEC.fit``.
 
 The update equations, initialization, target refresh interval, stopping rule and
 optimizer mirror the vendored official implementation.  The only intended
 difference is explicit tensor-device placement so the same API can use CUDA.
+The Author line identifies the compatibility-port author; upstream copyright
+and license terms are preserved in ``THIRD_PARTY_NOTICES.md``.
 """
 
 from __future__ import annotations

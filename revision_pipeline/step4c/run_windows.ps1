@@ -1,3 +1,6 @@
+# Purpose: Run the step-4c GenoRefine controlled-validation workflow on Windows and WSL.
+# Author: Ariana Rahman (Arizona State University)
+
 param(
     [Parameter(Mandatory=$true)][string]$Acceptance,
     [Parameter(Mandatory=$true)][string]$Smoke,

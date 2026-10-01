@@ -1,3 +1,6 @@
+# Purpose: Compiled GPU execution for the unchanged ConvIDEC training protocol.
+# Author: Ariana Rahman (Arizona State University)
+
 """Compiled GPU execution for the unchanged ConvIDEC training protocol.
 
 The deterministic CPU implementation remains the reference implementation.
@@ -22,18 +25,21 @@ from ..runs import write_json
 
 
 def encode(trainer, maps):
+    """Encode an input matrix in bounded batches without changing row order."""
     maps = trainer._maps(maps)
     return np.asarray(trainer.encoder.predict(
         maps, batch_size=max(256, trainer.config.batch_size), verbose=0))
 
 
 def probabilities(trainer, maps):
+    """Convert latent coordinates and cluster centers into Student-t soft assignments."""
     maps = trainer._maps(maps)
     return np.asarray(trainer.joint.predict(
         maps, batch_size=max(256, trainer.config.batch_size), verbose=0)[0])
 
 
 def reconstruction_mse(trainer, maps):
+    """Measure reconstruction error in bounded batches to limit accelerator memory use."""
     maps = trainer._maps(maps)
     batch_size = max(256, trainer.config.batch_size)
     squared_error, entries = 0.0, 0
@@ -46,6 +52,7 @@ def reconstruction_mse(trainer, maps):
 
 
 def pretrain(trainer, maps, *, cell_ids, directory):
+    """Run accelerated autoencoder pretraining while preserving the declared update budget."""
     if trainer.state != "initialized":
         raise RuntimeError("Pretraining is allowed once on a new trainer")
     maps = trainer._maps(maps)
@@ -122,6 +129,7 @@ def pretrain(trainer, maps, *, cell_ids, directory):
 
 
 def _flush_joint(stream, rows, tensors):
+    """Persist buffered joint-training diagnostics as an ordered batch."""
     if not rows:
         return
     values = tf.stack(tensors).numpy()
@@ -140,6 +148,7 @@ def _flush_joint(stream, rows, tensors):
 
 
 def cluster(trainer, maps, *, cell_ids, directory):
+    """Run accelerated joint clustering and reconstruction refinement with convergence checks."""
     from .trainer import target_distribution
 
     if trainer.state != "pretrained":
@@ -199,6 +208,8 @@ def cluster(trainer, maps, *, cell_ids, directory):
         for update, indices in enumerate(iter_batches(
                 len(maps), trainer.config.batch_size, trainer.config.max_updates,
                 shuffle=trainer.config.cluster_shuffle, seed=trainer.config.cluster_seed)):
+            # DEC targets depend on the complete cohort. Refresh them only at the
+            # declared interval, then index the frozen target for each mini-batch.
             if update % trainer.config.target_update_interval == 0:
                 _flush_joint(losses, buffered_rows, buffered_losses)
                 t0 = time.perf_counter()
@@ -269,6 +280,7 @@ def cluster(trainer, maps, *, cell_ids, directory):
 
 
 def reconstruction_continuation(model, maps, *, cell_ids, directory):
+    """Continue reconstruction-only training from a verified joint checkpoint."""
     trainer = model.trainer
     if trainer.state != "pretrained":
         raise ValueError("Reconstruction continuation requires a fresh pretrained branch")
@@ -340,6 +352,7 @@ def reconstruction_continuation(model, maps, *, cell_ids, directory):
 
 
 def _flush_reconstruction(stream, rows, tensors):
+    """Persist buffered reconstruction-continuation diagnostics in order."""
     if not rows:
         return
     values = tf.stack(tensors).numpy()

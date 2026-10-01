@@ -1,3 +1,6 @@
+# Purpose: Isolated run directories with an atomic success publication step.
+# Author: Ariana Rahman (Arizona State University)
+
 """Isolated run directories with an atomic success publication step."""
 
 from datetime import datetime, timezone

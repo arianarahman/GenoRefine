@@ -1,3 +1,6 @@
+# Purpose: Generate manuscript UMAP galleries from the final main-benchmark artifacts.
+# Author: Ariana Rahman (Arizona State University)
+
 """Generate manuscript UMAP galleries from the final main-benchmark artifacts.
 
 The gallery is descriptive.  It uses the predeclared seed-0 joint embedding for
@@ -166,6 +169,7 @@ def _plot_gallery(
     methods: tuple[str, ...] = METHODS,
     page_label: str | None = None,
 ):
+    """Render matched cell-type and batch panels for upstream and seed-0 refined coordinates."""
     import matplotlib
 
     matplotlib.use("Agg")
@@ -255,6 +259,7 @@ def _plot_gallery(
 
 
 def main() -> int:
+    """Generate or reuse audited UMAP coordinates, render galleries, and write their manifest."""
     parser = argparse.ArgumentParser()
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--force", action="store_true")

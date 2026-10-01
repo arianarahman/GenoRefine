@@ -1,3 +1,6 @@
+# Purpose: Fit one GenoRefine or IDEC replicate to one prepared corrupted embedding.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fit one GenoRefine or IDEC replicate to one prepared corrupted embedding."""
 
 from __future__ import annotations
@@ -82,6 +85,7 @@ def bind_training_k(prepared, baseline_score: Path | str) -> dict:
 
 
 def _save_inference_outputs(run, clean, counterfactuals, observed, expected_observed):
+    """Write canonical-row inference outputs and their validation receipts."""
     clean = np.asarray(clean, dtype=np.float64)
     counterfactuals = np.asarray(counterfactuals, dtype=np.float64)
     observed = np.asarray(observed, dtype=np.float64)
@@ -126,6 +130,7 @@ def _save_inference_outputs(run, clean, counterfactuals, observed, expected_obse
 
 
 def _fit_genorefine(artifact, decision, seed, run):
+    """Fit GenoRefine for one artifact case under the frozen training contract."""
     from ..refine.config import LayoutConfig, RefinerConfig
     from ..refine.staged import StagedGenoDR
     from ..step4_policy import check_joint_coverage, load_policy, planned_training_config
@@ -194,6 +199,7 @@ def _fit_genorefine(artifact, decision, seed, run):
 
 
 def _fit_idec(artifact, decision, seed, run):
+    """Fit the independent IDEC comparator under its pinned compatibility contract."""
     from ..independent_comparator.idec_compat import (
         IDECTransformer,
         build_idec_models,
@@ -304,6 +310,7 @@ def _fit_idec(artifact, decision, seed, run):
 
 
 def run_training(prepared_path, baseline_score, artifact_id, method, seed, run_id):
+    """Train one declared method-case-seed combination and record full provenance."""
     spec = specification()
     if method not in METHODS or seed not in spec["replicate_seeds"]:
         raise ValueError("Method or seed is outside artifact_validation_v2")
@@ -399,6 +406,7 @@ def run_training(prepared_path, baseline_score, artifact_id, method, seed, run_i
 
 
 def main():
+    """Parse and execute one artifact-validation training job."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prepared", type=Path, required=True)
     parser.add_argument("--baseline-score", type=Path, required=True)

@@ -1,3 +1,6 @@
+# Purpose: Generate main Figure 3: Scanorama versus Scanorama + GenoRefine.
+# Author: Ariana Rahman (Arizona State University)
+
 """Generate main Figure 3: Scanorama versus Scanorama + GenoRefine.
 
 The script reuses audited seed-0 UMAP coordinates from the complete gallery run
@@ -144,6 +147,7 @@ def _legend_spec(dataset_config: dict, labels: np.ndarray) -> dict:
 
 
 def main() -> int:
+    """Assemble Figure 3 from audited seed-0 coordinates without fitting or selecting models."""
     project = Path(__file__).resolve().parents[2]
     runs = project / "revision_pipeline" / "runs"
     coordinates = runs / UMAP_RUN / "coordinates"

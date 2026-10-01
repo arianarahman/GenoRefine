@@ -1,3 +1,6 @@
+# Purpose: Historical-order adapters and scheduler-coverage safeguards; no training.
+# Author: Ariana Rahman (Arizona State University)
+
 """Historical-order adapters and scheduler-coverage safeguards; no training."""
 
 import unittest

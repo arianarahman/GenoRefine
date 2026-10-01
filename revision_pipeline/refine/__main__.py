@@ -1,3 +1,6 @@
+# Purpose: Small synthetic acceptance run; this command does not load biological datasets.
+# Author: Ariana Rahman (Arizona State University)
+
 """Small synthetic acceptance run; this command does not load biological datasets."""
 
 import argparse
@@ -5,7 +8,7 @@ from pathlib import Path
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Staged GenoDR development validation")
+    parser = argparse.ArgumentParser(description="GenoRefine staged-refinement validation")
     parser.add_argument("command", choices=["smoke", "gpu-probe"])
     args = parser.parse_args()
     if args.command == "gpu-probe":

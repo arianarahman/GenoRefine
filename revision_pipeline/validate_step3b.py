@@ -1,3 +1,6 @@
+# Purpose: Aggregate evaluator software checks without training or integration.
+# Author: Ariana Rahman (Arizona State University)
+
 """Aggregate evaluator software checks without training or integration."""
 
 import argparse

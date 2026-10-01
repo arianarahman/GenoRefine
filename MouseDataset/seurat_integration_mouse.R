@@ -1,4 +1,6 @@
 # ============================================================
+# Purpose: Generate the Seurat comparison embedding for the mouse atlas benchmark.
+# Author: Ariana Rahman (Arizona State University)
 # FILE: seurat_integration_mouse_v5.R
 # PURPOSE:
 #   Run Seurat integration on mouse Tabula Muris Senis (.h5ad),

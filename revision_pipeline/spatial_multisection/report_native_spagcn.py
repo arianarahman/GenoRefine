@@ -1,3 +1,7 @@
+# Purpose: Derive the preregistered SpaGCN task-native endpoint report from frozen Package 4
+#          outputs.
+# Author: Ariana Rahman (Arizona State University)
+
 """Derive the preregistered SpaGCN task-native endpoint report from frozen Package 4 outputs.
 
 This is a reporting-only transformation.  It neither refits a model nor rescans
@@ -303,6 +307,7 @@ def _write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
 
 
 def execute(*, full_panel: Path, prefix: str, run_id: str) -> Path:
+    """Derive donor-balanced native SpaGCN summaries without retraining or rescoring."""
     section_rows, validation = _validate_frozen_inputs(full_panel, prefix)
     spec = specification()
     native_rows = extract_native_rows(

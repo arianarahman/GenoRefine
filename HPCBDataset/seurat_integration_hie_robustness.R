@@ -1,4 +1,6 @@
 # ============================================================
+# Purpose: Generate Seurat comparison embeddings for HP-CB robustness conditions.
+# Author: Ariana Rahman (Arizona State University)
 # FILE: seurat_integration_hie_robustness.R
 # PURPOSE:
 #   Strict Seurat reruns for HIE robustness perturbations.

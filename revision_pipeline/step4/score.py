@@ -1,3 +1,6 @@
+# Purpose: Run the complete saved-output scoring panel, then publish all comparisons.
+# Author: Ariana Rahman (Arizona State University)
+
 """Run the complete saved-output scoring panel, then publish all comparisons."""
 
 import argparse
@@ -23,6 +26,7 @@ from .run import verify_acceptance
 
 
 def main():
+    """Run locked Step 4A scoring and publish aggregate representation comparisons."""
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--execute-step4a-scoring",action="store_true")
     parser.add_argument("--acceptance",type=Path,required=True)

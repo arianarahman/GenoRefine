@@ -1,3 +1,6 @@
+# Purpose: Dependency-free integrity and indexing primitives for the revision pipeline.
+# Author: Ariana Rahman (Arizona State University)
+
 """Dependency-free integrity and indexing primitives for the revision pipeline."""
 
 from collections import Counter

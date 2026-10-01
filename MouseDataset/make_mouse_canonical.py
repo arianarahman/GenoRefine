@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Purpose: Generate one frozen canonical HVG list for the mouse benchmark.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 make_mouse_canonical_hvg_v3.py
 
@@ -401,6 +404,7 @@ def write_manifest_json(path: str, payload: Dict[str, Any]) -> None:
 # MAIN
 # ============================================================
 def main() -> None:
+    """Build canonical mouse HVGs from cross-batch ranks and write feature and provenance artifacts."""
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s | %(levelname)s | %(message)s",

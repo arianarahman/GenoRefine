@@ -1,3 +1,6 @@
+# Purpose: Fresh, exact-10-iteration Pancreas Harmony sensitivity build.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fresh, exact-10-iteration Pancreas Harmony sensitivity build."""
 import argparse
 import copy
@@ -30,6 +33,7 @@ def disable_outer_early_stop():
 
 
 def main():
+    """Rebuild the Pancreas Harmony embedding under the pinned exact-ten-iteration policy."""
     import anndata as ad
     import pandas as pd
     from threadpoolctl import threadpool_limits

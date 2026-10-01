@@ -1,3 +1,6 @@
+# Purpose: Score one independent IDEC output with the frozen primary evaluator.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score one independent IDEC output with the frozen primary evaluator."""
 
 from __future__ import annotations
@@ -29,6 +32,7 @@ def snapshot():
 
 
 def main():
+    """Score one verified IDEC stage with the frozen graph, clustering, and metric evaluator."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", default=str(PROTOCOL))
     parser.add_argument("--case")

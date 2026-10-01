@@ -1,3 +1,6 @@
+# Purpose: Derive K only from exact-parent baseline partitions, never true groups/ARI.
+# Author: Ariana Rahman (Arizona State University)
+
 """Derive K only from exact-parent baseline partitions, never true groups/ARI."""
 from pathlib import Path
 import numpy as np

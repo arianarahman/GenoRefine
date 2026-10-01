@@ -1,3 +1,6 @@
+# Purpose: Fit the complete upstream representation without seeing held-out HP-CB cells.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fit the complete upstream representation without seeing held-out HP-CB cells."""
 
 from __future__ import annotations

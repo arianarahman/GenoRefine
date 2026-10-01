@@ -1,3 +1,6 @@
+# Purpose: Explicit control configurations; the preserved refiner configuration is unchanged.
+# Author: Ariana Rahman (Arizona State University)
+
 """Explicit control configurations; the preserved refiner configuration is unchanged."""
 from dataclasses import asdict, dataclass, field
 import numpy as np

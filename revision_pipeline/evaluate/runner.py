@@ -1,3 +1,6 @@
+# Purpose: Immutable result run orchestration; neither integrates nor trains.
+# Author: Ariana Rahman (Arizona State University)
+
 """Immutable result run orchestration; neither integrates nor trains."""
 
 import os

@@ -1,3 +1,6 @@
+# Purpose: Run the step-4 GenoRefine refinement branches with the configured Windows and WSL runtimes.
+# Author: Ariana Rahman (Arizona State University)
+
 param(
     [Parameter(Mandatory=$true)][string]$Acceptance,
     [string]$Distro = $env:GENOREFINE_WSL_DISTRO,

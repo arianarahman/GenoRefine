@@ -1,3 +1,6 @@
+# Purpose: Validate spagcn compat behavior and invariants for the spatial multisection workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from __future__ import annotations
 
 import unittest

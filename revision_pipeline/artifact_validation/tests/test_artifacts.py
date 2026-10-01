@@ -1,3 +1,6 @@
+# Purpose: Validate artifacts behavior and invariants for the artifact validation workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import unittest
 
 import numpy as np

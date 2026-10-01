@@ -1,4 +1,6 @@
 # rliger_online_inmf_pancreas_v14.R
+# Purpose: Generate the Online iNMF comparison embedding for the five-study pancreas benchmark.
+# Author: Ariana Rahman (Arizona State University)
 # Online iNMF baseline for 5-pancreas .mat benchmark
 # Exports H (cells x k) to CSV with rownames matching Python v11 obs_names:
 #   "Cell-<i>-Batch-<Baron|Muraro|Segerstolpe|Wang|Xin>"

@@ -1,3 +1,6 @@
+# Purpose: Select GenoRefine K from the training upstream without reference labels.
+# Author: Ariana Rahman (Arizona State University)
+
 """Select GenoRefine K from the training upstream without reference labels."""
 
 import argparse

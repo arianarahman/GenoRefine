@@ -1,3 +1,6 @@
+# Purpose: Baseline-only K binding, fixed panel contracts and exact duplicate checks.
+# Author: Ariana Rahman (Arizona State University)
+
 """Baseline-only K binding, fixed panel contracts and exact duplicate checks."""
 
 from pathlib import Path

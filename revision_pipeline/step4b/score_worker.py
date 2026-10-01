@@ -1,3 +1,6 @@
+# Purpose: Evaluate one completed control using unchanged primary scoring functions.
+# Author: Ariana Rahman (Arizona State University)
+
 """Evaluate one completed control using unchanged primary scoring functions."""
 import argparse
 from pathlib import Path

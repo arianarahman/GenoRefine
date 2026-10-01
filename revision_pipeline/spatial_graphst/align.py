@@ -1,3 +1,6 @@
+# Purpose: Create one frozen, label-free PASTE alignment for a DLPFC donor pair.
+# Author: Ariana Rahman (Arizona State University)
+
 """Create one frozen, label-free PASTE alignment for a DLPFC donor pair."""
 
 from __future__ import annotations
@@ -36,6 +39,7 @@ def _paste_slice(metadata, pca: np.ndarray) -> ad.AnnData:
 
 
 def execute(donor: str, run_id: str) -> Path:
+    """Align one donor pair with label-free PASTE and persist validated transport outputs."""
     spec = specification()
     if donor not in spec["donors"]:
         raise ValueError("Unplanned donor")

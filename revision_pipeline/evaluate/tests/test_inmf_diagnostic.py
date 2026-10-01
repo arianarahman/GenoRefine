@@ -1,3 +1,6 @@
+# Purpose: Validate inmf diagnostic behavior and invariants for the evaluate workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 from copy import deepcopy
 import csv
 from pathlib import Path

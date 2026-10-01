@@ -1,3 +1,6 @@
+# Purpose: Acquire the exact official GraphST and PASTE source archives, fail closed.
+# Author: Ariana Rahman (Arizona State University)
+
 """Acquire the exact official GraphST and PASTE source archives, fail closed."""
 
 from __future__ import annotations

@@ -1,12 +1,14 @@
+# Purpose: Run the canonical end-to-end HP-CB pancreas benchmark (legacy code name: HIE).
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: bench_hie_master_v6.py
 -------------------------------------------------------------------------------
-Author: Ariana Rahman
-Affiliation: Arizona State University / Stanford University
 Date: April 2026 (v7)
 
 PURPOSE
-    Canonical end-to-end benchmark for the HIE (Human Intestinal Epithelium) dataset.
+    Canonical end-to-end benchmark for the HP-CB pancreas dataset (legacy code
+    name: HIE).
     This script is the HIE counterpart of bench_pancreas_multi_master_v9.py and
     produces the same *paper-facing* output artifacts (results CSV, ranked CSV,
     main-metrics table CSV/TEX, and a grouped bar chart), while retaining

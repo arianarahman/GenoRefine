@@ -1,3 +1,6 @@
+# Purpose: Step 3A extension: recompute two pancreas baselines, never score or refine them.
+# Author: Ariana Rahman (Arizona State University)
+
 """Step 3A extension: recompute two pancreas baselines, never score or refine them.
 
 Run in the separate backbone environment. The command launches itself with a
@@ -36,6 +39,7 @@ VERSIONS = {"scanpy": "1.9.8", "scanorama": "1.7.4", "harmonypy": "0.0.10",
 
 
 def read_config(root, relative):
+    """Load the frozen pancreas-backbone configuration and validate required fields."""
     from .store import read_json
     cfg = read_json(project_path(root, relative))
     expected = {"schema_version", "dataset", "parent_store", "feature_file", "feature_md5_file",
@@ -57,6 +61,7 @@ def read_config(root, relative):
 
 
 def feature_positions(tokens, n_features):
+    """Map requested feature identifiers to source-matrix column positions."""
     import numpy as np
     validate_cell_ids(tokens)
     try:
@@ -69,6 +74,7 @@ def feature_positions(tokens, n_features):
 
 
 def load_features(root, cfg):
+    """Load and align the configured feature subset for backbone recomputation."""
     from .store import check_sources, read_json
     check_sources(root, cfg["feature_source_pins"])
     tokens = project_path(root, cfg["feature_file"]).read_text(encoding="utf-8-sig").splitlines()
@@ -129,6 +135,7 @@ def preprocess(values, cell_ids, batches, feature_tokens, positions, cfg):
 
 
 def align_output(values, observed_ids, canonical_ids, dimensions):
+    """Align an external embedding to canonical cell identifiers and reject duplicates."""
     import numpy as np
     from .embeddings import matrix_diagnostics
     permutation = np.asarray(alignment_indices(canonical_ids, observed_ids), dtype=np.int64)
@@ -143,6 +150,7 @@ def align_output(values, observed_ids, canonical_ids, dimensions):
 
 
 def fit_scanorama(data, cfg):
+    """Fit the configured Scanorama backbone and return a canonical-row embedding."""
     import numpy as np
     import scanorama
     groups = [data[data.obs["batch"] == name].copy() for name in cfg["batch_order"]]
@@ -156,6 +164,7 @@ def fit_scanorama(data, cfg):
 
 
 def fit_harmony(data, cfg):
+    """Fit the configured Harmony backbone and return a canonical-row embedding."""
     import harmonypy
     import numpy as np
     result = harmonypy.run_harmony(data.obsm["X_pca"].copy(), data.obs[["batch"]].copy(), ["batch"], **cfg["harmony"])
@@ -173,6 +182,7 @@ def fit_harmony(data, cfg):
 
 
 def runtime_record():
+    """Record relevant dependency versions for a recomputed backbone."""
     import annoy.annoylib
     import scanorama.scanorama as scanorama_source
     import scanpy.preprocessing._pca as pca_source
@@ -207,6 +217,7 @@ def copy_parent_artifacts(parent, run):
 
 
 def recompute(root, config_relative="revision_pipeline/configs/pancreas_backbones.json"):
+    """Recompute one configured backbone and write a provenance-complete store entry."""
     import numpy as np
     from .store import Store, check_sources
     from .embeddings import cache_key
@@ -349,6 +360,7 @@ def recompute(root, config_relative="revision_pipeline/configs/pancreas_backbone
 
 
 def main():
+    """Parse the backbone recomputation command and dispatch the requested method."""
     if any(os.environ.get(k) != v for k, v in PROCESS_ENV.items()):
         return subprocess.run([sys.executable, "-B", "-m", "revision_pipeline.data.pancreas_backbones", *sys.argv[1:]],
                               env=dict(os.environ, **PROCESS_ENV)).returncode

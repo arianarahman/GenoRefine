@@ -1,3 +1,6 @@
+# Purpose: Immutable-run dataset/embedding store with explicit provenance and policy gates.
+# Author: Ariana Rahman (Arizona State University)
+
 """Immutable-run dataset/embedding store with explicit provenance and policy gates."""
 
 from collections import Counter
@@ -20,17 +23,20 @@ from .readers import array_hash, expression_blocks, load_dataset
 
 
 def read_json(path):
+    """Read a UTF-8 JSON document from a validated project path."""
     with Path(path).open(encoding="utf-8") as stream:
         return json.load(stream)
 
 
 def dataset_sources(spec):
+    """Enumerate the registered source files for one dataset specification."""
     if spec["format"] == "h5ad":
         return [spec["path"]]
     return [part["path"] for part in spec["parts"]] + [spec["label_path"]]
 
 
 def load_config(root, relative):
+    """Load and validate the data-store registry and its project-relative paths."""
     config = read_json(project_path(root, relative))
     if set(config) != {"schema_version", "registry", "source_lock", "loaders", "embeddings",
                        "evidence_files", "excluded_embedding_roots", "not_imported"} or config["schema_version"] != 1:
@@ -104,12 +110,14 @@ def load_config(root, relative):
 
 
 def check_sources(root, sources):
+    """Verify that registered source files still match their stored fingerprints."""
     for relative, expected in sources.items():
         if file_fingerprint(project_path(root, relative)) != expected:
             raise ValueError(f"Source fingerprint mismatch (do not silently refresh lock): {relative}")
 
 
 def runtime_inventory():
+    """Capture the interpreter and dependency versions used for store creation."""
     return {"python": platform.python_version(), "platform": platform.platform(),
             "executable": sys.executable,
             "packages": sorted(f"{d.metadata['Name']}=={d.version}" for d in metadata.distributions(
@@ -118,6 +126,7 @@ def runtime_inventory():
 
 
 def import_legacy(root, config_relative="revision_pipeline/configs/data_store.json"):
+    """Import legacy inputs into a provenance-bearing, row-aligned data store."""
     root = Path(root).resolve()
     config, registered, lock = load_config(root, config_relative)
     with RunDirectory(root / "revision_pipeline/runs", kind="step3a_data_store",
@@ -130,6 +139,8 @@ def import_legacy(root, config_relative="revision_pipeline/configs/data_store.js
         index = {"schema_version": 1, "datasets": {}, "embeddings": {},
                  "source_files": lock, "not_imported": config["not_imported"]}
         datasets, summaries = {}, []
+        # Fingerprint each source on both sides of parsing so a concurrent input
+        # replacement cannot produce a mixed-version store.
         for identifier, spec in config["loaders"].items():
             print(f"Validating dataset: {identifier}", flush=True)
             dataset_lock = {p: lock[p] for p in dataset_sources(spec)}
@@ -153,6 +164,8 @@ def import_legacy(root, config_relative="revision_pipeline/configs/data_store.js
             values, permutation, diagnostics = read_embedding_csv(
                 project_path(root, relative), dataset["cell_ids"], dimensions=item["dimensions"])
             check_sources(root, {relative: lock[relative]})
+            # Store both canonical values and the source-row permutation. The
+            # latter makes historical row order recoverable without guessing.
             prefix = f"embeddings/{identifier}/{name}"
             values_path, order_path = prefix + ".npy", prefix + ".source_rows.npy"
             np.save(run.artifact_path(values_path), values, allow_pickle=False)
@@ -200,6 +213,7 @@ def import_legacy(root, config_relative="revision_pipeline/configs/data_store.js
 
 @dataclass
 class DatasetView:
+    """Expose validated dataset arrays, identifiers, labels, and provenance metadata."""
     record: dict
     indices: np.ndarray
 
@@ -234,6 +248,7 @@ class DatasetView:
 
 @dataclass
 class EmbeddingView:
+    """Expose a row-aligned embedding together with its parent-data provenance."""
     values: np.ndarray
     cell_ids: tuple
     metadata: dict
@@ -281,6 +296,7 @@ class HistoricalOrderView:
 
 
 class Store:
+    """Open and validate the immutable on-disk data-store layout."""
     def __init__(self, path):
         self.path = Path(path).resolve()
         self.manifest = read_json(self.path / "run.json")

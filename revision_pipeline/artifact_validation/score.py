@@ -1,3 +1,6 @@
+# Purpose: Score one corrupted baseline or trained artifact-validation representation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score one corrupted baseline or trained artifact-validation representation."""
 
 from __future__ import annotations
@@ -41,11 +44,13 @@ def _relative(path: Path | str) -> str:
 
 
 def evaluation_config() -> EvaluationConfig:
+    """Construct the frozen evaluation settings used by every artifact case."""
     policy = load_policy()
     return EvaluationConfig.from_dict(read(ROOT / policy["primary_evaluation_config"]))
 
 
 def resolve_representation(prepared, artifact_id, training=None):
+    """Load and verify one clean or corrupted representation for scoring."""
     artifact = prepared.artifact(artifact_id)
     if training is None:
         values = artifact.values
@@ -197,6 +202,7 @@ def _metric_lookup(rows):
 
 
 def run_score(prepared_path, artifact_id, run_id, training=None):
+    """Score one trained artifact case against correction and preservation endpoints."""
     spec = specification()
     sources = snapshot(ROOT)
     source_tree_sha256 = canonical_hash(sources)
@@ -211,6 +217,8 @@ def run_score(prepared_path, artifact_id, run_id, training=None):
     config = evaluation_config()
     source_compatibility = {}
     if provenance["method"] != "corrupted_baseline":
+        # Reuse of immutable training outputs is allowed only through the
+        # narrowly declared source-transition bridge; unrelated edits fail closed.
         if (
             provenance["training_source_tree_sha256"]
             != provenance["baseline_source_tree_sha256"]
@@ -289,6 +297,8 @@ def run_score(prepared_path, artifact_id, run_id, training=None):
         reference, interpretation = dataset.reference_partition()
         with threadpool_limits(limits=1):
             write_json(run.path / "progress.json", {"stage": "graph_and_grid"})
+            # Build the clustering/grid result once, then reuse it across the
+            # standard and artifact-specific endpoints to prevent metric drift.
             grid = graph_and_grid(
                 values,
                 reference,
@@ -436,6 +446,7 @@ def run_score(prepared_path, artifact_id, run_id, training=None):
 
 
 def main():
+    """Parse a scoring request and write its provenance-bearing result bundle."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prepared", type=Path, required=True)
     parser.add_argument("--artifact", choices=("batch_simplex", "target_local_warp"), required=True)

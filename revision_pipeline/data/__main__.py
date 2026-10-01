@@ -1,3 +1,6 @@
+# Purpose: Run only Step 3A. No implicit evaluator, integration or training calls.
+# Author: Ariana Rahman (Arizona State University)
+
 """Run only Step 3A. No implicit evaluator, integration or training calls."""
 
 import argparse

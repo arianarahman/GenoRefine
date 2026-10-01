@@ -1,8 +1,10 @@
+# Purpose: Stress-testing and robustness analysis for single-cell integration methods using the
+#          5-dataset Pancreas benchmark.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: bench_pancreas_multi_robustness_canonical_strict_v15.py
 -------------------------------------------------------------------------------
-Author: Ariana Rahman
-Affiliation: Arizona State University / Stanford University
 Date: April 2026 (v16 GenoRefine core-method robustness)
 -------------------------------------------------------------------------------
 
@@ -1263,6 +1265,7 @@ def run_nonoverlap_experiment(
     frozen_hvgs: List[str],
     cfg: BenchConfig
 ) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    """Benchmark methods after removing one batch-cell-type combination, using frozen HVGs."""
     methods_all = [
         "Scanorama",
         "Harmony",

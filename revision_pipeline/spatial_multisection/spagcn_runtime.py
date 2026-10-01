@@ -1,3 +1,6 @@
+# Purpose: Fail-closed validation for the authoritative SpaGCN GPU runtime.
+# Author: Ariana Rahman (Arizona State University)
+
 """Fail-closed validation for the authoritative SpaGCN GPU runtime."""
 
 from __future__ import annotations

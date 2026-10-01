@@ -1,3 +1,6 @@
+# Purpose: Validate refiner behavior and invariants for the refine workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import ast
 from dataclasses import replace
 import json

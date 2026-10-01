@@ -1,8 +1,10 @@
+# Purpose: Canonical scalability harness for the 5-dataset Pancreas integration suite, aligned
+#          to bench_pancreas_multi_master_v13.py.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 =============================================================================
 Script Name:    bench_pancreas_scalability_canonical_v3.py
-Author:         Ariana Rahman
-Affiliation:    Arizona State University / Stanford University
 Date:           April 2026
 
 DESCRIPTION
@@ -776,6 +778,7 @@ def plot_scalability(df: pd.DataFrame, out_dir: str) -> None:
 # Main
 # -----------------------------
 def main():
+    """Measure runtime and peak memory across proportionally subsampled pancreas dataset sizes."""
     sc.settings.verbosity = 0
     logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
     ensure_out_dir(CFG.out_folder)

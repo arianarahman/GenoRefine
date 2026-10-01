@@ -1,3 +1,6 @@
+# Purpose: Deep validation for a Package 4 run accepted by resumable orchestration.
+# Author: Ariana Rahman (Arizona State University)
+
 """Deep validation for a Package 4 run accepted by resumable orchestration."""
 
 from __future__ import annotations

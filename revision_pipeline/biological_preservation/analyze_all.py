@@ -1,3 +1,6 @@
+# Purpose: Consolidate rare-cell, purity, geometry and expression-signature preservation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate rare-cell, purity, geometry and expression-signature preservation."""
 
 from __future__ import annotations
@@ -64,6 +67,7 @@ def resolve_case(display, record):
 
 
 def main():
+    """Consolidate cross-fitted marker, rare-cell, and geometry preservation for all eligible cases."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--marker-run", type=Path, required=True)
     parser.add_argument("--run-id")

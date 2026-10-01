@@ -1,3 +1,6 @@
+# Purpose: Deterministic known-structure embeddings; training inputs exclude all oracles.
+# Author: Ariana Rahman (Arizona State University)
+
 """Deterministic known-structure embeddings; training inputs exclude all oracles."""
 from pathlib import Path
 import numpy as np

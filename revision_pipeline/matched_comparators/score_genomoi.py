@@ -1,3 +1,6 @@
+# Purpose: Score one completed genoMOI-core seed with the frozen primary evaluator.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score one completed genoMOI-core seed with the frozen primary evaluator."""
 
 import argparse
@@ -27,6 +30,7 @@ def snapshot():
 
 
 def main():
+    """Score one validated genoMOI-core run with the frozen primary evaluator."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seed", required=True, type=int)
     parser.add_argument("--training-run", required=True, type=Path)

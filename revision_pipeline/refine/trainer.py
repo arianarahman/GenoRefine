@@ -1,3 +1,6 @@
+# Purpose: Pretraining and joint refinement with explicit budgets, states and diagnostics.
+# Author: Ariana Rahman (Arizona State University)
+
 """Pretraining and joint refinement with explicit budgets, states and diagnostics."""
 
 from dataclasses import asdict
@@ -19,6 +22,7 @@ from .networks import adam, architecture_record, build_models, loss_components
 
 
 def target_distribution(q):
+    """Compute the DEC auxiliary target that sharpens confident cluster assignments."""
     q = np.asarray(q)
     if q.ndim != 2 or not np.isfinite(q).all() or np.any(q <= 0):
         raise ValueError("Cluster probabilities must be finite and positive")
@@ -28,11 +32,13 @@ def target_distribution(q):
 
 
 def log_row(stream, row):
+    """Append one structured training event to the run log and flush it immediately."""
     stream.write(json.dumps(row, allow_nan=False) + "\n")
     stream.flush()
 
 
 class ConvIDECTrainer:
+    """Coordinate pretraining and joint GenoRefine optimization with explicit run budgets."""
     def __init__(self, side, config):
         self.side, self.config, self.state = side, config, "initialized"
         tf.keras.utils.set_random_seed(config.init_seed)
@@ -168,6 +174,7 @@ class ConvIDECTrainer:
         return features
 
     def cluster(self, maps, *, cell_ids, directory):
+        """Run budgeted joint refinement and persist the embedding and diagnostics."""
         if os.environ.get("GENOREFINE_TRAINING_BACKEND") == "compiled_gpu":
             from .fast_gpu import cluster
             return cluster(self, maps, cell_ids=cell_ids, directory=directory)

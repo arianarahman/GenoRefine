@@ -1,3 +1,6 @@
+# Purpose: Acquire and verify the commit-pinned six-section LIBD DLPFC sources.
+# Author: Ariana Rahman (Arizona State University)
+
 """Acquire and verify the commit-pinned six-section LIBD DLPFC sources.
 
 The acquisition command never accepts an unpinned URL.  Every downloaded byte

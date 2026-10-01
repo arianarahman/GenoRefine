@@ -1,3 +1,6 @@
+# Purpose: Select GenoRefine K from scVI seed 0 without reference labels.
+# Author: Ariana Rahman (Arizona State University)
+
 """Select GenoRefine K from scVI seed 0 without reference labels."""
 
 import argparse

@@ -1,3 +1,6 @@
+# Purpose: Validate pilot behavior and invariants for the pilot workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import tempfile
 from pathlib import Path
 import unittest

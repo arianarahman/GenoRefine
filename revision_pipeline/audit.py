@@ -1,3 +1,6 @@
+# Purpose: Read-only project inspection; generated evidence goes into a new run directory.
+# Author: Ariana Rahman (Arizona State University)
+
 """Read-only project inspection; generated evidence goes into a new run directory."""
 
 import ast

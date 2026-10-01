@@ -1,3 +1,6 @@
+# Purpose: One fresh-process, full-budget Step 3C replicate.
+# Author: Ariana Rahman (Arizona State University)
+
 """One fresh-process, full-budget Step 3C replicate. Never tunes toward old ARI."""
 
 import time

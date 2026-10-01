@@ -1,3 +1,6 @@
+# Purpose: Reuse only a complete, verified, same-protocol standalone baseline evaluation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Reuse only a complete, verified, same-protocol standalone baseline evaluation."""
 
 import json

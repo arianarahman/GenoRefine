@@ -1,3 +1,6 @@
+# Purpose: Train one focused HP-CB Scanorama ablation replicate on the fast GPU profile.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train one focused HP-CB Scanorama ablation replicate on the fast GPU profile."""
 
 from __future__ import annotations
@@ -24,6 +27,7 @@ K_EVIDENCE = ROOT / "revision_pipeline/runs/20260917T201840Z-c98b46e80508/verifi
 
 
 def main():
+    """Train one frozen HP-CB architecture ablation and persist its validated refined bundle."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--variant", choices=VARIANTS, required=True)
     parser.add_argument("--seed", type=int, required=True)

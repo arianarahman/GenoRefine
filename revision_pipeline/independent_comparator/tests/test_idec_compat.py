@@ -1,3 +1,6 @@
+# Purpose: Validate idec compat behavior and invariants for the independent comparator workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import unittest
 from pathlib import Path
 import json

@@ -1,3 +1,6 @@
+# Purpose: Build the result-independent external-marker foundation for package 2.
+# Author: Ariana Rahman (Arizona State University)
+
 """Build the result-independent external-marker foundation for package 2."""
 
 from __future__ import annotations
@@ -225,6 +228,7 @@ def _mouse_inputs(root: Path, spec: Mapping, source_records: Mapping,
 
 
 def build_foundation(root: Path, config_path: Path, run_id: str) -> Path:
+    """Verify locked marker sources and persist aligned HP-CB and mouse reference inputs."""
     root = Path(root).resolve()
     config_path = project_path(root, Path(config_path).as_posix())
     config = _validate_config(_read(config_path))

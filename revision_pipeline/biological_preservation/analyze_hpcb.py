@@ -1,3 +1,6 @@
+# Purpose: Analyze HP-CB biological-structure preservation from saved Step 4A outputs.
+# Author: Ariana Rahman (Arizona State University)
+
 """Analyze HP-CB biological-structure preservation from saved Step 4A outputs."""
 
 from __future__ import annotations
@@ -62,6 +65,7 @@ def write_csv(path: Path, rows: list[dict]):
 
 
 def analyze(output: Path) -> dict:
+    """Summarize seedwise neighborhood, rare-cell, centroid, and expression preservation for HP-CB."""
     output.mkdir(parents=True, exist_ok=False)
     dataset = read_json(DATASET)
     ids = dataset["cell_ids"]

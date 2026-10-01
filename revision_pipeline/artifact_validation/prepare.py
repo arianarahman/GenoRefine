@@ -1,3 +1,6 @@
+# Purpose: Prepare immutable clean/corrupted inputs for one artifact-validation case.
+# Author: Ariana Rahman (Arizona State University)
+
 """Prepare immutable clean/corrupted inputs for one artifact-validation case."""
 
 from __future__ import annotations

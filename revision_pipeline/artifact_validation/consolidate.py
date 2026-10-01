@@ -1,3 +1,6 @@
+# Purpose: Consolidate the complete 12-condition, two-method artifact panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the complete 12-condition, two-method artifact panel."""
 
 from __future__ import annotations
@@ -81,6 +84,7 @@ def _mean(rows, name):
 
 
 def _validate_source_lineage(stage_source_hashes, current_source):
+    """Require every child score to share the expected source transition."""
     if any(len(values) != 1 or None in values for values in stage_source_hashes.values()):
         raise ValueError("Each artifact-panel stage must have one complete source lineage")
     stage_sources = {
@@ -98,6 +102,7 @@ def _validate_source_lineage(stage_source_hashes, current_source):
 
 
 def consolidate(prefix, run_id):
+    """Combine all prespecified artifact scores into auditable aggregate tables."""
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,39}", prefix):
         raise ValueError("Panel prefix must be a short path-safe identifier")
     spec = specification()
@@ -396,6 +401,7 @@ def consolidate(prefix, run_id):
 
 
 def main():
+    """Parse completed panel locations and consolidate their verified results."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prefix", required=True)
     parser.add_argument("--run-id", required=True)

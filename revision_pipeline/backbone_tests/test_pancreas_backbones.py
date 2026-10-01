@@ -1,3 +1,6 @@
+# Purpose: Integration-environment tests; intentionally not part of the minimal-refiner suite.
+# Author: Ariana Rahman (Arizona State University)
+
 """Integration-environment tests; intentionally not part of the minimal-refiner suite."""
 
 import copy

@@ -1,3 +1,6 @@
+# Purpose: Validate prepare behavior and invariants for the artifact validation workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import tempfile
 import unittest
 import gc

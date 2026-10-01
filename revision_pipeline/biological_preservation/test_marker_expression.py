@@ -1,3 +1,7 @@
+# Purpose: Validate marker expression behavior and invariants for the biological preservation
+#          workflow.
+# Author: Ariana Rahman (Arizona State University)
+
 import inspect
 import unittest
 

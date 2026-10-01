@@ -1,3 +1,6 @@
+# Purpose: Optimized execution profiles for the user-authorized fast continuation.
+# Author: Ariana Rahman (Arizona State University)
+
 """Optimized execution profiles for the user-authorized fast continuation.
 
 The original deterministic CPU profile remains unchanged in

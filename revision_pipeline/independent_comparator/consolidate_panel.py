@@ -1,3 +1,6 @@
+# Purpose: Consolidate the full five-seed IDEC panel against upstream and GenoRefine.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the full five-seed IDEC panel against upstream and GenoRefine."""
 
 from __future__ import annotations
@@ -41,6 +44,7 @@ def direction(delta):
 
 
 def main():
+    """Combine complete IDEC seed panels with matched upstream and GenoRefine summaries."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", default=str(DEFAULT_PROTOCOL))
     parser.add_argument("--prefix", required=True)

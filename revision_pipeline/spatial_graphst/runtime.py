@@ -1,3 +1,6 @@
+# Purpose: Validate the isolated GraphST/PASTE/R runtime before any scientific fit.
+# Author: Ariana Rahman (Arizona State University)
+
 """Validate the isolated GraphST/PASTE/R runtime before any scientific fit."""
 
 from __future__ import annotations

@@ -1,3 +1,6 @@
+# Purpose: Run deterministic synthetic acceptance gates for the frozen GraphST runtime.
+# Author: Ariana Rahman (Arizona State University)
+
 """Run deterministic synthetic acceptance gates for the frozen GraphST runtime."""
 
 from __future__ import annotations

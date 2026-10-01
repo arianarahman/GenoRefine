@@ -1,3 +1,6 @@
+# Purpose: One full primary-order matched-objective run.
+# Author: Ariana Rahman (Arizona State University)
+
 """One full primary-order matched-objective run. No reference-label selection."""
 
 import argparse

@@ -1,3 +1,6 @@
+# Purpose: Consolidate the completed five-seed loss-objective ablation panel.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate the completed five-seed loss-objective ablation panel."""
 
 from __future__ import annotations

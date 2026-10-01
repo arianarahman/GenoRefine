@@ -1,3 +1,6 @@
+# Purpose: Train GenoRefine on the fully train-fitted upstream and transform held-out cells.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train GenoRefine on the fully train-fitted upstream and transform held-out cells."""
 
 from __future__ import annotations

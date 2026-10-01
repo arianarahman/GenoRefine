@@ -1,3 +1,6 @@
+# Purpose: Actual BBKNN graphs; all coordinate-derived metrics explicitly proxy-labeled.
+# Author: Ariana Rahman (Arizona State University)
+
 """Actual BBKNN graphs; all coordinate-derived metrics explicitly proxy-labeled."""
 import argparse
 from pathlib import Path
@@ -29,6 +32,7 @@ def build_graph(values,batches):
 
 
 def main():
+    """Build the native BBKNN graph and report graph metrics plus labeled coordinate proxies."""
     import anndata as ad
     import scanpy as sc
     import leidenalg

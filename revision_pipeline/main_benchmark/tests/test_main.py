@@ -1,3 +1,6 @@
+# Purpose: Validate primary-benchmark planning, case contracts, and orchestration behavior.
+# Author: Ariana Rahman (Arizona State University)
+
 import copy
 import json
 import tempfile

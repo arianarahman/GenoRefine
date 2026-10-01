@@ -1,3 +1,6 @@
+# Purpose: Strict frozen contracts shared by GraphST Package 4b.
+# Author: Ariana Rahman (Arizona State University)
+
 """Strict frozen contracts shared by GraphST Package 4b."""
 
 from __future__ import annotations
@@ -26,14 +29,17 @@ SPEC_SHA256 = "e9c18af60cbeed37d152a5298b808377be0ad5662779453b56ed51d5ee50bddb"
 
 
 def read_json(path: Path) -> dict:
+    """Read a UTF-8 JSON document used by the GraphST workflow."""
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
 def raw_specification() -> dict:
+    """Load the unexpanded GraphST panel specification from disk."""
     return read_json(SPEC_PATH)
 
 
 def _fingerprint_matches(path: Path, record: dict, prefix: str = "run_manifest") -> None:
+    """Compare a file against a declared SHA-256 and byte count."""
     observed = file_fingerprint(path)
     expected = {
         "sha256": record[f"{prefix}_sha256"],
@@ -44,6 +50,7 @@ def _fingerprint_matches(path: Path, record: dict, prefix: str = "run_manifest")
 
 
 def specification() -> dict:
+    """Validate the GraphST protocol, source locks, and dependency pins."""
     if file_fingerprint(SPEC_PATH)["sha256"] != SPEC_SHA256:
         raise ValueError("GraphST Package 4b protocol is not frozen or changed; mint a new protocol")
     spec = raw_specification()
@@ -93,23 +100,28 @@ def specification() -> dict:
 
 
 def foundation_path() -> Path:
+    """Resolve the prepared spatial foundation required by GraphST."""
     return ROOT / specification()["foundation"]["path"]
 
 
 def harmony_path() -> Path:
+    """Resolve the frozen Harmony comparison run."""
     return ROOT / specification()["package4_bindings"]["fixed_harmony"]["path"]
 
 
 def evaluation_dict() -> dict:
+    """Return the serializable common-evaluation configuration."""
     spec = specification()
     return read_json(ROOT / spec["evaluation"]["config"])
 
 
 def evaluation_config() -> EvaluationConfig:
+    """Build the common fixed-resolution evaluation configuration."""
     return EvaluationConfig.from_dict(evaluation_dict())
 
 
 def validate_evaluation_runtime() -> dict:
+    """Verify runtime behavior that can affect clustering endpoints."""
     locked = specification()["evaluation"]["runtime"]
     observed = {
         "python_executable": "<PYTHON_ENV>",
@@ -131,6 +143,7 @@ def validate_evaluation_runtime() -> dict:
 
 
 def load_metadata(*, include_labels: bool = True) -> pd.DataFrame:
+    """Load canonical spatial metadata for GraphST evaluation."""
     spec = specification()
     path = foundation_path() / spec["foundation"]["metadata_file"]
     expected = (
@@ -158,6 +171,7 @@ def load_metadata(*, include_labels: bool = True) -> pd.DataFrame:
 
 
 def load_counts_and_genes() -> tuple[sparse.csr_matrix, pd.DataFrame]:
+    """Load sparse counts and gene identifiers from the foundation."""
     spec = specification()
     root = foundation_path()
     counts = sparse.load_npz(root / spec["foundation"]["counts_file"]).tocsr()
@@ -172,6 +186,7 @@ def load_counts_and_genes() -> tuple[sparse.csr_matrix, pd.DataFrame]:
 
 
 def load_fixed_harmony() -> tuple[np.ndarray, pd.DataFrame, dict]:
+    """Load the frozen Harmony comparison embedding and receipt."""
     spec = specification()
     path = harmony_path()
     completed(path, spec["package4_bindings"]["fixed_harmony"]["kind"])
@@ -190,6 +205,7 @@ def require_run(path: Path, kind: str) -> dict:
 
 
 def donor_take(metadata: pd.DataFrame, donor: str) -> np.ndarray:
+    """Return canonical row positions for one donor's declared sections."""
     spec = specification()
     if donor not in spec["donors"]:
         raise ValueError("Unplanned donor")
@@ -363,4 +379,5 @@ def source_snapshot() -> dict:
 
 
 def source_tree_sha256() -> str:
+    """Return the canonical hash of the GraphST source snapshot."""
     return canonical_hash(source_snapshot())

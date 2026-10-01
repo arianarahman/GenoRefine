@@ -1,3 +1,6 @@
+# Purpose: Focused GenoRefine architecture and objective ablations.
+# Author: Ariana Rahman (Arizona State University)
+
 """Focused GenoRefine architecture and objective ablations."""
 
 # Kept outside the TensorFlow-dependent model module so that scoring and

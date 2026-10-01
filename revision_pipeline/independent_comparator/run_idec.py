@@ -1,3 +1,6 @@
+# Purpose: Run one pinned independent IDEC replicate on a frozen upstream embedding.
+# Author: Ariana Rahman (Arizona State University)
+
 """Run one pinned independent IDEC replicate on a frozen upstream embedding."""
 
 from __future__ import annotations
@@ -84,6 +87,7 @@ def encoder_dimensions(spec, case):
 
 
 def main():
+    """Validate the pinned IDEC checkout, train one replicate, and record its output lineage."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", default=str(PROTOCOL))
     parser.add_argument("--case")

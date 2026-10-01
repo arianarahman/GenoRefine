@@ -1,3 +1,6 @@
+# Purpose: Validate the end-to-end artifact-validation protocol and its provenance gates.
+# Author: Ariana Rahman (Arizona State University)
+
 import ast
 import inspect
 import json

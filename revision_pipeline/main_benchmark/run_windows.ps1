@@ -1,3 +1,6 @@
+# Purpose: Run the GenoRefine primary benchmark stages from Windows through the pinned WSL environments.
+# Author: Ariana Rahman (Arizona State University)
+
 param(
     [Parameter(Mandatory=$true)][string]$Acceptance,
     [string]$ResumeAudit,

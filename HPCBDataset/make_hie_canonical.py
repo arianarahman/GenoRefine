@@ -1,3 +1,8 @@
+# Purpose: Generate the frozen canonical HVG file for the HIE benchmark so that
+#          bench_hie_master_v6.py, seurat_integration_hie_v4.R, and rliger_online_inmf_hie_v7.R
+#          all use the same fixed feature space.
+# Author: Ariana Rahman (Arizona State University)
+
 """
 FILE: make_hie_canonical_hvg.py
 -------------------------------------------------------------------------------
@@ -28,7 +33,7 @@ Run
     python make_hie_canonical.py
 
 Optional environment override
-    set HIE_BASE_DIR=C:\path\to\3.4-ScanoramaDataset
+    set HIE_BASE_DIR=C:\\path\\to\\3.4-ScanoramaDataset
     python make_hie_canonical_hvg.py
 -------------------------------------------------------------------------------
 """

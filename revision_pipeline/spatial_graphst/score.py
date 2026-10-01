@@ -1,3 +1,6 @@
+# Purpose: Score GraphST Package 4b with the frozen common evaluator and native endpoints.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score GraphST Package 4b with the frozen common evaluator and native endpoints."""
 
 from __future__ import annotations
@@ -31,6 +34,7 @@ def _metric_values(rows: list[dict], prefix: str) -> list[float]:
 
 def load_training(training: Path, alignment_path: Path, k_selection_path: Path,
                   donor: str, seed: int) -> dict:
+    """Load one completed GraphST fit and verify its source and runtime bindings."""
     spec = specification()
     training = Path(training)
     require_run(training, "spatial_graphst_training")
@@ -104,6 +108,7 @@ def load_training(training: Path, alignment_path: Path, k_selection_path: Path,
 
 def score_section(section: str, donor: str, seed: int, training: Path,
                   alignment: Path, k_selection: Path, run_id: str) -> Path:
+    """Score common and task-native GraphST outputs for one tissue section."""
     spec = specification()
     if donor not in spec["donors"] or section not in spec["donors"][donor]:
         raise ValueError("Section does not belong to the requested donor")
@@ -212,6 +217,7 @@ def score_section(section: str, donor: str, seed: int, training: Path,
 
 def score_donor(donor: str, seed: int, training: Path, alignment: Path,
                 k_selection: Path, run_id: str) -> Path:
+    """Score the aligned GraphST representation for one donor pair."""
     spec = specification()
     if donor not in spec["donors"]:
         raise ValueError("Unplanned donor")
@@ -274,6 +280,7 @@ def score_donor(donor: str, seed: int, training: Path, alignment: Path,
 
 
 def main() -> None:
+    """Parse a section or donor GraphST scoring request and dispatch it."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=["section", "donor"])
     parser.add_argument("--section")

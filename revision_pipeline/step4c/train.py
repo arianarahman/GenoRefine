@@ -1,3 +1,6 @@
+# Purpose: Observed-only fitting using unchanged loops; evaluation counterfactuals afterward.
+# Author: Ariana Rahman (Arizona State University)
+
 """Observed-only fitting using unchanged loops; evaluation counterfactuals afterward."""
 import argparse
 from pathlib import Path

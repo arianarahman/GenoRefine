@@ -1,3 +1,6 @@
+# Purpose: Train the frozen GenoRefine protocol and export held-out/full endpoint embeddings.
+# Author: Ariana Rahman (Arizona State University)
+
 """Train the frozen GenoRefine protocol and export held-out/full endpoint embeddings."""
 
 import argparse

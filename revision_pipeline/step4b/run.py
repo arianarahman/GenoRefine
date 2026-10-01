@@ -1,3 +1,6 @@
+# Purpose: Gated Step4B training and full scoring; stop on failure, not unfavorable results.
+# Author: Ariana Rahman (Arizona State University)
+
 """Gated Step4B training and full scoring; stop on failure, not unfavorable results."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor,as_completed

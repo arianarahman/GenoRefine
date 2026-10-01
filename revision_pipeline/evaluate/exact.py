@@ -1,3 +1,6 @@
+# Purpose: Bounded exact Euclidean kNN with identity exclusion and stable-ID tie breaks.
+# Author: Ariana Rahman (Arizona State University)
+
 """Bounded exact Euclidean kNN with identity exclusion and stable-ID tie breaks.
 
 Distance arithmetic uses SciPy's float64 direct Euclidean kernel, not a BLAS

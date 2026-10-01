@@ -1,3 +1,6 @@
+# Purpose: Consolidate paired scVI and scVI+GenoRefine results without seed selection.
+# Author: Ariana Rahman (Arizona State University)
+
 """Consolidate paired scVI and scVI+GenoRefine results without seed selection."""
 
 import csv

@@ -1,3 +1,6 @@
+# Purpose: Score one broader-validation representation with the frozen primary evaluator.
+# Author: Ariana Rahman (Arizona State University)
+
 """Score one broader-validation representation with the frozen primary evaluator."""
 
 import argparse

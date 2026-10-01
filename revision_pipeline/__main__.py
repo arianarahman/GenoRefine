@@ -1,3 +1,6 @@
+# Purpose: Run from the project root with: python -m revision_pipeline --help.
+# Author: Ariana Rahman (Arizona State University)
+
 """Run from the project root with: python -m revision_pipeline --help."""
 
 import argparse
@@ -8,7 +11,7 @@ from .audit import run_audit, verify_audit
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="GenoRefine revision foundation (no training yet)")
+    parser = argparse.ArgumentParser(description="GenoRefine data-audit and verification tools")
     parser.add_argument("--project-root", type=Path, default=Path(__file__).resolve().parent.parent)
     commands = parser.add_subparsers(dest="command", required=True)
     audit = commands.add_parser("audit", help="Snapshot sources and inspect registered inputs without training")
